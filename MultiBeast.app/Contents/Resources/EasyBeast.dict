@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Drivers > Disk > 3rd Party SATA</key>
+            <string>NO</string>
+        <key>Bootloaders > Chimera v4.1.0</key>
+            <string>NO</string>
+        <key>Customize > Boot Options > Use KernelCache</key>
+            <string>NO</string>
+        <key>Customize > System Definitions > Mac Pro > Mac Pro 3,1</key>
+            <string>NO</string>
+        <key>Customize > Themes > tonymacx86 Black</key>
+            <string>NO</string>
+        
+        <key>Drivers > Misc > FakeSMC v6.14.1364</key>
+            <string>YES</string>
+        <key>Drivers > Misc > ElliottForceLegacyRTC</key>
+            <string>YES</string>
+        <key>Drivers > Misc > EvOreboot</key>
+            <string>YES</string>
+        <key>Drivers > Misc > NullCPUPowerManagement</key>
+            <string>YES</string>
+        <key>Customize > Boot Options > Basic Boot Options</key>
+            <string>YES</string>
+        <key>Customize > Boot Options > Kext Dev Mode</key>
+            <string>YES</string>
+    </dict>
+</plist>

@@ -1,0 +1,44 @@
+#!/usr/bin/python
+#
+# Script to add kext-dev-mode=1 to Chameleon boot loaders
+#
+# Copyright (C) tonymacx86 LLC
+
+import sys
+import os
+
+vol = str(sys.argv[1])
+boot = "/Extra/org.chameleon.Boot.plist"
+plist = vol + boot
+
+infile = open(plist, "r")
+
+body = ""
+
+for line in infile:
+	if "<key>Kernel</key>" in line:
+		line = infile.next()
+		if "<string>mach_kernel</string>" in line:
+			continue
+		else:
+			body += "<key>Kernel</key>\n"
+
+	body += line
+
+	if "<key>Kernel Flags</key>" in line:
+		line = infile.next()
+		if "kext-dev-mode=1" not in line:
+			temp = line.split("<string>")[1]
+			temp = temp.split("</string>")[0]
+			if (temp):
+				line = "        <string>" + temp + " " + "kext-dev-mode=1</string>\n"
+			else:
+				line = "	<string>kext-dev-mode=1</string>\n"
+			
+		body += line
+
+infile.close()
+
+outfile = open(plist, "w")
+outfile.write(body)
+outfile.close()

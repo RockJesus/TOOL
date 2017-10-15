@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# postinstall script for patching AppleIntelSNBGraphicsFB and AppleIntelFramebufferCapri
+# allows HD3000 graphics on 7 Series motherboards and HD4000 graphics on 6 Series motherboards
+#
+# Copyright (C) tonymacx86 LLC
+
+perl -pi -e 's|0x1C3A8086|0x1E3A8086|' "${1}/System/Library/Extensions/AppleIntelSNBGraphicsFB.kext/Contents/Info.plist"
+
+perl -pi -e 's|0x1E3A8086|0x1C3A8086|' "${1}/System/Library/Extensions/AppleIntelFramebufferCapri.kext/Contents/Info.plist"
+
+touch "${1}/System/Library/Extensions/"
+
+exit 0

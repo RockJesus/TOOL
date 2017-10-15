@@ -1,0 +1,33 @@
+#!/usr/bin/python
+#
+# Script to add -v to Chameleon boot loaders
+#
+# Copyright (C) tonymacx86 LLC
+
+import sys
+import os
+
+vol = str(sys.argv[1])
+boot = "/Extra/org.chameleon.Boot.plist"
+plist = vol + boot
+
+infile = open(plist, "r")
+
+body = ""
+
+for line in infile:
+    body += line
+    if "<key>Kernel Flags</key>" in line:
+        line = infile.next()
+        if "-v" in line:
+            sys.exit()
+        temp = line.split("<string>")[1]
+        temp = temp.split("</string>")[0]
+        line = "        <string>" + temp + " " + "-v</string>\n"
+        body += line
+
+infile.close()
+
+outfile = open(plist, "w")
+outfile.write(body)
+outfile.close()

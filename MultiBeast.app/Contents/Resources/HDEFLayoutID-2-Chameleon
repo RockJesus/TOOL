@@ -1,0 +1,41 @@
+#!/usr/bin/python
+#
+# Script to add HDEFLayoutID=02000000 for Chameleon boot loaders
+#
+# Copyright (C) tonymacx86 LLC
+
+import sys
+import os
+
+vol = str(sys.argv[1])
+boot = "/Extra/org.chameleon.Boot.plist"
+plist = vol + boot
+infile = open(plist, "r")
+# check if HDEFLayoutID has been written or not
+HDEFLayoutIDCheck = False
+
+body = ""
+
+for line in infile:
+    # if HDEFLayoutID is there, advance the next line to
+    # read past it, and then add the 02000000 string
+    if "<key>HDEFLayoutID</key>" in line:
+        line = infile.next()
+        line = "        <key>HDEFLayoutID</key>\n"
+        line += "        <string>02000000</string>\n"
+        HDEFLayoutIDCheck = True
+        
+    # if we finish the tags and haven't written HDEFLayoutID yet
+    if "</dict>" in line and HDEFLayoutIDCheck == False:
+        line = "        <key>HDEFLayoutID</key>\n"
+        line += "        <string>02000000</string>\n"
+        line += "</dict>\n"
+        HDEFLayoutIDCheck = True
+        
+    body += line
+    
+infile.close()
+
+outfile = open(plist, "w")
+outfile.write(body)
+outfile.close()

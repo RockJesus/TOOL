@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# postinstall script to configure hibernatemode for desktop and deletes sleepimage
+#
+# Copyright (C) tonymacx86 LLC
+
+pmset -a hibernatemode 0
+
+if [ -f "${1}/var/vm/sleepimage" ]; then
+	rm "${1}/var/vm/sleepimage"
+fi
+
+exit 0

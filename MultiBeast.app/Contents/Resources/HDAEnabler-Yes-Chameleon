@@ -1,0 +1,41 @@
+#!/usr/bin/python
+#
+# Script to add HDAEnabler=Yes for Chameleon boot loaders
+#
+# Copyright (C) tonymacx86 LLC
+
+import sys
+import os
+
+vol = str(sys.argv[1])
+boot = "/Extra/org.chameleon.Boot.plist"
+plist = vol + boot
+infile = open(plist, "r")
+# check if HDAEnabler has been written or not
+HDAEnablerCheck = False
+
+body = ""
+
+for line in infile:
+    # if HDAEnabler is there, advance the next line to
+    # read past it, and then add the Yes string
+    if "<key>HDAEnabler</key>" in line:
+        line = infile.next()
+        line = "        <key>HDAEnabler</key>\n"
+        line += "        <string>Yes</string>\n"
+        HDAEnablerCheck = True
+        
+    # if we finish the tags and haven't written HDAEnabler yet
+    if "</dict>" in line and HDAEnablerCheck == False:
+        line = "        <key>HDAEnabler</key>\n"
+        line += "        <string>Yes</string>\n"
+        line += "</dict>\n"
+        HDAEnablerCheck = True
+        
+    body += line
+    
+infile.close()
+
+outfile = open(plist, "w")
+outfile.write(body)
+outfile.close()

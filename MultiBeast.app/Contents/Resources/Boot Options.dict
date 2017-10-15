@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Name</key>
+        <array>
+            <string>Boot Options</string>
+            <string>Contains scripts to edit /Extra/org.chameleon.Boot.plist files to enable/disable special boot loader features at startup.</string>
+        </array>
+        <key>Children</key>
+        <array>
+            <array>
+                <string>1080p Display Mode</string>
+                <string>Adds Graphics Mode = "1920x1080x32" or changes Graphics Mode to "1920x1080x32" in /Extra/org.chameleon.Boot.plist.</string>
+                <string>GraphicsMode-Chameleon</string>
+            </array>
+            <array>
+                <string>Basic Boot Options</string>
+                <string>Installs /Extra/org.chameleon.Boot.plist with the minimum required options, EthernetBuiltIn=Yes, GraphicsEnabler=No, IGPEnabler=Yes, Legacy Logo=Yes and Timeout=2</string>
+                <string>Base-Boot-plist.pkg</string>
+            </array>
+            <array>
+                <string>DropSSDT=Yes</string>
+                <string>Adds DropSSDT=Yes to /Extra/org.chameleon.Boot.plist.</string>
+                <string>DropSSDT-Chameleon</string>
+            </array>
+            <array>
+                <string>Generate CPU States</string>
+                <string>Adds GenerateCStates=Yes and GeneratePStates=Yes to /Extra/org.chameleon.Boot.plist.</string>
+                <string>GenerateStates-Chameleon</string>
+            </array>
+            <array>
+                <string>GraphicsEnabler=Yes</string>
+                <string>Changes GraphicsEnabler=No to GraphicsEnabler=Yes in /Extra/org.chameleon.Boot.plist.</string>
+                <string>GE-Yes-Chameleon</string>
+            </array>
+            <array>
+                <string>Hibernate Mode - Desktop</string>
+                <string>Configures the system for Desktop power management hibernate mode and deletes /var/vm/sleepimage to reclaim disk space.</string>
+                <string>Desktop-PM</string>
+            </array>
+            <array>
+                <string>Hibernate Mode - Laptop</string>
+                <string>Configures the system for Laptop power management hibernate mode.</string>
+                <string>Laptop-PM</string>
+            </array>
+            <array>
+                <string>IGPEnabler=No</string>
+                <string>Changes IGPEnabler=Yes to IGPEnabler=No in /Extra/org.chameleon.Boot.plist.</string>
+                <string>IGPEnabler-No-Chameleon</string>
+            </array>
+            <array>
+                <string>Instant Menu</string>
+                <string>Adds Instant Menu=Yes or replaces Timeout=n in /Extra/org.chameleon.Boot.plist.</string>
+                <string>InstantMenu-Chameleon</string>
+            </array>
+            <array>
+                <string>Kext Dev Mode</string>
+                <string>Adds kext-dev-mode=1 to Kernel Flags in /Extra/org.chameleon.Boot.plist.</string>
+                <string>kext-dev-mode=1</string>
+            </array>
+            <array>
+                <string>PCI Root ID Fix</string>
+                <string>Adds PCIRootUID=1 to Kernel Flags in /Extra/org.chameleon.Boot.plist.</string>
+                <string>PCIRoot-Chameleon</string>
+            </array>
+            <array>
+                <string>Use KernelCache</string>
+                <string>Adds UseKernelCache=Yes to /Extra/org.chameleon.Boot.plist. Not needed when using EasyBeast or UserDSDT.</string>
+                <string>UseKernelCache-Chameleon</string>
+            </array>
+            <array>
+                <string>Verbose Boot</string>
+                <string>Adds -v to Kernel Flags in /Extra/org.chameleon.Boot.plist.</string>
+                <string>Verbose-Chameleon</string>
+            </array>
+        </array>
+    </dict>
+</plist>

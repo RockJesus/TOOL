@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# postinstall script for patching IOAHCIBlockStorage in IOAHCIFamily
+# enables TRIM support for non-Apple SSD drives in Yosemite 10.10.3 and later
+#
+# Copyright (C) tonymacx86 LLC
+
+perl -pi -e 's|\x00\x41\x50\x50\x4c\x45\x20\x53\x53\x44\x00|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00|' "${3}/System/Library/Extensions/IOAHCIFamily.kext/Contents/PlugIns/IOAHCIBlockStorage.kext/Contents/MacOS/IOAHCIBlockStorage"
+
+touch "${3}/System/Library/Extensions/"
+
+exit 0

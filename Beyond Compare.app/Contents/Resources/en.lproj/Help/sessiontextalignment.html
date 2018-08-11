@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Text Compare Alignment Settings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="alignment control (in Text Compare)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sessiontextalignment.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Text Compare Alignment Settings</span></h1>
+<p class="p_Command2"><span class="f_Command2">Session </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Session Settings </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Alignment</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="sessiontextimportance.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="sessiontext.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="sessiontextreplacements.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">The Alignment tab settings control the algorithm for aligning lines in the comparison.</p>
+<p class="p_Normal">Mark the <span class="f_Command">Never align differences</span> checkbox to show lines with important differences as blocks of added and deleted text rather than changed text.</p>
+<p class="p_Normal">Pick <span class="f_Command">Unaligned</span> to compare files without aligning lines based on their content.</p>
+<p class="p_Normal">Pick <span class="f_Command">Standard alignment</span> to align the files by comparing successively smaller sections of each file.  Parts of the alignment can be shown before the entire comparison is finished.</p>
+<p class="p_Normal">Pick <span class="f_Command">Myers O(ND) alignment</span> to align the files using a common LCS (Longest Common Subsequence) algorithm.  This can give better matches in certain cases, such as large inserts or when the files contain a lot of repeating text.  Since files are compared all at once, larger file scans take much longer than the standard method, and the files are not displayed until the comparison is complete.  It does not support similarity comparisons, so mismatches will be grouped in blocks.</p>
+<p class="p_Normal">Pick <span class="f_Command">Patience Diff alignment</span> to align the files using Bram Cohen's algorithm.</p>
+<p class="p_Normal">The <span class="f_Command">Skew tolerance</span> specifies the maximum number of lines that the algorithm will check when looking for a match to a particular line.  Increasing it can improve the alignment, especially if there are large gaps.  Of course, the comparison may also require more time.</p>
+<p class="p_Normal">Mark the <span class="f_Command">Use closeness matching</span> checkbox to attempt to align the remaining mismatched lines based on their similarity.</p>
+<p class="p_Normal"><img width="12" height="12" style="margin:0;width:12px;height:12px;border:none" src="note.png"/><span class="f_Subtitle">Note</span>  Regardless of these settings, the alignment algorithm will sometimes produce undesirable results.  To manually align two lines, right-click one line and pick <span class="f_Command">Align With</span> and then click the second line.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Using Text Merge</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "using_text_merge.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Using Text Merge</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="viewtextmerge.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="viewtextmerge.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="viewdata.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal"><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+<p class="p_Normal">Once Beyond Compare has completed the comparison it will show up to four panes:  The left, center, and right panes at the top, with an output pane below it.  If you include a center file Beyond Compare will be able to compare both files to it and mark changes as additions, modifications, or deletions on each specific side.  Changes on the left are marked in teal and changes on the right are marked in magenta.  Overlapping changes are considered conflicts and are marked in red.  (You can <a href="optionsfilecolor.html" class="topiclink">change the color scheme</a> if you like.)</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Conflicts</span></p>
+<p class="p_Normal">Any time there are different changes in the left and right side that are on the same lines or within two lines of each other those sections will be considered a conflict and will be colored red in the three input panes.  The output will be considered a conflict.  If the same change is made in both the left and right side it isn't considered a conflict.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Display Filters</span></p>
+<p class="p_Normal">When merging, the display filters switch from Beyond Compare's traditional ones to new ones that check the merging status of each line.  Using those filters you can limit the display to just conflicts or just changes on one side or the other.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Merging</span></p>
+<p class="p_Normal">You can navigate from difference to difference in both the input and output panes and the windows will stay synced up.  When you are positioned on a difference you can use the <span class="f_Command">Take Left</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="filetakesectionleft.png"/>, <span class="f_Command">Take Center</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="filetakesectioncenter.png"/>, and <span class="f_Command">Take Right</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="filetakesectionright.png"/> commands to accept the changes from the left or right or keep the original from the center.  The &quot;Take&quot; commands are available on the toolbar, in each edit's popup menu, and as buttons next to each section in the output pane.  When it first loads, the output pane will match the center except when it can automatically take non-conflicting changes.  Each change will be colored to match the pane it originally came from.  While merging you can also edit the output pane directly, which will change the section to yellow.  If you want to revert to one of the original inputs just use the &quot;Take&quot; command again.</p>
+
+</td></tr></table>
+
+</body>
+</html>

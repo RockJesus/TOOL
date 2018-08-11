@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Content Comparisons</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="compare contents,content comparison" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "opcompare.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#7B6B45;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Content Comparisons</span></h1>
+<p class="p_Command2"><span class="f_Command2">Actions </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Compare Contents</span></p>
+
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p class="p_Normal">In the <span class="f_Command">Actions</span> menu, the <span class="f_Command">Compare Contents</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="compare.png"/> command performs content comparisons on the selected pairs of files to determine if they match.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Content comparison methods</span></p>
+<p class="p_Normal"><span class="f_Command">CRC comparison</span> compares files using their CRC values.</p>
+<p class="p_Normal"><span class="f_Command">Binary comparison</span> compares files byte-by-byte.</p>
+<p class="p_Normal"><span class="f_Command">Rules-based comparison</span> compares files based on their <a href="file_formats.html" class="topiclink">file format</a> associations.  It allows you to define unimportant differences, such as changes in whitespace or source code comments.  A rules-based comparison can also ignore differences in file encoding or line endings.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Results of content comparisons</span></p>
+<p class="p_Normal">CRC and Binary comparisons return one of these results:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:36px; padding:0px;"><p class="p_Normal"><img width="28" height="16" style="margin:0;width:28px;height:16px;border:none" src="contentsamebinary.png"/></p>
+</td>
+<td style="vertical-align:top; width:140px; padding:0px;"><p class="p_Normal">Binary same</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">The files are exactly the same.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:36px; padding:0px;"><p class="p_Normal"><img width="28" height="16" style="margin:0;width:28px;height:16px;border:none" src="contentdifferentbinary.png"/></p>
+</td>
+<td style="vertical-align:top; width:140px; padding:0px;"><p class="p_Normal">Binary differences</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">At least one byte is different between the files.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">Rules-based comparisons have a built-in binary comparison and return one of these results:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:36px; padding:0px;"><p class="p_Normal"><img width="28" height="16" style="margin:0;width:28px;height:16px;border:none" src="contentsamebinary.png"/></p>
+</td>
+<td style="vertical-align:top; width:140px; padding:0px;"><p class="p_Normal">Binary same</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">The files are exactly the same.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:36px; padding:0px;"><p class="p_Normal"><img width="28" height="16" style="margin:0;width:28px;height:16px;border:none" src="contentsame.png"/></p>
+</td>
+<td style="vertical-align:top; width:140px; padding:0px;"><p class="p_Normal">Rules-based same</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">The files have binary differences, such as character encoding, that can be ignored.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:36px; padding:0px;"><p class="p_Normal"><img width="28" height="16" style="margin:0;width:28px;height:16px;border:none" src="contentsimilar.png"/></p>
+</td>
+<td style="vertical-align:top; width:140px; padding:0px;"><p class="p_Normal">Unimportant differences</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">A rules-based comparison found only unimportant differences.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:36px; padding:0px;"><p class="p_Normal"><img width="28" height="16" style="margin:0;width:28px;height:16px;border:none" src="contentdifferent.png"/></p>
+</td>
+<td style="vertical-align:top; width:140px; padding:0px;"><p class="p_Normal">Important differences</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">A rules-based comparison found important differences.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">When content comparisons are performed</span></p>
+<p class="p_Normal">Content comparisons are performed:</p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>when a folder session is loaded, and its session settings call for automatic content comparisons</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>explicitly, when the <span class="f_Command">Compare Contents</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="compare.png"/> command is used</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>when a pair of files is opened in a file session</p>
+</td></tr></table>
+
+</body>
+</html>

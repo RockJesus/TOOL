@@ -1,0 +1,81 @@
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "reset"; ObjectID = "0qi-mh-1ld"; */
+"0qi-mh-1ld.ibExternalAccessibilityDescription" = "重設";
+
+/* Class = "NSTextFieldCell"; title = ":"; ObjectID = "5cR-6D-9WV"; */
+"5cR-6D-9WV.title" = ":";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "switch equallizer preset"; ObjectID = "6fv-7z-pAS"; */
+"6fv-7z-pAS.ibExternalAccessibilityDescription" = "開關等化器預設";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "boom volume on / off"; ObjectID = "71R-rh-wiG"; */
+"71R-rh-wiG.ibExternalAccessibilityDescription" = "Boom 音量開/關";
+
+/* Class = "NSTextFieldCell"; title = ":"; ObjectID = "FCu-V6-VQr"; */
+"FCu-V6-VQr.title" = ":";
+
+/* Class = "NSTextFieldCell"; title = ":"; ObjectID = "Ftg-yc-NPN"; */
+"Ftg-yc-NPN.title" = ":";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "switch equallizer preset"; ObjectID = "GZd-Xb-zDm"; */
+"GZd-Xb-zDm.ibExternalAccessibilityDescription" = "開關等化器預設";
+
+/* Class = "NSTextFieldCell"; title = ":"; ObjectID = "IYN-Ws-Rjj"; */
+"IYN-Ws-Rjj.title" = ":";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "boost level down"; ObjectID = "IsG-PM-qNu"; */
+"IsG-PM-qNu.ibExternalAccessibilityDescription" = "增加水平下降";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "Launch Boom 2"; ObjectID = "KJ6-dW-RrC"; */
+"KJ6-dW-RrC.ibExternalAccessibilityDescription" = "啟動 Boom 2";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "reset"; ObjectID = "KrK-SG-kyG"; */
+"KrK-SG-kyG.ibExternalAccessibilityDescription" = "重設";
+
+/* Class = "NSView"; ibExternalAccessibilityDescription = "hot keys"; ObjectID = "Nmf-8J-wru"; */
+"Nmf-8J-wru.ibExternalAccessibilityDescription" = "熱鍵";
+
+/* Class = "NSTextField"; ibExternalAccessibilityHelp = "enter new shortcut to change existing"; ObjectID = "PBy-P2-Lu9"; */
+"PBy-P2-Lu9.ibExternalAccessibilityHelp" = "輸入新的快捷方式來變更現有的";
+
+/* Class = "NSTextFieldCell"; title = ":"; ObjectID = "RUH-9H-gbC"; */
+"RUH-9H-gbC.title" = ":";
+
+/* Class = "NSTextFieldCell"; title = ":"; ObjectID = "UV0-mb-XKL"; */
+"UV0-mb-XKL.title" = ":";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "equallizer on / off"; ObjectID = "VVn-8C-N0d"; */
+"VVn-8C-N0d.ibExternalAccessibilityDescription" = "等化器開/關";
+
+/* Class = "NSTextField"; ibExternalAccessibilityHelp = "enter new shortcut to change existing"; ObjectID = "VbK-1M-dS6"; */
+"VbK-1M-dS6.ibExternalAccessibilityHelp" = "輸入新的快捷方式來變更現有的";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "reset"; ObjectID = "VfX-Is-Igm"; */
+"VfX-Is-Igm.ibExternalAccessibilityDescription" = "重設";
+
+/* Class = "NSTextFieldCell"; title = ":"; ObjectID = "X2g-R4-27t"; */
+"X2g-R4-27t.title" = ":";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "boost level up"; ObjectID = "ZJq-z0-GY0"; */
+"ZJq-z0-GY0.ibExternalAccessibilityDescription" = "增加水平上升";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "reset"; ObjectID = "c9C-wL-7dl"; */
+"c9C-wL-7dl.ibExternalAccessibilityDescription" = "重設";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "reset"; ObjectID = "fbt-Bp-ZMG"; */
+"fbt-Bp-ZMG.ibExternalAccessibilityDescription" = "重設";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "reset"; ObjectID = "lNj-FA-Qj9"; */
+"lNj-FA-Qj9.ibExternalAccessibilityDescription" = "重設";
+
+/* Class = "NSTextFieldCell"; title = ":"; ObjectID = "oCf-SV-aMc"; */
+"oCf-SV-aMc.title" = ":";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "reset"; ObjectID = "qoP-UF-KpB"; */
+"qoP-UF-KpB.ibExternalAccessibilityDescription" = "重設";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "switch equallizer preset"; ObjectID = "tIp-ej-fqQ"; */
+"tIp-ej-fqQ.ibExternalAccessibilityDescription" = "開關等化器預設";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "reset"; ObjectID = "zLN-4g-2df"; */
+"zLN-4g-2df.ibExternalAccessibilityDescription" = "重設";
+

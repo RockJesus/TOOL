@@ -1,0 +1,51 @@
+body, html
+{
+	background-size: cover;
+    
+	width: 100%;
+	height: 100%;
+    
+    margin: 0;
+
+	background-repeat:no-repeat;
+	background-position: center center;
+	background-color:rgba(0,0,0,0);
+    
+    position: relative;
+}
+
+#imageFront, #imageMiddle, #imageBack
+{    
+	background-size: cover;
+    
+	width: 100%;
+	height: 100%;
+    
+    margin: 0;
+
+	background-repeat:no-repeat;
+    background-position: center center;
+    background-image: url("Front.png");
+    
+    position: absolute;
+    top: 0px;
+    left:0px;
+}
+
+#imageFront
+{
+    background-image: url('Front.png');
+    z-index: 2;
+}
+
+#imageMiddle
+{
+    background-image: url('Middle.png');
+    z-index: 1;
+}
+
+#imageBack
+{
+    background-image: url('Back.png');
+    z-index: 0;
+}

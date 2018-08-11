@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>Boot flags</string>
+		<key>Description</key>
+		<string>Main boot flags</string>
+		<key>Children</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>-v</string>
+				<key>Description</key>
+				<string>verbose mode</string>
+				<key>Enabled</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>-f</string>
+				<key>Description</key>
+				<string>ignore cache</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>-s</string>
+				<key>Description</key>
+				<string>single user mode</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>-x</string>
+				<key>Description</key>
+				<string>safe mode</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>kext-dev-mode=1</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>CPU flags</string>
+		<key>Description</key>
+		<string>Flags related with CPU</string>
+		<key>Children</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>cpus=1</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>-xcpm</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>-force64</string>
+				<key>Exclude</key>
+				<string>arch=i386</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>arch=i386</string>
+				<key>Exclude</key>
+				<string>-force64</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Miscellaneous</string>
+		<key>Description</key>
+		<string>Misc flags</string>
+		<key>Children</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>npci=0x2000</string>
+				<key>Exclude</key>
+				<string>npci=0x3000</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>npci=0x3000</string>
+				<key>Exclude</key>
+				<string>npci=0x2000</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>ahcidisk=1 debug=8</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>darkwake=0</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>dart=0</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>nvda_drv=1</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>GenericUSBXHCI</string>
+		<key>Description</key>
+		<string>GenericUSBXHCI kext flags</string>
+		<key>Children</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>-gux_nosleep</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>-gux_nomsi</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>-gux_defer_usb2</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>-gux_no_idle</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

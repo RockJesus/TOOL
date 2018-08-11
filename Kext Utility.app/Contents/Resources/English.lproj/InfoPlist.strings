@@ -1,0 +1,4 @@
+CFBundleName = "Kext Utility";
+CFBundleShortVersionString = "2.4.2";
+CFBundleGetInfoString = "Kext Utility version 2.4.2 Copyright 2009 cVad Software\nwww.applelife.ru";
+NSHumanReadableCopyright = "Copyright 2009 cVad Software\nwww.applelife.ru.";

@@ -1,0 +1,15 @@
+/* Class = "NSView"; ibExternalAccessibilityDescription = "Editable equallizer band"; ObjectID = "1zE-FB-cKc"; */
+"1zE-FB-cKc.ibExternalAccessibilityDescription" = "可编辑的均衡器带";
+
+/* Class = "NSView"; ibExternalAccessibilityHelp = "Press Enter to Save your changes or Press Escape to Cancel"; ObjectID = "1zE-FB-cKc"; */
+"1zE-FB-cKc.ibExternalAccessibilityHelp" = "按 Enter 键保存更改，或按 Escape 键取消";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "advanced"; ObjectID = "6LN-hk-50T"; */
+"6LN-hk-50T.ibExternalAccessibilityDescription" = "高级";
+
+/* Class = "NSButtonCell"; title = "Advanced"; ObjectID = "S3a-O6-FbF"; */
+"S3a-O6-FbF.title" = "高级";
+
+/* Class = "NSSlider"; ibExternalAccessibilityHelp = "Press Enter to Save your changes or Press Escape to Cancel"; ObjectID = "h3u-8x-YHS"; */
+"h3u-8x-YHS.ibExternalAccessibilityHelp" = "按 Enter 键保存更改，或按 Escape 键取消";
+

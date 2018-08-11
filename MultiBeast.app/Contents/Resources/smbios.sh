@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Script for adding SMBIOS information into Clover
+#
+# Copyright (C) tonymacx86 LLC
 
 # 1 = source plist
 # 2 = destination folder containing config.plist

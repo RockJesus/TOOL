@@ -1,0 +1,24 @@
+"jWl-cr-set.title" = "感谢使用人人播放器,你可以直接从人人下载器里面播放.当然你也可以打开一个本地文件来进行播放";
+/* Class = "NSTextFieldCell"; title = "Open URL…"; ObjectID = "FKG-Tz-TCV"; */
+"FKG-Tz-TCV.title" = "打开 URL…";
+
+/* Class = "NSTextFieldCell"; title = "⌘O"; ObjectID = "FKk-kb-jEw"; */
+"FKk-kb-jEw.title" = "⌘O";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "VLQ-Oo-gK9"; */
+"VLQ-Oo-gK9.title" = "Table View Cell";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "ejb-iU-Lro"; */
+"ejb-iU-Lro.title" = "Label";
+
+/* Class = "NSTextFieldCell"; title = "⇧⌘O"; ObjectID = "kBV-5X-8Bp"; */
+"kBV-5X-8Bp.title" = "⇧⌘O";
+
+/* Class = "NSTextFieldCell"; title = "RRPlayer"; ObjectID = "n70-xD-8He"; */
+"n70-xD-8He.title" = "人人播放器";
+
+/* Class = "NSTextFieldCell"; title = "Open…"; ObjectID = "qsU-lZ-WQq"; */
+"qsU-lZ-WQq.title" = "打开…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "zVA-nb-1Rx"; */
+"zVA-nb-1Rx.title" = "Text Cell";

@@ -1,0 +1,33 @@
+/* Class = "NSTextFieldCell"; title = "Mail"; ObjectID = "1QK-YO-RId"; */
+"1QK-YO-RId.title" = "邮件";
+
+/* Class = "NSTextFieldCell"; title = "Facebook"; ObjectID = "7GG-ZT-vtE"; */
+"7GG-ZT-vtE.title" = "Facebook";
+
+/* Class = "NSView"; ibExternalAccessibilityDescription = "share"; ObjectID = "7K3-Z5-Th4"; */
+"7K3-Z5-Th4.ibExternalAccessibilityDescription" = "共享";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "facebook"; ObjectID = "70F-Ft-rNt"; */
+"70F-Ft-rNt.ibExternalAccessibilityDescription" = "Facebook";
+
+/* Class = "NSView"; ibExternalAccessibilityDescription = "share"; ObjectID = "DWh-tN-KfS"; */
+"DWh-tN-KfS.ibExternalAccessibilityDescription" = "共享";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "imessage"; ObjectID = "E5A-7Q-28Q"; */
+"E5A-7Q-28Q.ibExternalAccessibilityDescription" = "iMessage";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "mail"; ObjectID = "OkK-Km-pbG"; */
+"OkK-Km-pbG.ibExternalAccessibilityDescription" = "邮件";
+
+/* Class = "NSTextFieldCell"; title = "iMessage"; ObjectID = "VuB-sY-yp8"; */
+"VuB-sY-yp8.title" = "iMessage";
+
+/* Class = "NSTextFieldCell"; title = "Twitter"; ObjectID = "m7G-kY-fdx"; */
+"m7G-kY-fdx.title" = "Twitter";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "twitter"; ObjectID = "raE-a0-0Oe"; */
+"raE-a0-0Oe.ibExternalAccessibilityDescription" = "Twitter";
+
+/* Class = "NSTextFieldCell"; title = "Copyright © 2008 - 2017, Global Delight Technologies Pvt. Ltd. All rights reserved."; ObjectID = "vS0-0e-iwF"; */
+"vS0-0e-iwF.title" = "Copyright © 2008 - 2017, Global Delight Technologies Pvt. Ltd.保留所有权利。";
+

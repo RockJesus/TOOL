@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>fold</string>
+				<string>disk</string>
+				<string>****</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>bcpkg</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>Beyond Compare.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>Beyond Compare settings</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>bcss</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>Beyond Compare.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>Beyond Compare snapshot</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSTypeIsDefaultForType</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>BCompare</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>Help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>Beyond Compare Help</string>
+	<key>CFBundleIconFile</key>
+	<string>Beyond Compare.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.ScooterSoftware.BeyondCompare</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>de</string>
+		<string>en</string>
+		<string>fr</string>
+		<string>ja</string>
+		<string>zh_cn</string>
+	</array>
+	<key>CFBundleName</key>
+	<string>Beyond Compare</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>4.2.6.23150</string>
+	<key>CFBundleSignature</key>
+	<string>BCmp</string>
+	<key>CFBundleVersion</key>
+	<string>4020.63.15</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+	<key>LSEnvironment</key>
+	<dict>
+		<key>LC_CTYPE</key>
+		<string>UTF-8</string>
+	</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 1996-2018 Scooter Software. All rights reserved.</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Select Left File for Compare</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>bcSelLeftFile</string>
+			<key>NSPortName</key>
+			<string>Beyond Compare</string>
+			<key>NSRequiredContext</key>
+			<dict/>
+			<key>NSSendFileTypes</key>
+			<array>
+				<string>public.data</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Compare Files</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>bcCompareFiles</string>
+			<key>NSPortName</key>
+			<string>Beyond Compare</string>
+			<key>NSRequiredContext</key>
+			<dict/>
+			<key>NSSendFileTypes</key>
+			<array>
+				<string>public.data</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Select Left Folder for Compare</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>bcSelLeftFolder</string>
+			<key>NSPortName</key>
+			<string>Beyond Compare</string>
+			<key>NSRequiredContext</key>
+			<dict/>
+			<key>NSSendFileTypes</key>
+			<array>
+				<string>public.directory</string>
+				<string>public.archive</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Compare Folders</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>bcCompareFolders</string>
+			<key>NSPortName</key>
+			<string>Beyond Compare</string>
+			<key>NSRequiredContext</key>
+			<dict/>
+			<key>NSSendFileTypes</key>
+			<array>
+				<string>public.directory</string>
+				<string>public.archive</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

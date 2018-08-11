@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Folder Sync Handling Settings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="archive files,archive files handling,override,override file formats,refresh,refresh automatic,zip files,zip files handling" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sessiondirsynchandling.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Folder Sync Handling Settings</span></h1>
+<p class="p_Command2"><span class="f_Command2">Session </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Session Settings </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Handling</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="sessiondirsynccomparison.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="sessiondirsync.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="sessiondirsyncnamefilter.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Subtitle"><span class="f_Subtitle">Folder handling</span></p>
+<p class="p_Normal"><span class="f_Command">Sync empty folders</span> will affect folders without content or whose entire contents have been filtered out.</p>
+<p class="p_Normal"><span class="f_Command">Expand subfolders when loading session</span> opens all folders automatically when a comparison is loaded.</p>
+<p class="p_Normal"><span class="f_Command">Sync within archives</span> treats archive files like regular folders.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">File handling</span></p>
+<p class="p_Command"><span class="f_Command">Delete to recycle bin if possible</span></p>
+<p class="p_Normal">Moves files and folders stored on a local drive to the recycle bin instead of permanently deleting them.  This option is ignored for deletions from network drives, remote services and within archive files.</p>
+<p class="p_Command"><span class="f_Command">Touch local files when copying to an FTP site</span></p>
+<p class="p_Normal">Many FTP sites do not allow Beyond Compare to control file timestamps, so when a file is copied to the FTP site, its date will not match the local copy.  This option changes the local file timestamp to match the FTP copy.</p>
+<p class="p_Command"><span class="f_Command">Follow symbolic links</span></p>
+<p class="p_Normal">Displays symbolic links and NTFS junction points as if they were their target.  This includes whether they will be shown as files or folders, their size, their last modified time, and their attributes.</p>
+<p class="p_Command"><span class="f_Command">Maintain DOS 8.3 aliases </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Normal">Tries to keep the same short (DOS 8.3) filenames when copying files.</p>
+<p class="p_Command"><span class="f_Command">Copy NTFS file permissions </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Normal">Copies security descriptors of files on NTFS file systems under Windows 2000 or newer.  This feature does not preserve permissions of files edited from Text Compare sessions.</p>
+<p class="p_Command"><span class="f_Command">Copy creation dates </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Normal">Preserves original creation date of a local file when making a copy.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Automatic refresh</span></p>
+<p class="p_Normal">Set this option to periodically refresh the folder comparison.</p>
+
+</td></tr></table>
+
+</body>
+</html>

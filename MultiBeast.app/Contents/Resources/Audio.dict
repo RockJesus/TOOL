@@ -17,17 +17,7 @@
                 </array>
                 <key>Children</key>
                 <array>
-                    
-                    <array>
-                        <string>ALC269 (BRIX only)</string>
-                        <string>Enables full functionality for the Realtek ALC269 high-definition audio codec. Installs RealtekALC.kext in /Library/Extensions. Adds codec-specific patches for AppleHDA.kext into /Volumes/EFI/EFI/CLOVER/config.plist. Adds codec specific zlib files into /System/Library/Extensions/AppleHDA.kext/Contents/Resources. CloverALC patching technique by toleda.</string>
-                        <string>Clover-ALC269.pkg</string>
-                    </array>
-                    <array>
-                        <string>ALC283 (BRIX Pro and NUC only)</string>
-                        <string>Enables full functionality for the Realtek ALC283 high-definition audio codec. Installs RealtekALC.kext in /Library/Extensions. Adds codec-specific patches for AppleHDA.kext into /Volumes/EFI/EFI/CLOVER/config.plist. Adds codec specific zlib files into /System/Library/Extensions/AppleHDA.kext/Contents/Resources. CloverALC patching technique by toleda.</string>
-                        <string>Clover-ALC283.pkg</string>
-                    </array>
+
                     <array>
                         <string>ALC885/889a</string>
                         <string>Enables full functionality for the Realtek ALC885 high-definition audio codec. Installs RealtekALC.kext in /Library/Extensions. Adds codec-specific patches for AppleHDA.kext into /Volumes/EFI/EFI/CLOVER/config.plist. Adds codec specific zlib files into /System/Library/Extensions/AppleHDA.kext/Contents/Resources. CloverALC patching technique by toleda.</string>
@@ -94,9 +84,19 @@
                         <string>OptionalHDMIAudio</string>
                     </array>
                     <array>
-                        <string>100 / 200 Series Audio</string>
-                        <string>Required for 100 and 200 Series onboard audio. Adds Rename HDAS to HDEF patch to Volumes/EFI/EFI/CLOVER/config.plist.</string>
-                        <string>Clover-100-200-HDEF-Patch.pkg</string>
+                        <string>100 / 200 / 300 Series Audio Support</string>
+                        <string>Required for 100 / 200 / 300 Series onboard audio. Must be installed before any codec installation. Adds Rename HDAS to HDEF patch to /Volumes/EFI/EFI/CLOVER/config.plist.</string>
+                        <string>Clover-HDAS-HDEF-Patch.pkg</string>
+                    </array>
+                    <array>
+                        <string>200 / Z370 Series / X299 Audio Device ID Patch</string>
+                        <string>Required for 200 / Z370 Series and X299 onboard audio. Must be installed before any codec installation. Adds temporary device ID patch to /Volumes/EFI/EFI/CLOVER/config.plist.</string>
+                        <string>Clover-Unsupported_Audio_Device_ID_Kaby_Lake.pkg</string>
+                    </array>
+                    <array>
+                        <string>H310 / B360 / H370 / Q370 Audio Device ID Patch</string>
+                        <string>Required for H310 / B360 / H370 / Q370 onboard audio. Must be installed before any codec installation. Adds temporary device ID patch to /Volumes/EFI/EFI/CLOVER/config.plist.</string>
+                        <string>Clover-Unsupported_Audio_Device_ID_Coffee_Lake.pkg</string>
                     </array>
                 </array>
             </dict>

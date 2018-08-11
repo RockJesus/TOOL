@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>Vega 控制表生成器</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style></style>
+    <script src="js/prefixfree.min.js"></script>
+  </head>
+  
+  <body>
+    <div class='wrapper' id="canvas-wrapper">
+      <canvas height='40' id='canvas' width='100'></canvas>
+      <div>
+        <select id="select" onchange="hide();">
+          <option value="cf">核心频率: MHz</option>
+          <option value="cv">核心电压: mV</option>
+          <option value="mf">显存频率: MHz</option>
+          <option value="mv">显存电压: mV</option></select>
+      </div>
+      <br>
+      <div id='cf'>
+        <div class='inputbox'>
+          <input type="number" id="num_1_0" step="1" min="100" max="2000" class="input" value="852" oninput="getWord(1,0,value)" onporpertychange="getWord(1,0,vlaue)">
+          <input type="number" id="num_1_1" step="1" min="100" max="2000" class="input" value="991" oninput="getWord(1,1,value)" onporpertychange="getWord(1,1,vlaue)">
+          <input type="number" id="num_1_2" step="1" min="100" max="2000" class="input" value="1138" oninput="getWord(1,2,value)" onporpertychange="getWord(1,2,vlaue)">
+          <input type="number" id="num_1_3" step="1" min="100" max="2000" class="input" value="1269" oninput="getWord(1,3,value)" onporpertychange="getWord(1,3,vlaue)">
+          <input type="number" id="num_1_4" step="1" min="100" max="2000" class="input" value="1348" oninput="getWord(1,4,value)" onporpertychange="getWord(1,4,vlaue)">
+          <input type="number" id="num_1_5" step="1" min="100" max="2000" class="input" value="1440" oninput="getWord(1,5,value)" onporpertychange="getWord(1,5,vlaue)">
+          <input type="number" id="num_1_6" step="1" min="100" max="2000" class="input" value="1528" oninput="getWord(1,6,value)" onporpertychange="getWord(1,6,vlaue)">
+          <input type="number" id="num_1_7" step="1" min="100" max="2000" class="input" value="1600" oninput="getWord(1,7,value)" onporpertychange="getWord(1,7,vlaue)"></div>
+        <div class='ranger'>
+          <input type="range" id="rag_1_0" step="1" min="100" max="2000" value="852" oninput="getWord(1,0,value)" onporpertychange="getWord(1,0,vlaue)" />
+          <input type="range" id="rag_1_1" step="1" min="100" max="2000" value="991" oninput="getWord(1,1,value)" onporpertychange="getWord(1,1,vlaue)" />
+          <input type="range" id="rag_1_2" step="1" min="100" max="2000" value="1138" oninput="getWord(1,2,value)" onporpertychange="getWord(1,2,vlaue)" />
+          <input type="range" id="rag_1_3" step="1" min="100" max="2000" value="1269" oninput="getWord(1,3,value)" onporpertychange="getWord(1,3,vlaue)" />
+          <input type="range" id="rag_1_4" step="1" min="100" max="2000" value="1348" oninput="getWord(1,4,value)" onporpertychange="getWord(1,4,vlaue)" />
+          <input type="range" id="rag_1_5" step="1" min="100" max="2000" value="1440" oninput="getWord(1,5,value)" onporpertychange="getWord(1,5,vlaue)" />
+          <input type="range" id="rag_1_6" step="1" min="100" max="2000" value="1528" oninput="getWord(1,6,value)" onporpertychange="getWord(1,6,vlaue)" />
+          <input type="range" id="rag_1_7" step="1" min="100" max="2000" value="1600" oninput="getWord(1,7,value)" onporpertychange="getWord(1,7,vlaue)" /></div>
+      </div>
+      <div id='cv' style="display:none">
+        <div class='inputbox'>
+          <input type="number" id="num_0_0" step="1" min="100" max="2000" class="input" value="800" oninput="getWord(0,0,value)" onporpertychange="getWord(0,0,vlaue)">
+          <input type="number" id="num_0_1" step="1" min="100" max="2000" class="input" value="900" oninput="getWord(0,1,value)" onporpertychange="getWord(0,1,vlaue)">
+          <input type="number" id="num_0_2" step="1" min="100" max="2000" class="input" value="950" oninput="getWord(0,2,value)" onporpertychange="getWord(0,2,vlaue)">
+          <input type="number" id="num_0_3" step="1" min="100" max="2000" class="input" value="1000" oninput="getWord(0,3,value)" onporpertychange="getWord(0,3,vlaue)">
+          <input type="number" id="num_0_4" step="1" min="100" max="2000" class="input" value="1050" oninput="getWord(0,4,value)" onporpertychange="getWord(0,4,vlaue)">
+          <input type="number" id="num_0_5" step="1" min="100" max="2000" class="input" value="1100" oninput="getWord(0,5,value)" onporpertychange="getWord(0,5,vlaue)">
+          <input type="number" id="num_0_6" step="1" min="100" max="2000" class="input" value="1150" oninput="getWord(0,6,value)" onporpertychange="getWord(0,6,vlaue)">
+          <input type="number" id="num_0_7" step="1" min="100" max="2000" class="input" value="1200" oninput="getWord(0,7,value)" onporpertychange="getWord(0,7,vlaue)"></div>
+        <div class='ranger'>
+          <input type="range" id="rag_0_0" step="1" min="100" max="2000" value="800" oninput="getWord(0,0,value)" onporpertychange="getWord(0,0,vlaue)" />
+          <input type="range" id="rag_0_1" step="1" min="100" max="2000" value="900" oninput="getWord(0,1,value)" onporpertychange="getWord(0,1,vlaue)" />
+          <input type="range" id="rag_0_2" step="1" min="100" max="2000" value="950" oninput="getWord(0,2,value)" onporpertychange="getWord(0,2,vlaue)" />
+          <input type="range" id="rag_0_3" step="1" min="100" max="2000" value="1000" oninput="getWord(0,3,value)" onporpertychange="getWord(0,3,vlaue)" />
+          <input type="range" id="rag_0_4" step="1" min="100" max="2000" value="1050" oninput="getWord(0,4,value)" onporpertychange="getWord(0,4,vlaue)" />
+          <input type="range" id="rag_0_5" step="1" min="100" max="2000" value="1100" oninput="getWord(0,5,value)" onporpertychange="getWord(0,5,vlaue)" />
+          <input type="range" id="rag_0_6" step="1" min="100" max="2000" value="1150" oninput="getWord(0,6,value)" onporpertychange="getWord(0,6,vlaue)" />
+          <input type="range" id="rag_0_7" step="1" min="100" max="2000" value="1200" oninput="getWord(0,7,value)" onporpertychange="getWord(0,7,vlaue)" /></div>
+      </div>
+      <div id='mf' style="display:none">
+        <div class='inputbox'>
+          <input type="number" id="num_2_0" step="1" min="100" max="2000" class="input" value="167" oninput="getWord(2,0,value)" onporpertychange="getWord(2,0,vlaue)">
+          <input type="number" id="num_2_1" step="1" min="100" max="2000" class="input" value="500" oninput="getWord(2,1,value)" onporpertychange="getWord(2,1,vlaue)">
+          <input type="number" id="num_2_2" step="1" min="100" max="2000" class="input" value="800" oninput="getWord(2,2,value)" onporpertychange="getWord(2,2,vlaue)">
+          <input type="number" id="num_2_3" step="1" min="100" max="2000" class="input" value="945" oninput="getWord(2,3,value)" onporpertychange="getWord(2,3,vlaue)"></div>
+        <div class='ranger'>
+          <input type="range" id="rag_2_0" step="1" min="100" max="2000" value="167" oninput="getWord(2,0,value)" onporpertychange="getWord(2,0,vlaue)" />
+          <input type="range" id="rag_2_1" step="1" min="100" max="2000" value="500" oninput="getWord(2,1,value)" onporpertychange="getWord(2,1,vlaue)" />
+          <input type="range" id="rag_2_2" step="1" min="100" max="2000" value="800" oninput="getWord(2,2,value)" onporpertychange="getWord(2,2,vlaue)" />
+          <input type="range" id="rag_2_3" step="1" min="100" max="2000" value="945" oninput="getWord(2,3,value)" onporpertychange="getWord(2,3,vlaue)" /></div>
+      </div>
+      <div id='mv' style="display:none">
+        <div class='inputbox'>
+          <input type="number" id="num_3_0" step="1" min="100" max="2000" class="input" value="1350" oninput="getWord(3,0,value)" onporpertychange="getWord(3,0,vlaue)"></div>
+        <div class='ranger'>
+          <input type="range" id="rag_3_0" step="1" min="100" max="2000" value="1350" oninput="getWord(3,0,value)" onporpertychange="getWord(3,0,vlaue)" /></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="fan">
+        <div>
+          <div id="free_fan_icon" style="width: 100px;height: 100px;">
+            <embed src="img/fan.svg" width="100px"></div><a href="javascript:void(0);" onclick="alert('待机状态下的转速, 也就是平常意义上的最低转速')"
+>空闲怠速</a></div>
+        <div style="float: left;width: 5%;"></div>
+        <div>
+          <div id="down_fan_icon" style="width: 100px;height: 100px;">
+            <embed src="img/fan.svg" width="100px"></div><a href="javascript:void(0);" onclick="alert('温度达到目标温度时的转速, 此处设定的是理论最大值\n具体的实际转速由vBios控制')"
+            >目标转速</a></div>
+        <div style="float: left;width: 5%;"></div>
+        <div>
+          <div id="min_fan_icon" style="width: 100px;height: 100px;">
+            <embed src="img/fan.svg" width="100px"></div><a href="javascript:void(0);" onclick="alert('理论最低转速, 一般无需修改')"
+                >最低转速</a></div>
+        <div style="float: left;width: 5%;"></div>
+        <div>
+          <div id="max_fan_icon" style="width: 100px;height: 100px;">
+            <embed src="img/fan.svg" width="100px"></div><a href="javascript:void(0);" onclick="alert('理论最高转速, 一般无需修改')"
+                >最高转速</a></div>
+      </div>
+      <br>
+      <div id="fan_inputbox">
+        <input type="number" class="input" value="1500" min="100" max="5000" id="free_fan_num" oninput="valSync('free_fan',value,100,5000)" onporpertychange="valSync('free_fan',value,100,5000)">
+        <input type="number" class="input" value="2300" min="100" max="5000" id="down_fan_num" oninput="valSync('down_fan',value,100,5000)" onporpertychange="valSync('down_fan',value,100,5000)">
+        <input type="number" class="input" step="100" value="400" min="100" max="5000" id="min_fan_num" oninput="valSync('min_fan',value,100,5000)" onporpertychange="valSync('min_fan',value,100,5000)">
+        <input type="number" class="input" step="100" value="3300" min="100" max="5000" id="max_fan_num" oninput="valSync('max_fan',value,100,5000)" onporpertychange="valSync('max_fan',value,100,5000)"></div>
+      <div id="fan_ranger">
+        <input type="range" value="1500" min="100" max="5000" id="free_fan" oninput="valSync('free_fan',value,100,5000)" onporpertychange="valSync('free_fan',value,100,5000)">
+        <input type="range" value="2300" min="100" max="5000" id="down_fan" oninput="valSync('down_fan',value,100,5000)" onporpertychange="valSync('down_fan',value,100,5000)">
+        <input type="range" step="100" value="400" min="100" max="5000" id="min_fan" oninput="valSync('min_fan',value,100,5000)" onporpertychange="valSync('min_fan',value,100,5000)">
+        <input type="range" step="100" value="3300" min="100" max="5000" id="max_fan" oninput="valSync('max_fan',value,100,5000)" onporpertychange="valSync('max_fan',value,100,5000)"></div>
+        <div>
+        <br>
+        <div><a href="javascript:void(0);" onclick="alert('仅为官方英文名称翻译而来, 不知具体含义\n原文: usFanOutputSensitivity')"
+            >风扇灵敏度</a></div>
+          <input type="number" class="input" value="4836" min="100" max="7000" id="sen_fan_num" oninput="valSync('sen_fan',value,100,7000)" onporpertychange="valSync('free_fan',value,100,7000)"></div>
+          <div>
+          <input type="range" value="4836" min="100" max="7000" id="sen_fan" oninput="valSync('sen_fan',value,100,7000)" onporpertychange="valSync('free_fan',value,100,7000)">
+        </div>
+    </div>
+    <div class="wrapper">
+      <div class="fan">
+        <div id="mometer">
+          <div id="hot"></div>
+          <span>
+            <div id="Hgheader">0℃</div>
+            <div id="Hg"></div>
+          </span>
+        </div>
+      </div><a href="javascript:void(0);" onclick="alert('达到此温度时, 触发风扇开始加速运行')"
+          >目标温度</a>
+      <div>
+        <input type="number" class="input" value="65" min="10" max="100" id="temp_num" oninput="valSync('temp',value,10,100);" onporpertychange="valSync('temp',value,10,100);"></div>
+      <div>
+        <input type="range" value="80" min="10" max="100" id="temp" oninput="valSync('temp',value,10,100);" onporpertychange="valSync('temp',value,10,100);"></div>
+        <br><div><a href="javascript:void(0);" onclick="alert('极限功率, 官方默认设定为50%')"
+                  >功率调整范围(%)</a></div>
+        <div>
+          <input type="number" class="input" value="50" min="10" max="150" id="power_num" oninput="valSync('power',value,10,150);" onporpertychange="valSync('power',value,10,150);"></div>
+        <div>
+          <input type="range" value="50" min="10" max="150" id="power" oninput="valSync('power',value,10,150);" onporpertychange="valSync('power',value,10,150);"></div>
+    </div>
+    <div class="wrapper">
+      <button class="create-button" onclick="location.reload();">恢复默认配置</button>
+      <button class="create-button" onclick="createTable('FELC','link')">生成信息链接</button>
+      <button class="create-button" onclick="createTable('FELC','tab')">生成控制信息</button></div>
+    <script type='text/JavaScript' src='js/Chart.min.js'></script>
+    <script type='text/JavaScript' src='js/chartjs-plugin-annotation.min.js'></script>
+    <script type="text/JavaScript" src='js/jquery-3.3.1.min.js'></script>
+    <script type="text/JavaScript" src='js/temp.js'></script>
+    <script type="text/JavaScript" src="js/range.js"></script>
+    <script type="text/JavaScript" src="js/fan.js"></script>
+    <script type="text/JavaScript" src="js/create.js"></script>
+    <script>
+    var ctx = document.getElementById("canvas").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels : ["P0","P1","P2","P3","P4","P5","P6","P7"],
+          datasets : [{
+              data : [800,900,950,1000,1050,1100,1150,1200],
+              label:"核心电压",
+              fill: false,
+              backgroundColor : "rgba(220,220,220,.5)",
+              borderColor : "rgba(220,220,220,1)",
+              pointBorderColor : "rgba(220,220,220,1)",
+              pointBackgroundColor : "#fff",
+            },
+          {
+              data : [852,991,1138,1269,1348,1440,1528,1600],
+              label:"核心频率",
+              fill: false,
+              backgroundColor : "rgba(90,190,90,.5)",
+              borderColor : "rgba(90,190,90,1)",
+              pointBorderColor : "rgba(90,190,90,1)",
+              pointBackgroundColor : "#fff",
+            },
+            {
+                data : [167,500,800,945],
+                label:"显存频率",
+                fill: false,
+                backgroundColor : "rgba(252,100,96,.5)",
+                borderColor : "rgba(252,100,96,1)",
+                pointBorderColor : "rgba(252,100,96,1)",
+                pointBackgroundColor : "#fff",
+              }]
+            },
+      options: {
+        annotation: {
+              annotations: [{
+                type: 'line',
+                mode: 'horizontal',
+                scaleID: 'y-axis-0',
+                value: 1350,
+                borderColor: 'rgba(270,190,90,1)',
+                borderWidth: 3,
+                label: {
+                  enabled: true,
+                  content: '显存电压'
+                }
+              }]
+            },
+        elements: {
+              line: {
+                tension: 0,
+              }
+            },
+        animation: {
+          duration: 0,
+        },
+          scales: {
+            yAxes: [{
+              ticks: {
+                fontSize: 10,
+                max: 2000,
+                min: 100,
+                stepSize: 100
+              }
+            }],
+            xAxes: [{
+              ticks: {
+                fontSize: 15,
+              }
+            }]
+          }
+        }
+      });
+    </script>
+  </body>
+
+</html>

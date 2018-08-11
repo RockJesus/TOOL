@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>3-way Merge Concepts</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="3-way merge,3-way merge concepts,merge,merge concepts" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "3-way_merge_concepts.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#7B6B45;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">3-way Merge Concepts</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p class="p_Normal"><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+<p class="p_Normal">A merge session helps you combine separate sets of changes into a new version of the data, accommodating both sets of changes.</p>
+<p class="p_Normal">Consider first a simple 2-sided comparison, where an item is on one side and not the other.  The software can't tell if the item was newly added on one side, or if its pair was deleted from the other side:</p>
+<p style="margin: 8px 0px 16px 0px;"><img width="774" height="108" style="margin:0;width:774px;height:108px;border:none" src="mergenobase.png"/></p>
+<p class="p_Normal">However, when there is an older copy of the data available there is more information to base merge decisions on.  For example, to decide whether an item was added on one side or deleted on the other, we can refer to an older copy of the data:</p>
+<p class="p_Normal"><img width="772" height="226" style="margin:0;width:772px;height:226px;border:none" src="mergebase.png"/></p>
+<p class="p_Normal">In this situation, the program can help you quickly and accurately combine independent modifications.  This is called a <span class="f_Definition">3-way merge</span>.</p>
+<p class="p_Normal">However, not all changes can be safely merged without careful review.  If the same line has been independently changed on both sides (and the changes are different from each other) the line will be flagged as a <span class="f_Definition">conflict</span> requiring manual review.</p>
+
+</td></tr></table>
+
+</body>
+</html>

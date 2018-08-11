@@ -1,0 +1,84 @@
+
+/* Class = "NSTextFieldCell"; title = "Scroll horizontally to:"; ObjectID = "1yb-m4-1sK"; */
+"1yb-m4-1sK.title" = "查找方法:";
+
+/* Class = "NSMenuItem"; title = "Previous / Next Media"; ObjectID = "2Ig-fw-UvW"; */
+"2Ig-fw-UvW.title" = "上一个 / 下一个";
+
+/* Class = "NSMenuItem"; title = "Toggle fullscreen"; ObjectID = "6F4-gm-oBg"; */
+"6F4-gm-oBg.title" = "切换全屏";
+
+/* Class = "NSTextFieldCell"; title = "Exact seek is more precise but can cause lag and high CPU usage."; ObjectID = "6FZ-Qm-0k0"; */
+"6FZ-Qm-0k0.title" = "精确查找对于大文件会消耗大量 CPU 并导致卡顿";
+
+/* Class = "NSMenuItem"; title = "Exact seek"; ObjectID = "70P-6t-4jC"; */
+"70P-6t-4jC.title" = "精确查找";
+
+/* Class = "NSMenuItem"; title = "Pause / Resume"; ObjectID = "A8c-wa-IFR"; */
+"A8c-wa-IFR.title" = "暂停 / 继续";
+
+/* Class = "NSMenuItem"; title = "Pause / Resume"; ObjectID = "Dm7-JG-fLd"; */
+"Dm7-JG-fLd.title" = "暂停 / 继续";
+
+/* Class = "NSTextFieldCell"; title = "Double click to:"; ObjectID = "GPH-fM-XHN"; */
+"GPH-fM-XHN.title" = "双击鼠标时:";
+
+/* Class = "NSMenuItem"; title = "Auto"; ObjectID = "K9H-w9-wmT"; */
+"K9H-w9-wmT.title" = "自动";
+
+/* Class = "NSTextFieldCell"; title = "Single click to:"; ObjectID = "QhO-As-ZLL"; */
+"QhO-As-ZLL.title" = "单击鼠标时:";
+
+/* Class = "NSMenuItem"; title = "Speed"; ObjectID = "hIG-5X-2Pm"; */
+"hIG-5X-2Pm.title" = "速度调整";
+
+/* Class = "NSTextFieldCell"; title = "Use left/right button for:"; ObjectID = "kEB-gk-wuI"; */
+"kEB-gk-wuI.title" = "点击左/右键时";
+
+/* Class = "NSTextFieldCell"; title = "Amount for normal seek:"; ObjectID = "of2-ec-OkC"; */
+"of2-ec-OkC.title" = "查找滚动灵敏度:";
+
+/* Class = "NSMenuItem"; title = "Fastforward / Rewind"; ObjectID = "q50-Po-JYO"; */
+"q50-Po-JYO.title" = "前进 / 后退";
+
+/* Class = "NSMenuItem"; title = "None"; ObjectID = "w54-7I-QfW"; */
+"w54-7I-QfW.title" = "无";
+
+/* Class = "NSMenuItem"; title = "Keyframe seek"; ObjectID = "wBB-fx-Mao"; */
+"wBB-fx-Mao.title" = "关键帧查找";
+
+/* Class = "NSMenuItem"; title = "None"; ObjectID = "wkV-Gq-B0T"; */
+"wkV-Gq-B0T.title" = "无";
+
+"9qx-ao-oxE.title" = "隐藏播放控制";
+
+// Right click actions
+"Rqy-g2-AP2.title" = "右键单击时:";
+"OOM-jo-N4V.title" = "隐藏播放控制";
+"mOX-Fi-oTv.title" = "暂停 / 继续";
+"oOk-y6-lek.title" = "无";
+
+"hNU-dJ-5Cj.title" = "纵向滚动时:";
+"SYg-hW-b6r.title" = "调整音量";
+"RCe-3m-q9N.title" = "查找";
+"NjV-fH-YgN.title" = "无";
+"w1Y-jy-vNc.title" = "横向滚动时:";
+"wcS-tP-wav.title" = "查找";
+"guu-dK-YfL.title" = "无";
+"YQH-1a-WcM.title" = "音量滚动灵敏度:";
+"E8H-pO-MLc.title" = "双指缩放时:";
+"Ols-Lr-fiH.title" = "缩放窗口";
+"Hm3-dh-jgb.title" = "切换全屏";
+"chS-d2-TG1.title" = "无";
+
+"Gyd-Qt-FEo.title" = "中键单击时:";
+"iFF-Gq-tVx.title" = "隐藏播放控制";
+"uqM-UM-Xvb.title" = "暂停 / 继续";
+"7wy-xt-c8Z.title" = "切换全屏";
+"unj-zt-RyU.title" = "无";
+
+"dpH-PO-WKt.title" = "Force Touch 时:";
+"M6K-ME-cve.title" = "隐藏播放控制";
+"Ba4-eT-rTv.title" = "暂停 / 继续";
+"hDh-Lk-FJe.title" = "切换全屏";
+"jnR-2I-4x4.title" = "无";

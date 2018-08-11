@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>File Masks</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="file masks" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "file_masks.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#7B6B45;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">File Masks</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p class="p_Normal">A file mask is a pattern of characters and wildcards used to match folder and file names.</p>
+<p class="p_Normal">Example:  *.* would match any filename.  For historical reasons, it even matches files that don't have an extension.</p>
+<p class="p_Normal">Example:  *.html would match any HTML filename.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Wildcards</span></p>
+<p class="p_Normal">Wildcards allow a file mask to match multiple folder or file names.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">?</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Matches any single character.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">*</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Matches zero or any other amount of characters.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">[az]</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Matches any single character in the set (a or z).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">[a-z]</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Matches any single character in the range (from a to z).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">[!az]</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Matches any single character not in the set (not a and not z).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">[[]</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Matches a single [ character.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">Example:  A? would match A followed by any single character.</p>
+<p class="p_Normal">Example:  A* would match A followed by any amount of characters.</p>
+<p class="p_Normal">Example:  [a-z0-9] would match any number or letter.</p>
+<p class="p_Normal">Example:  [!ac-g] would match any character except for a, c, d, e, f, and g.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Simple file masks</span></p>
+<p class="p_Normal">Simple file masks will affect any files or folders whose parent folder is included.  The base folder is always included.  All folders which contain included files are also included.</p>
+<p class="p_Normal">To exclude rather than include the specified items, add a minus sign (-) in front of a file mask in the <span class="f_Command">Filters</span> edit.  In the File Filters dialog, place the file mask in the Exclude edit rather than using the minus sign.</p>
+<p class="p_Normal">If the last character in the file mask is a period (.) then ? and * wildcards do not match periods to allow filtering of files that don't have an extension.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">f</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Include any file named f.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">p\</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Include any folder named p.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">-f</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Exclude any file named f.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">-p\</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Exclude any folder named p.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">Example:  *.pas;*.dfm;*.dpr would include only files with extensions pas, dfm, or dpr.</p>
+<p class="p_Normal">Example:  Source\ would include only folders named Source and their subfolders.</p>
+<p class="p_Normal">Example:  -*.dcu;-*.ddp would exclude files with extensions dcu, or ddp.</p>
+<p class="p_Normal">Example:  -Backup\ would exclude folders named Backup.</p>
+<p class="p_Normal">Example:  *. would include only files without an extension.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Relative file masks</span></p>
+<p class="p_Normal">Relative file masks affect files or folders in specific locations.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">p\f</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">f must be in folder p.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">.\f</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">f must be in the base folder.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:58px; padding:0px;"><p class="p_Normal">...\f</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">f may have zero or more parent folders.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">Example:  Windows\*.txt would affect any text file in any included folder named Windows.</p>
+<p class="p_Normal">Example:  ...\Windows\*.txt would affect any text file in any folder named Windows.</p>
+<p class="p_Normal">Example:  .\Windows\*.txt would affect any text file in a folder named Windows that is in the base folder.</p>
+
+</td></tr></table>
+
+</body>
+</html>

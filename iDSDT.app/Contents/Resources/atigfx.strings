@@ -1,0 +1,82 @@
+Method (_DSM, 4, NotSerialized)
+{
+	Store (Package ()
+	{
+	   "@0,compatible", 
+	    Buffer (){
+			"ATY,Motmot" 
+		}, 
+			   
+		"@0,deviceType", 
+		Buffer ()
+		{
+			"display"
+		}, 
+		"@0,VRAM,memsize", 
+		Buffer ()
+		{
+			0x00, 0x00, 0x00, 0X%x
+		}, 
+		"@0,display-connect-flags", 
+		Buffer ()
+		{
+			0x00, 0x04
+		}, 
+		"@0,name", 
+		Buffer ()
+		{
+			"ATY,Display_A"
+		}, 
+		"@1,compatible", 
+		Buffer ()
+		{
+			"ATY,Motmot" 
+		}, 
+		"@1,device_type", 
+		Buffer ()
+		{
+			"display"
+		}, 
+		"@1,VRAM,memsize", 
+		Buffer ()
+		{
+			0x00, 0x00, 0x00, 0X%x
+		}, 
+			   
+		"@1,display-connect-flags", 
+		Buffer ()
+		{
+			0x00, 0x04
+		}, 
+		"@1,name", 
+		Buffer ()
+		{
+		   "ATY,Display_B"
+		}, 			  
+		"device_type", 
+		Buffer ()
+		{
+			"ATY,MotmotParent" 
+		}, 
+		"VRAM,totalsize", 
+		Buffer ()
+		{
+			0x00, 0x00, 0x00, 0X%x
+		}, 
+		"hda-gfx", 
+		Buffer ()
+		{
+			"onboard-1"
+		},
+		"model", 
+		Buffer ()
+		{
+		   "%@" /*  name   */
+		}			   
+		  %@    /* other */ 
+	}, Local0)
+	DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+	Return (Local0)
+}
+
+	

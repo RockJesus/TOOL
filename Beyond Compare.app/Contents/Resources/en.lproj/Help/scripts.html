@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Scripts</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="automate Beyond Compare,batch file processing,scripts,scripts overview" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "scripts.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Scripts</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="moving_bc_to_another_computer.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="using_bc.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="sample_scripts.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">Beyond Compare provides a script processing feature which allows you to automate routine tasks.  A script is a simple text file containing a list of commands which can control the program and automatically perform file operations or produce reports.  See <a href="scripting_reference.html" class="topiclink">Scripting Reference</a> for a list of all scripting commands.</p>
+<p class="p_Normal">Scripts run without displaying the usual Beyond Compare user interface, but might require input for certain confirmations.  Scripts essentially manipulate an invisible folder session: file operations require selections, the &quot;display&quot; can be limited with filters, and folders can be &quot;expanded&quot; to recurse into them.  Any folder name argument can be a folder on your system, on the network or a remote service, or the name of an archive file such as .zip, .cab, or Beyond Compare Snapshot file.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Running a script</span></p>
+<p class="p_Normal">Specify the filename of the script on the command line with a leading &quot;@&quot; symbol, as in:</p>
+<p class="p_IndentedCode"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/><span class="f_CourierFixed">BCompare.exe @&quot;C:\</span><span class="f_CourierFixed">My Folder</span><span class="f_CourierFixed">\</span><span class="f_CourierFixed">My Script</span><span class="f_CourierFixed">.txt&quot;</span></p>
+<p class="p_IndentedCode"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="linux.png"/><span class="f_CourierFixed">bcompare @&quot;</span><span class="f_CourierFixed">My Folder</span><span class="f_CourierFixed">/</span><span class="f_CourierFixed">My Script</span><span class="f_CourierFixed">&quot;</span></p>
+<p class="p_IndentedCode"><span class="f_IndentedCode">&nbsp;</span></p>
+<p class="p_Subtitle"><span class="f_Subtitle">Creating a script</span></p>
+<p class="p_Normal">Scripts are processed line by line, with a single command per line.  Scripts are not case sensitive, and blank lines and comments (anything after a &quot;#&quot;) are ignored.  Arguments are separated by spaces.  To include a space in an argument, surround the argument with quotes (&quot;).  To continue a long command on a second (or third) line, add an ampersand (&amp;) at the end of every line but the last.</p>
+<p class="p_Normal">A parameter specified on the command line can be referenced by inserting a percent sign (%) followed by a single number from 1-9.  The script name and command line switches starting with / are not included in the 1-9 list.  Given the command line:</p>
+<p class="p_IndentedCode"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/><span class="f_CourierFixed">BCompare.exe @&quot;</span><span class="f_CourierFixed">My Script</span><span class="f_CourierFixed">.txt&quot; /silent &quot;</span><span class="f_CourierFixed">My Session</span><span class="f_CourierFixed">&quot;</span></p>
+<p class="p_IndentedCode"><span class="f_IndentedCode">&nbsp;</span></p>
+<p class="p_Normal">the session named &quot;My Session&quot; can be loaded by adding the following to the script:</p>
+<p class="p_IndentedCode"><span class="f_CourierFixed">load &quot;%1&quot;</span></p>
+<p class="p_IndentedCode"><span class="f_IndentedCode">&nbsp;</span></p>
+<p class="p_Normal">An environmental variable can be inserted by enclosing its name in percent signs.  The character case of the environmental variable must be correct.  The system's temporary folder can be loaded by adding the following to the script:</p>
+<p class="p_IndentedCode"><span class="f_CourierFixed">load &quot;%TMP%&quot;</span></p>
+<p class="p_IndentedCode"><span class="f_IndentedCode">&nbsp;</span></p>
+<p class="p_Normal">There are several dynamic variables that Beyond Compare can fill in at each line of the script.  The %date% variable fills in the current date in the format yyyy-mm-dd.  The %time% variable's format depends on your computer's regional settings.  The %fn_time% variable outputs the time as hh-mm-ss, which can be used for filenames.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Scripting command line switches</span></p>
+<p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/><span class="f_Subtitle"> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="linux.png"/> Note  </span>Mac and Linux users should prefix the switches with &quot;-&quot; instead of &quot;/&quot;.</p>
+<p class="p_Normal">The command line switches that affect scripting are <span class="f_CourierFixed">/closescript</span>, <span class="f_CourierFixed">/leftreadonly</span>, <span class="f_CourierFixed">/readonly</span>, <span class="f_CourierFixed">/rightreadonly</span>, and <span class="f_CourierFixed">/silent</span>.  Normally, script processing adds an entry on the Task Bar and displays a Scripting Status Window detailing its progress and any errors.  The <span class="f_CourierFixed">/silent</span> switch bypasses the Task Bar entry and Scripting Status Window, allowing Beyond Compare to process the script invisibly.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Scripting options</span></p>
+<p class="p_Normal">To change the script processing options, pick <span class="f_Command">Tools &gt; Options</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="options.png"/>, switch to the <span class="f_Command">Tweaks</span> page, and then scroll to find <span class="f_Command">Scripts</span>.  Mark the <span class="f_Command">Beep when finished</span> checkbox to have Beyond Compare sound an audible beep when it completes script processing.  This beep can alert you to check and close the Scripting Status window.  <span class="f_Command">Close when finished</span> causes Beyond Compare to automatically close its Scripting Status window when it completes script processing.  When used in conjunction with <span class="f_Command">Beep when finished</span>, the beep simply tells you the process has completed.</p>
+<p class="p_Normal">There is also a place to designate a <span class="f_Command">Shared scripts folder</span>.  When you provide a script name argument on the command line with no path designation, and there is no file of that name in the current folder, Beyond Compare will look in the <span class="f_Command">Shared scripts folder</span> for that script.</p>
+
+</td></tr></table>
+
+</body>
+</html>

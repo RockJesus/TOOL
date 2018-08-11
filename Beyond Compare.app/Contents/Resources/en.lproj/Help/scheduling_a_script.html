@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Scheduling a Script</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="scheduled task,scripts,scripts scheduling" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "scheduling_a_script.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Scheduling a Script</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="sample_scripts.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="scripts.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="settings_reference.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Normal">You can use Beyond Compare's script processor to perform certain tasks, such as synchronizing folders, without interaction.  For example, to automate a backup of &quot;C:\My Folder&quot;, enter the following script commands into Notepad:</p>
+<p class="p_IndentedCode"><span class="f_CourierFixed">load &quot;C:\</span><span class="f_CourierFixed">My Folder</span><span class="f_CourierFixed">&quot; &quot;C:\</span><span class="f_CourierFixed">My Backups</span><span class="f_CourierFixed">&quot;</span></p>
+<p class="p_IndentedCode"><span class="f_CourierFixed">expand all</span></p>
+<p class="p_IndentedCode"><span class="f_CourierFixed">select left.newer.files left.orphan.files</span></p>
+<p class="p_IndentedCode"><span class="f_CourierFixed">copy left-&gt;right</span></p>
+<p class="p_IndentedCode"><span class="f_IndentedCode">&nbsp;</span></p>
+<p class="p_Normal">Save this text file as <span class="f_CourierFixed">&quot;C:\My Scripts\Sync.txt&quot;</span>.</p>
+<p class="p_Normal">To run a Beyond Compare script at any desired time:</p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span>In Windows Task Scheduler, pick <span class="f_Command">Action &gt; Create Basic Task</span> to get a wizard.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span>In <span class="f_Command">Action</span>, pick <span class="f_Command">Start a program</span>.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span>In <span class="f_Command">Program/script</span>, pick the Beyond Compare 4 executable.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">4.</span>In <span class="f_Command">Add arguments</span>, add a reference to your script file:<br />
+<span class="f_CourierFixed">@</span><span class="f_CourierFixed">Sync</span><span class="f_CourierFixed">.txt</span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">5.</span>In <span class="f_Command">Start in</span>, pick the script folder:<br />
+<span class="f_CourierFixed">C:\</span><span class="f_CourierFixed">My Scripts</span></p><p class="p_Normal">We recommend including a log command in your script.  If you have trouble with your script, check out the Scheduled Tasks error log: &quot;SchedLgU.txt&quot; in your Windows folder.</p>
+
+</td></tr></table>
+
+</body>
+</html>

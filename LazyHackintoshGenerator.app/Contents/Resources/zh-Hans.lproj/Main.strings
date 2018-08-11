@@ -1,0 +1,72 @@
+
+/* Class = "NSMenuItem"; title = "懒人版镜像制作器"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "懒人版镜像制作器";
+
+/* Class = "NSButtonCell"; title = "退出"; ObjectID = "4oe-lq-Fmn"; */
+"4oe-lq-Fmn.title" = "退出";
+
+/* Class = "NSMenuItem"; title = "退出 懒人版镜像制作器"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "退出 懒人版镜像制作器";
+
+/* Class = "NSMenuItem"; title = "关于 懒人版镜像制作器"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "关于 懒人版镜像制作器";
+
+/* Class = "NSButtonCell"; title = "开始"; ObjectID = "78f-UZ-JFI"; */
+"78f-UZ-JFI.title" = "开始";
+
+/* Class = "NSButtonCell"; title = "内核Lapic补丁"; ObjectID = "9vX-Bi-vQi"; */
+"9vX-Bi-vQi.title" = "内核Lapic补丁";
+
+/* Class = "NSButtonCell"; title = "Copy OSInstaller"; ObjectID = "ACT-AL-v8U"; */
+"ACT-AL-v8U.title" = "导入OSInstaller";
+
+/* Class = "NSMenu"; title = "主菜单"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "主菜单";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "检测更新"; ObjectID = "PVa-qe-VTN"; */
+"PVa-qe-VTN.title" = "检测更新";
+
+/* Class = "NSButtonCell"; title = "自定义生成镜像大小"; ObjectID = "T6N-SL-jmh"; */
+"T6N-SL-jmh.title" = "自定义生成镜像大小";
+
+/* Class = "NSButtonCell"; title = "安装命令行工具"; ObjectID = "blk-oQ-iCj"; */
+"blk-oQ-iCj.title" = "安装命令行工具";
+
+/* Class = "NSTextFieldCell"; title = "拖入Extra文件夹(可选)"; ObjectID = "dYT-MI-ERe"; */
+"dYT-MI-ERe.title" = "拖入Extra文件夹(可选)";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "k82-n4-Qi8"; */
+"k82-n4-Qi8.title" = "Label";
+
+/* Class = "NSButtonCell"; title = "直接写入分区(耗时较长)"; ObjectID = "kye-sc-dC2"; */
+"kye-sc-dC2.title" = "直接写入分区(耗时较长)";
+
+/* Class = "NSMenuItem"; title = "开启调试日志"; ObjectID = "m5L-xw-t0a"; */
+"m5L-xw-t0a.title" = "开启调试日志";
+
+/* Class = "NSTextFieldCell"; title = "GB"; ObjectID = "nus-BF-iqV"; */
+"nus-BF-iqV.title" = "GB";
+
+/* Class = "NSButtonCell"; title = "自定义输出文件"; ObjectID = "oQ6-oL-hfO"; */
+"oQ6-oL-hfO.title" = "自定义输出文件";
+
+/* Class = "NSButtonCell"; title = "内核XCPM补丁"; ObjectID = "pvR-jb-Lfe"; */
+"pvR-jb-Lfe.title" = "内核XCPM补丁";
+
+/* Class = "NSButtonCell"; title = "MBR补丁"; ObjectID = "q5G-N8-8sb"; */
+"q5G-N8-8sb.title" = "MBR补丁";
+
+/* Class = "NSTextFieldCell"; title = "请在此处拖入DMG镜像或者安装包。"; ObjectID = "qeC-H5-IUy"; */
+"qeC-H5-IUy.title" = "请在此处拖入DMG镜像或者安装包。";
+
+/* Class = "NSButtonCell"; title = "放入原版内核"; ObjectID = "ryD-dv-ejv"; */
+"ryD-dv-ejv.title" = "放入原版内核";
+
+/* Class = "NSMenu"; title = "懒人版镜像制作器"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "懒人版镜像制作器";
+
+/* Class = "NSButtonCell"; title = "同时生成CDR"; ObjectID = "znd-va-Rf7"; */
+"znd-va-Rf7.title" = "同时生成CDR";

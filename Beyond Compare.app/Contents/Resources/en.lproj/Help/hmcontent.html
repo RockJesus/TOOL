@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>Beyond Compare</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { background:#FFF; }
+       .navbar   { font-size: 120%; }
+
+       .heading1 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading3 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading4 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading5 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading6 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+
+       .hilight1 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #FFFFFF; background: #002682; text-decoration: none; }
+       .hilight2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #FFFFFF; background: #002682; text-decoration: none; }
+       .hilight3 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #FFFFFF; background: #002682; text-decoration: none; }
+       .hilight4 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #FFFFFF; background: #002682; text-decoration: none; }
+       .hilight5 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #FFFFFF; background: #002682; text-decoration: none; }
+       .hilight6 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #FFFFFF; background: #002682; text-decoration: none; }
+
+       /* TOC LIST CSS */
+       #toc    { padding: 0; margin: 0; }
+       #toc li { margin-top: 2px; }
+       #toc ul { padding-left:0; padding-right:0 }
+       /* TOC LIST CSS */
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body>
+<p class="navbar"><b>Contents</b>
+ | <a href="hmkwindex.html">Index</a>
+ | <a href="hmftsearch.html">Search</a>
+</p>
+<hr/>
+
+
+  <!-- Place holder for the TOC - this variable is REQUIRED! -->
+  <ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="welcome.html" target="hmcontent"><span class="heading1" id="s1" ondblclick="return dblclicked(this)">Welcome</span></a>
+<ul id="ul1" style="list-style-type:none">
+<li class="heading2" id="i1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a1.1" href="whats_new.html" target="hmcontent"><span class="heading2" id="s1.1">What's New</span></a>
+</li>
+<li class="heading2" id="i1.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a1.2" href="standard_vs_pro.html" target="hmcontent"><span class="heading2" id="s1.2">Standard vs. Pro</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="using_bc.html" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">Using Beyond Compare</span></a>
+<ul id="ul2" style="list-style-type:none">
+<li class="heading2" id="i2.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="viewhome.html" target="hmcontent"><span class="heading2" id="s2.1" ondblclick="return dblclicked(this)">Home View</span></a>
+<ul id="ul2.1" style="list-style-type:none">
+<li class="heading3" id="i2.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.1" href="managing_sessions.html" target="hmcontent"><span class="heading3" id="s2.1.1">Managing Sessions</span></a>
+</li>
+<li class="heading3" id="i2.1.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.2" href="sharing_sessions.html" target="hmcontent"><span class="heading3" id="s2.1.2">Sharing Sessions</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="viewdir.html" target="hmcontent"><span class="heading2" id="s2.2" ondblclick="return dblclicked(this)">Folder Compare</span></a>
+<ul id="ul2.2" style="list-style-type:none">
+<li class="heading3" id="i2.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.1" href="dir_understanding_the_display.html" target="hmcontent"><span class="heading3" id="s2.2.1">Understanding the Display</span></a>
+</li>
+<li class="heading3" id="i2.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.2" href="dir_how_to_compare.html" target="hmcontent"><span class="heading3" id="s2.2.2">How to Compare</span></a>
+</li>
+<li class="heading3" id="i2.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.3" href="dir_filtering_the_view.html" target="hmcontent"><span class="heading3" id="s2.2.3">Filtering the View</span></a>
+</li>
+<li class="heading3" id="i2.2.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.4" href="dir_reconciling_differences.html" target="hmcontent"><span class="heading3" id="s2.2.4">Reconciling Differences</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.3" href="viewdirmerge.html" target="hmcontent"><span class="heading2" id="s2.3" ondblclick="return dblclicked(this)">Folder Merge</span></a>
+<ul id="ul2.3" style="list-style-type:none">
+<li class="heading3" id="i2.3.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.1" href="dir_merge_understanding_the_display.html" target="hmcontent"><span class="heading3" id="s2.3.1">Understanding the Display</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.4" href="viewdirsync.html" target="hmcontent"><span class="heading2" id="s2.4" ondblclick="return dblclicked(this)">Folder Sync</span></a>
+<ul id="ul2.4" style="list-style-type:none">
+<li class="heading3" id="i2.4.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.1" href="dir_sync_understanding_the_display.html" target="hmcontent"><span class="heading3" id="s2.4.1">Understanding the Display</span></a>
+</li>
+<li class="heading3" id="i2.4.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.2" href="dir_sync_how_to_sync.html" target="hmcontent"><span class="heading3" id="s2.4.2">How to Sync</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.5" href="viewtext.html" target="hmcontent"><span class="heading2" id="s2.5" ondblclick="return dblclicked(this)">Text Compare</span></a>
+<ul id="ul2.5" style="list-style-type:none">
+<li class="heading3" id="i2.5.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.5.1" href="editing_text.html" target="hmcontent"><span class="heading3" id="s2.5.1">Editing Text</span></a>
+</li>
+<li class="heading3" id="i2.5.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.5.2" href="walking_through_differences.html" target="hmcontent"><span class="heading3" id="s2.5.2">Walking Through Differences</span></a>
+</li>
+<li class="heading3" id="i2.5.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.5.3" href="searching_for_text.html" target="hmcontent"><span class="heading3" id="s2.5.3">Searching for Text</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.6" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.6" href="viewtextmerge.html" target="hmcontent"><span class="heading2" id="s2.6" ondblclick="return dblclicked(this)">Text Merge</span></a>
+<ul id="ul2.6" style="list-style-type:none">
+<li class="heading3" id="i2.6.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.6.1" href="using_text_merge.html" target="hmcontent"><span class="heading3" id="s2.6.1">Using Text Merge</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.7" href="viewdata.html" target="hmcontent"><span class="heading2" id="s2.7">Table Compare</span></a>
+</li>
+<li class="heading2" id="i2.8" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.8" href="viewhex.html" target="hmcontent"><span class="heading2" id="s2.8">Hex Compare</span></a>
+</li>
+<li class="heading2" id="i2.9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.9" href="viewpix.html" target="hmcontent"><span class="heading2" id="s2.9" ondblclick="return dblclicked(this)">Picture Compare</span></a>
+<ul id="ul2.9" style="list-style-type:none">
+<li class="heading3" id="i2.9.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.9.1" href="pix_how_to_compare.html" target="hmcontent"><span class="heading3" id="s2.9.1">How to Compare</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.10" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.10" href="viewreg.html" target="hmcontent"><span class="heading2" id="s2.10">Registry Compare</span></a>
+</li>
+<li class="heading2" id="i2.11" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.11" href="viewtextedit.html" target="hmcontent"><span class="heading2" id="s2.11">Text Edit</span></a>
+</li>
+<li class="heading2" id="i2.12" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.12" href="viewtextpatch.html" target="hmcontent"><span class="heading2" id="s2.12">Text Patch</span></a>
+</li>
+<li class="heading2" id="i2.13" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.13" href="viewother.html" target="hmcontent"><span class="heading2" id="s2.13">Other View Types</span></a>
+</li>
+<li class="heading2" id="i2.14" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.14" href="bcclipmain.html" target="hmcontent"><span class="heading2" id="s2.14">Clipboard Compare</span></a>
+</li>
+<li class="heading2" id="i2.15" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.15" href="file_formats.html" target="hmcontent"><span class="heading2" id="s2.15" ondblclick="return dblclicked(this)">File Formats</span></a>
+<ul id="ul2.15" style="list-style-type:none">
+<li class="heading3" id="i2.15.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.15.1" href="grammars.html" target="hmcontent"><span class="heading3" id="s2.15.1">Grammars</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.16" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.16" href="dlgreport.html" target="hmcontent"><span class="heading2" id="s2.16">Reports</span></a>
+</li>
+<li class="heading2" id="i2.17" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.17" href="specs.html" target="hmcontent"><span class="heading2" id="s2.17" ondblclick="return dblclicked(this)">Specs</span></a>
+<ul id="ul2.17" style="list-style-type:none">
+<li class="heading3" id="i2.17.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.17.1" href="archive_files.html" target="hmcontent"><span class="heading3" id="s2.17.1">Archive Files</span></a>
+</li>
+<li class="heading3" id="i2.17.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.17.2" href="remote_services.html" target="hmcontent"><span class="heading3" id="s2.17.2">Remote Services</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.18" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.18" href="snapshots.html" target="hmcontent"><span class="heading2" id="s2.18">Snapshots</span></a>
+</li>
+<li class="heading2" id="i2.19" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.19" href="calling_bc_from_other_applications.html" target="hmcontent"><span class="heading2" id="s2.19">Calling Beyond Compare from Other Applications</span></a>
+</li>
+<li class="heading2" id="i2.20" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.20" href="moving_bc_to_another_computer.html" target="hmcontent"><span class="heading2" id="s2.20">Moving Beyond Compare to Another Computer</span></a>
+</li>
+<li class="heading2" id="i2.21" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.21" href="scripts.html" target="hmcontent"><span class="heading2" id="s2.21" ondblclick="return dblclicked(this)">Scripts</span></a>
+<ul id="ul2.21" style="list-style-type:none">
+<li class="heading3" id="i2.21.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.21.1" href="sample_scripts.html" target="hmcontent"><span class="heading3" id="s2.21.1">Sample Scripts</span></a>
+</li>
+<li class="heading3" id="i2.21.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a2.21.2" href="scheduling_a_script.html" target="hmcontent"><span class="heading3" id="s2.21.2">Scheduling a Script</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="settings_reference.html" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">Settings Reference</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="dlgprogoptions.html" target="hmcontent"><span class="heading2" id="s3.1" ondblclick="return dblclicked(this)">Program Options</span></a>
+<ul id="ul3.1" style="list-style-type:none">
+<li class="heading3" id="i3.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.1" href="optionsstartup.html" target="hmcontent"><span class="heading3" id="s3.1.1">Startup</span></a>
+</li>
+<li class="heading3" id="i3.1.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.2" href="optionstab.html" target="hmcontent"><span class="heading3" id="s3.1.2">Tabs</span></a>
+</li>
+<li class="heading3" id="i3.1.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.3" href="optionscolor.html" target="hmcontent"><span class="heading3" id="s3.1.3" ondblclick="return dblclicked(this)">Colors, Fonts</span></a>
+<ul id="ul3.1.3" style="list-style-type:none">
+<li class="heading4" id="i3.1.3.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.3.1" href="optionsdircolor.html" target="hmcontent"><span class="heading4" id="s3.1.3.1">Folder Views</span></a>
+</li>
+<li class="heading4" id="i3.1.3.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.3.2" href="optionsfilecolor.html" target="hmcontent"><span class="heading4" id="s3.1.3.2">File Views</span></a>
+</li>
+<li class="heading4" id="i3.1.3.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.3.3" href="optionspixcolor.html" target="hmcontent"><span class="heading4" id="s3.1.3.3">Picture Compare</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.1.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.4" href="optionstext.html" target="hmcontent"><span class="heading3" id="s3.1.4">Text Editing</span></a>
+</li>
+<li class="heading3" id="i3.1.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.5" href="optionsnextdiff.html" target="hmcontent"><span class="heading3" id="s3.1.5">Next Difference</span></a>
+</li>
+<li class="heading3" id="i3.1.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.6" href="optionsbackup.html" target="hmcontent"><span class="heading3" id="s3.1.6">Backups</span></a>
+</li>
+<li class="heading3" id="i3.1.7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.7" href="optionsop.html" target="hmcontent"><span class="heading3" id="s3.1.7">File Operations</span></a>
+</li>
+<li class="heading3" id="i3.1.8" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.8" href="optionsarchive.html" target="hmcontent"><span class="heading3" id="s3.1.8">Archive Types</span></a>
+</li>
+<li class="heading3" id="i3.1.9" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.9" href="optionscommand.html" target="hmcontent"><span class="heading3" id="s3.1.9">Toolbars, etc.</span></a>
+</li>
+<li class="heading3" id="i3.1.10" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.10" href="optionsopenwith.html" target="hmcontent"><span class="heading3" id="s3.1.10">Open With</span></a>
+</li>
+<li class="heading3" id="i3.1.11" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.11" href="optionstweak.html" target="hmcontent"><span class="heading3" id="s3.1.11">Tweaks</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="session_settings.html" target="hmcontent"><span class="heading2" id="s3.2" ondblclick="return dblclicked(this)">Session Settings</span></a>
+<ul id="ul3.2" style="list-style-type:none">
+<li class="heading3" id="i3.2.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.1" href="sessiondir.html" target="hmcontent"><span class="heading3" id="s3.2.1" ondblclick="return dblclicked(this)">Folder Compare</span></a>
+<ul id="ul3.2.1" style="list-style-type:none">
+<li class="heading4" id="i3.2.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.1.1" href="sessiondirspecs.html" target="hmcontent"><span class="heading4" id="s3.2.1.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.1.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.1.2" href="sessiondircomparison.html" target="hmcontent"><span class="heading4" id="s3.2.1.2">Comparison</span></a>
+</li>
+<li class="heading4" id="i3.2.1.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.1.3" href="sessiondirhandling.html" target="hmcontent"><span class="heading4" id="s3.2.1.3">Handling</span></a>
+</li>
+<li class="heading4" id="i3.2.1.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.1.4" href="sessiondirnamefilter.html" target="hmcontent"><span class="heading4" id="s3.2.1.4">Name Filters</span></a>
+</li>
+<li class="heading4" id="i3.2.1.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.1.5" href="sessiondirotherfilters.html" target="hmcontent"><span class="heading4" id="s3.2.1.5">Other Filters</span></a>
+</li>
+<li class="heading4" id="i3.2.1.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.1.6" href="sessiondirmisc.html" target="hmcontent"><span class="heading4" id="s3.2.1.6">Misc</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.2" href="sessiondirmerge.html" target="hmcontent"><span class="heading3" id="s3.2.2" ondblclick="return dblclicked(this)">Folder Merge</span></a>
+<ul id="ul3.2.2" style="list-style-type:none">
+<li class="heading4" id="i3.2.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.2.1" href="sessiondirmergespecs.html" target="hmcontent"><span class="heading4" id="s3.2.2.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.2.2" href="sessiondirmergecomparison.html" target="hmcontent"><span class="heading4" id="s3.2.2.2">Comparison</span></a>
+</li>
+<li class="heading4" id="i3.2.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.2.3" href="sessiondirmergehandling.html" target="hmcontent"><span class="heading4" id="s3.2.2.3">Handling</span></a>
+</li>
+<li class="heading4" id="i3.2.2.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.2.4" href="sessiondirmergenamefilter.html" target="hmcontent"><span class="heading4" id="s3.2.2.4">Name Filters</span></a>
+</li>
+<li class="heading4" id="i3.2.2.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.2.5" href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="heading4" id="s3.2.2.5">Other Filters</span></a>
+</li>
+<li class="heading4" id="i3.2.2.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.2.6" href="sessiondirmergemisc.html" target="hmcontent"><span class="heading4" id="s3.2.2.6">Misc</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.3" href="sessiondirsync.html" target="hmcontent"><span class="heading3" id="s3.2.3" ondblclick="return dblclicked(this)">Folder Sync</span></a>
+<ul id="ul3.2.3" style="list-style-type:none">
+<li class="heading4" id="i3.2.3.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.3.1" href="sessiondirsyncspecs.html" target="hmcontent"><span class="heading4" id="s3.2.3.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.3.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.3.2" href="sessiondirsyncops.html" target="hmcontent"><span class="heading4" id="s3.2.3.2">Sync</span></a>
+</li>
+<li class="heading4" id="i3.2.3.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.3.3" href="sessiondirsynccomparison.html" target="hmcontent"><span class="heading4" id="s3.2.3.3">Comparison</span></a>
+</li>
+<li class="heading4" id="i3.2.3.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.3.4" href="sessiondirsynchandling.html" target="hmcontent"><span class="heading4" id="s3.2.3.4">Handling</span></a>
+</li>
+<li class="heading4" id="i3.2.3.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.3.5" href="sessiondirsyncnamefilter.html" target="hmcontent"><span class="heading4" id="s3.2.3.5">Name Filters</span></a>
+</li>
+<li class="heading4" id="i3.2.3.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.3.6" href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="heading4" id="s3.2.3.6">Other Filters</span></a>
+</li>
+<li class="heading4" id="i3.2.3.7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.3.7" href="sessiondirsyncmisc.html" target="hmcontent"><span class="heading4" id="s3.2.3.7">Misc</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.4" href="sessiontext.html" target="hmcontent"><span class="heading3" id="s3.2.4" ondblclick="return dblclicked(this)">Text Compare</span></a>
+<ul id="ul3.2.4" style="list-style-type:none">
+<li class="heading4" id="i3.2.4.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.4.1" href="sessiontextspecs.html" target="hmcontent"><span class="heading4" id="s3.2.4.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.4.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.4.2" href="sessiontextformats.html" target="hmcontent"><span class="heading4" id="s3.2.4.2">Format</span></a>
+</li>
+<li class="heading4" id="i3.2.4.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.4.3" href="sessiontextimportance.html" target="hmcontent"><span class="heading4" id="s3.2.4.3">Importance</span></a>
+</li>
+<li class="heading4" id="i3.2.4.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.4.4" href="sessiontextalignment.html" target="hmcontent"><span class="heading4" id="s3.2.4.4">Alignment</span></a>
+</li>
+<li class="heading4" id="i3.2.4.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.4.5" href="sessiontextreplacements.html" target="hmcontent"><span class="heading4" id="s3.2.4.5">Replacements</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.5" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.5" href="sessiontextmerge.html" target="hmcontent"><span class="heading3" id="s3.2.5" ondblclick="return dblclicked(this)">Text Merge</span></a>
+<ul id="ul3.2.5" style="list-style-type:none">
+<li class="heading4" id="i3.2.5.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.5.1" href="sessiontextmergespecs.html" target="hmcontent"><span class="heading4" id="s3.2.5.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.5.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.5.2" href="sessiontextmergeformats.html" target="hmcontent"><span class="heading4" id="s3.2.5.2">Format</span></a>
+</li>
+<li class="heading4" id="i3.2.5.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.5.3" href="sessiontextmergeimportance.html" target="hmcontent"><span class="heading4" id="s3.2.5.3">Importance</span></a>
+</li>
+<li class="heading4" id="i3.2.5.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.5.4" href="sessiontextmergealignment.html" target="hmcontent"><span class="heading4" id="s3.2.5.4">Alignment</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.6" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.6" href="sessiondata.html" target="hmcontent"><span class="heading3" id="s3.2.6" ondblclick="return dblclicked(this)">Table Compare</span></a>
+<ul id="ul3.2.6" style="list-style-type:none">
+<li class="heading4" id="i3.2.6.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.6.1" href="sessiondataspecs.html" target="hmcontent"><span class="heading4" id="s3.2.6.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.6.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.6.2" href="sessiondataformats.html" target="hmcontent"><span class="heading4" id="s3.2.6.2">Format</span></a>
+</li>
+<li class="heading4" id="i3.2.6.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.6.3" href="sessiondatacolumns.html" target="hmcontent"><span class="heading4" id="s3.2.6.3">Columns</span></a>
+</li>
+<li class="heading4" id="i3.2.6.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.6.4" href="sessiondataalignment.html" target="hmcontent"><span class="heading4" id="s3.2.6.4">Alignment</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.7" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.7" href="sessionhex.html" target="hmcontent"><span class="heading3" id="s3.2.7" ondblclick="return dblclicked(this)">Hex Compare</span></a>
+<ul id="ul3.2.7" style="list-style-type:none">
+<li class="heading4" id="i3.2.7.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.7.1" href="sessionhexspecs.html" target="hmcontent"><span class="heading4" id="s3.2.7.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.7.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.7.2" href="sessionhexformats.html" target="hmcontent"><span class="heading4" id="s3.2.7.2">Format</span></a>
+</li>
+<li class="heading4" id="i3.2.7.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.7.3" href="sessionhexcomparison.html" target="hmcontent"><span class="heading4" id="s3.2.7.3">Comparison</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.8" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.8" href="sessionmp3.html" target="hmcontent"><span class="heading3" id="s3.2.8" ondblclick="return dblclicked(this)">MP3 Compare</span></a>
+<ul id="ul3.2.8" style="list-style-type:none">
+<li class="heading4" id="i3.2.8.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.8.1" href="sessionmp3specs.html" target="hmcontent"><span class="heading4" id="s3.2.8.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.8.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.8.2" href="sessionmp3importance.html" target="hmcontent"><span class="heading4" id="s3.2.8.2">Importance</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.9" href="sessionpix.html" target="hmcontent"><span class="heading3" id="s3.2.9" ondblclick="return dblclicked(this)">Picture Compare</span></a>
+<ul id="ul3.2.9" style="list-style-type:none">
+<li class="heading4" id="i3.2.9.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.9.1" href="sessionpixspecs.html" target="hmcontent"><span class="heading4" id="s3.2.9.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.9.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.9.2" href="sessionpixformats.html" target="hmcontent"><span class="heading4" id="s3.2.9.2">Format</span></a>
+</li>
+<li class="heading4" id="i3.2.9.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.9.3" href="sessionpixreplacements.html" target="hmcontent"><span class="heading4" id="s3.2.9.3">Replacements</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.10" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.10" href="sessionreg.html" target="hmcontent"><span class="heading3" id="s3.2.10" ondblclick="return dblclicked(this)">Registry Compare</span></a>
+<ul id="ul3.2.10" style="list-style-type:none">
+<li class="heading4" id="i3.2.10.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.10.1" href="sessionregspecs.html" target="hmcontent"><span class="heading4" id="s3.2.10.1">Specs</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.2.11" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.2.11" href="sessionver.html" target="hmcontent"><span class="heading3" id="s3.2.11" ondblclick="return dblclicked(this)">Version Compare</span></a>
+<ul id="ul3.2.11" style="list-style-type:none">
+<li class="heading4" id="i3.2.11.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.11.1" href="sessionverspecs.html" target="hmcontent"><span class="heading4" id="s3.2.11.1">Specs</span></a>
+</li>
+<li class="heading4" id="i3.2.11.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.2.11.2" href="sessionverimportance.html" target="hmcontent"><span class="heading4" id="s3.2.11.2">Importance</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.3" href="dlgfileformatmanager.html" target="hmcontent"><span class="heading2" id="s3.3" ondblclick="return dblclicked(this)">File Formats</span></a>
+<ul id="ul3.3" style="list-style-type:none">
+<li class="heading3" id="i3.3.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.3.1" href="formattext.html" target="hmcontent"><span class="heading3" id="s3.3.1" ondblclick="return dblclicked(this)">Text Formats</span></a>
+<ul id="ul3.3.1" style="list-style-type:none">
+<li class="heading4" id="i3.3.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.1.1" href="formattextgeneral.html" target="hmcontent"><span class="heading4" id="s3.3.1.1">General</span></a>
+</li>
+<li class="heading4" id="i3.3.1.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.1.2" href="formattextconversion.html" target="hmcontent"><span class="heading4" id="s3.3.1.2">Conversion</span></a>
+</li>
+<li class="heading4" id="i3.3.1.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.1.3" href="formattextgrammar.html" target="hmcontent"><span class="heading4" id="s3.3.1.3">Grammar</span></a>
+</li>
+<li class="heading4" id="i3.3.1.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.1.4" href="formattextmisc.html" target="hmcontent"><span class="heading4" id="s3.3.1.4">Misc</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.3.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.3.2" href="formatdata.html" target="hmcontent"><span class="heading3" id="s3.3.2" ondblclick="return dblclicked(this)">Table Format</span></a>
+<ul id="ul3.3.2" style="list-style-type:none">
+<li class="heading4" id="i3.3.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.2.1" href="formatdatageneral.html" target="hmcontent"><span class="heading4" id="s3.3.2.1">General</span></a>
+</li>
+<li class="heading4" id="i3.3.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.2.2" href="formatdataconversion.html" target="hmcontent"><span class="heading4" id="s3.3.2.2">Conversion</span></a>
+</li>
+<li class="heading4" id="i3.3.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.2.3" href="formatdatatype.html" target="hmcontent"><span class="heading4" id="s3.3.2.3">Type</span></a>
+</li>
+<li class="heading4" id="i3.3.2.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.2.4" href="formatdataregional.html" target="hmcontent"><span class="heading4" id="s3.3.2.4">Regional</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.3.3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.3.3" href="formathex.html" target="hmcontent"><span class="heading3" id="s3.3.3" ondblclick="return dblclicked(this)">Hex Format</span></a>
+<ul id="ul3.3.3" style="list-style-type:none">
+<li class="heading4" id="i3.3.3.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.3.1" href="formathexgeneral.html" target="hmcontent"><span class="heading4" id="s3.3.3.1">General</span></a>
+</li>
+<li class="heading4" id="i3.3.3.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.3.2" href="formathexconversion.html" target="hmcontent"><span class="heading4" id="s3.3.3.2">Conversion</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.3.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.3.4" href="formatpix.html" target="hmcontent"><span class="heading3" id="s3.3.4" ondblclick="return dblclicked(this)">Picture Format</span></a>
+<ul id="ul3.3.4" style="list-style-type:none">
+<li class="heading4" id="i3.3.4.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.4.1" href="formatpixgeneral.html" target="hmcontent"><span class="heading4" id="s3.3.4.1">General</span></a>
+</li>
+<li class="heading4" id="i3.3.4.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.4.2" href="formatpixconversion.html" target="hmcontent"><span class="heading4" id="s3.3.4.2">Conversion</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.3.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.3.5" href="formatexternalgeneral.html" target="hmcontent"><span class="heading3" id="s3.3.5">External Format</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.4" href="dlgprofilemanager.html" target="hmcontent"><span class="heading2" id="s3.4" ondblclick="return dblclicked(this)">Profiles</span></a>
+<ul id="ul3.4" style="list-style-type:none">
+<li class="heading3" id="i3.4.1" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.1" href="profileftp.html" target="hmcontent"><span class="heading3" id="s3.4.1" ondblclick="return dblclicked(this)">FTP Profiles</span></a>
+<ul id="ul3.4.1" style="list-style-type:none">
+<li class="heading4" id="i3.4.1.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.4.1.1" href="profileftpglobal.html" target="hmcontent"><span class="heading4" id="s3.4.1.1">Global</span></a>
+</li>
+<li class="heading4" id="i3.4.1.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.4.1.2" href="profileftplogin.html" target="hmcontent"><span class="heading4" id="s3.4.1.2">Login</span></a>
+</li>
+<li class="heading4" id="i3.4.1.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.4.1.3" href="profileftpserver.html" target="hmcontent"><span class="heading4" id="s3.4.1.3">Server</span></a>
+</li>
+<li class="heading4" id="i3.4.1.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.4.1.4" href="profileftpconnection.html" target="hmcontent"><span class="heading4" id="s3.4.1.4">Connection</span></a>
+</li>
+<li class="heading4" id="i3.4.1.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.4.1.5" href="profileftpproxy.html" target="hmcontent"><span class="heading4" id="s3.4.1.5">Proxy</span></a>
+</li>
+<li class="heading4" id="i3.4.1.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.4.1.6" href="profileftplisting.html" target="hmcontent"><span class="heading4" id="s3.4.1.6">Listings</span></a>
+</li>
+<li class="heading4" id="i3.4.1.7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a3.4.1.7" href="profileftptransfer.html" target="hmcontent"><span class="heading4" id="s3.4.1.7">Transfer</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.4.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.2" href="profileamazons3.html" target="hmcontent"><span class="heading3" id="s3.4.2">Amazon S3 Profiles</span></a>
+</li>
+<li class="heading3" id="i3.4.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.3" href="profiledropbox.html" target="hmcontent"><span class="heading3" id="s3.4.3">Dropbox Profiles</span></a>
+</li>
+<li class="heading3" id="i3.4.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.4" href="profileonedrive.html" target="hmcontent"><span class="heading3" id="s3.4.4">OneDrive Profiles</span></a>
+</li>
+<li class="heading3" id="i3.4.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.5" href="profilesvn.html" target="hmcontent"><span class="heading3" id="s3.4.5">Subversion Profiles</span></a>
+</li>
+<li class="heading3" id="i3.4.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.6" href="profilewebdav.html" target="hmcontent"><span class="heading3" id="s3.4.6">WebDAV Profiles</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.5" href="dlgsourcecontrolmanager.html" target="hmcontent"><span class="heading2" id="s3.5">Source Control Integration</span></a>
+</li>
+<li class="heading2" id="i3.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.6" href="where_settings_are_stored.html" target="hmcontent"><span class="heading2" id="s3.6">Where Settings are Stored</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="commands_reference.html" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">Commands Reference</span></a>
+<ul id="ul4" style="list-style-type:none">
+<li class="heading2" id="i4.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="commandsbc.html" target="hmcontent"><span class="heading2" id="s4.1">Common</span></a>
+</li>
+<li class="heading2" id="i4.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="commandshome.html" target="hmcontent"><span class="heading2" id="s4.2">Home</span></a>
+</li>
+<li class="heading2" id="i4.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.3" href="commandsdir.html" target="hmcontent"><span class="heading2" id="s4.3">Folder Compare</span></a>
+</li>
+<li class="heading2" id="i4.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.4" href="commandsdirmerge.html" target="hmcontent"><span class="heading2" id="s4.4">Folder Merge</span></a>
+</li>
+<li class="heading2" id="i4.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.5" href="commandsdirsync.html" target="hmcontent"><span class="heading2" id="s4.5">Folder Sync</span></a>
+</li>
+<li class="heading2" id="i4.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.6" href="commandstext.html" target="hmcontent"><span class="heading2" id="s4.6">Text Compare</span></a>
+</li>
+<li class="heading2" id="i4.7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.7" href="commandstextmerge.html" target="hmcontent"><span class="heading2" id="s4.7">Text Merge</span></a>
+</li>
+<li class="heading2" id="i4.8" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.8" href="commandsdata.html" target="hmcontent"><span class="heading2" id="s4.8">Table Compare</span></a>
+</li>
+<li class="heading2" id="i4.9" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.9" href="commandshex.html" target="hmcontent"><span class="heading2" id="s4.9">Hex Compare</span></a>
+</li>
+<li class="heading2" id="i4.10" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.10" href="commandsmp3.html" target="hmcontent"><span class="heading2" id="s4.10">MP3 Compare</span></a>
+</li>
+<li class="heading2" id="i4.11" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.11" href="commandspix.html" target="hmcontent"><span class="heading2" id="s4.11">Picture Compare</span></a>
+</li>
+<li class="heading2" id="i4.12" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.12" href="commandsreg.html" target="hmcontent"><span class="heading2" id="s4.12">Registry Compare</span></a>
+</li>
+<li class="heading2" id="i4.13" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.13" href="commandsver.html" target="hmcontent"><span class="heading2" id="s4.13">Version Compare</span></a>
+</li>
+<li class="heading2" id="i4.14" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.14" href="commandstextedit.html" target="hmcontent"><span class="heading2" id="s4.14">Text Edit</span></a>
+</li>
+<li class="heading2" id="i4.15" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.15" href="commandstextpatch.html" target="hmcontent"><span class="heading2" id="s4.15">Text Patch</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="command_line_reference.html" target="hmcontent"><span class="heading1" id="s5">Command Line Reference</span></a>
+</li>
+<li class="heading1" id="i6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="scripting_reference.html" target="hmcontent"><span class="heading1" id="s6">Scripting Reference</span></a>
+</li>
+<li class="heading1" id="i7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a7" href="regular_expression_reference.html" target="hmcontent"><span class="heading1" id="s7">Regular Expression Reference</span></a>
+</li>
+<li class="heading1" id="i8" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a8" href="glossary.html" target="hmcontent"><span class="heading1" id="s8">Glossary</span></a>
+</li>
+<li class="heading1" id="i9" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a9" href="support_ordering_and_license.html" target="hmcontent"><span class="heading1" id="s9">Support, Ordering and License</span></a>
+</li>
+</ul>
+<script type="text/javascript">loadicons('cicon2.png','cicon1.png','cicon9.png');</script>
+
+
+</body>
+</html>

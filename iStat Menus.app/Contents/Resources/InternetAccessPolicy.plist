@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationDescription</key>
+	<string>iStat Menus</string>
+	<key>Connections</key>
+	<array>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>*.accuweather.com</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Weather data</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, you will not be able to use the weather item.</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>1.1.1.1</string>
+			<key>NetworkProtocol</key>
+			<string>ICMP</string>
+			<key>Purpose</key>
+			<string>Internet status checker in network item</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, the internet status checker in the network item will not work correctly</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>google.com</string>
+			<key>NetworkProtocol</key>
+			<string>ICMP</string>
+			<key>Purpose</key>
+			<string>Internet status checker in network item</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, the internet status checker in the network item will not work correctly</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>*.paddle.com</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Built in store for purchasing</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, you will not be able to use the built in store to purchase iStat Menus</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>*.darksky.net</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Weather data</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, you will not be able to use the weather item.</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>*.wunderground.com</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Weather data</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, you will not be able to use the weather item.</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>weather.bjango.com,snowflake.bjango.com</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Weather data</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, you will not be able to use the weather item.</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>ip.bjango.com</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Public IP Address lookup</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, the public IP Address feature in the network item will not work.</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>updates.bjango.com,download.bjango.com,s3.amazonaws.com,files.bjango.com</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Update checker &amp; downloads</string>
+			<key>DenyConsequences</key>
+			<string>If you deny this connection, you will not get software updates</string>
+		</dict>
+	</array>
+</dict>
+</plist>

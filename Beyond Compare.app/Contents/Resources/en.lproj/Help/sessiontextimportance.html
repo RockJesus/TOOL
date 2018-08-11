@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Text Compare Importance Settings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="classifying text differences,Text Compare,Text Compare rules" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sessiontextimportance.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Text Compare Importance Settings</span></h1>
+<p class="p_Command2"><span class="f_Command2">Session </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Session Settings </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Importance</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="sessiontextformats.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="sessiontext.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="sessiontextalignment.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">These settings control which differences you consider important in the current session.  Important differences will be colored red in the comparison.  Unimportant differences will be blue (or not highlighted at all if <span class="f_Command">View &gt; Ignore Unimportant Differences</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="insigignored.png"/> is marked).</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Unimportance</span></p>
+<p class="p_Normal">Text that matches items defined in this list are considered unimportant.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Grammar elements</span></p>
+<p class="p_Normal">Mark the boxes in the list of items that are important to the comparison.</p>
+<p class="p_Normal"><span class="f_Command">Leading whitespace</span> controls whether whitespace at the start of the line is important.</p>
+<p class="p_Normal"><span class="f_Command">Embedded whitespace</span> controls whether whitespace in the middle of the line is important.</p>
+<p class="p_Normal"><span class="f_Command">Trailing whitespace</span> controls whether whitespace at the end of the line is important.</p>
+<p class="p_Normal"><span class="f_Command">Everything else</span> refers to non-whitespace text not already defined as a grammar element.</p>
+<p class="p_Normal">Mark the <span class="f_Command">Character case</span> checkbox if the &quot;everything else&quot; text is case-sensitive.  (The case sensitivity of grammar elements is controlled by the file format's grammar.)</p>
+<p class="p_Normal">Click the <span class="f_Command">Edit Grammar</span> button to examine or change the grammar definitions in the selected file format.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Miscellaneous</span></p>
+<p class="p_Normal">To consider an extra blank line (or an inserted line with only unimportant text) an important difference, mark the <span class="f_Command">Orphan lines are always important</span> checkbox.</p>
+<p class="p_Normal">Beyond Compare normally ignores differences in line ending style, such as CR+LF in Windows text files vs. LF only in Unix files.  To find differences in line endings on a line-by-line basis, mark the <span class="f_Command">Compare line endings (PC/Mac/Unix)</span> checkbox.  (To examine the line endings, mark <span class="f_Command">View &gt; Visible Whitespace</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showws.png"/>.)</p>
+<p class="p_SingleSpaced"><span class="f_SeeAlso">See also</span></p>
+<p class="p_SingleSpaced"><a href="rules_vs_file_formats.html" class="topiclink">Rules vs. File Formats</a></p>
+
+</td></tr></table>
+
+</body>
+</html>

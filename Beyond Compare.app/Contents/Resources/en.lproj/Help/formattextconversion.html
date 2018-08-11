@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Text Format Conversion Settings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "formattextconversion.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Text Format Conversion Settings</span></h1>
+<p class="p_Command2"><span class="f_Command2">Text Format </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Conversion</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="formattextgeneral.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="formattext.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="formattextgrammar.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">The <span class="f_Command">Conversion</span> tab defines how files should be loaded and saved.</p>
+<p class="p_Normal">Text Compare sessions can compare plain text files, such as programming source files, directly.  To compare files with structured or proprietary formats, it may be necessary to first extract the plain text content from the file.  For example, Microsoft Word documents are binary files, but Beyond Compare can extract and compare their textual content.  Beyond Compare can highlight differences in words and sentences but cannot identify differences in formatting or embedded images.</p>
+<p class="p_Normal">Pick a <span class="f_Command">Conversion</span> method.  When using <span class="f_Command">External program</span> methods, you will need to specify a conversion program with the appropriate path and command line switches in the <span class="f_Command">Loading</span> edit.  In order to support filenames with extended characters, make sure to pick the appropriate filename encoding (Unicode or ANSI).  The following variables will be replaced with the indicated information:</p>
+<p class="p_Normal"> &nbsp;%s &nbsp; &nbsp; &nbsp; &nbsp;source file</p>
+<p class="p_Normal"> &nbsp;%t &nbsp; &nbsp; &nbsp; &nbsp;target file</p>
+<p class="p_Normal"> &nbsp;%o &nbsp; &nbsp; &nbsp; &nbsp;original file</p>
+<p class="p_Normal">Conversion programs are only considered successful if they return a zero exit code and generate a non-empty file.</p>
+<p class="p_Normal">If you have a conversion program you want to use before saving, you can unmark the <span class="f_Command">Disable editing</span> checkbox and in the <span class="f_Command">Saving</span> edit specify that conversion program's path and command line switches.  The above variables apply.</p>
+<p class="p_Normal">The <span class="f_Command">Encoding</span> of most text files can be detected automatically, but you can specify a specific code page to use.</p>
+<p class="p_Normal">Mark the <span class="f_Command">Ctrl+Z indicates end of file</span> checkbox for if your file type uses the hex value 1A as an EOF marker.</p>
+<p class="p_Normal">The <span class="f_Command">characters per line limit</span> setting will break long lines at the indicated length.  Those artificial line breaks are removed when saving an edited file.</p>
+<p class="p_Normal"><span class="f_Command">Trim trailing whitespace</span> and <span class="f_Command">Convert leading spaces to tabs</span> are edits that can be performed before saving files.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:before, :after {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  content: '';
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  color:#000000;
+  text-decoration:none;
+}
+
+.wrapper {
+  margin:0 auto;
+  padding: 50px 0;
+  width: 90%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  text-align: center;
+}
+.ranger {
+  display: flex;
+  width:100%;
+  justify-content:center;
+}
+.fan {
+  display: flex;
+  width:100%;
+  justify-content:center;
+}
+.input {
+  width: 13%;
+}
+.inputbox {
+  display: flex;
+  width:100%;
+  justify-content:center;
+}
+#storeSends {
+  display: block;
+  margin: 0 auto;
+}
+input[type=range] {
+  width: 13%;
+  -webkit-appearance: none;
+  
+}
+input[type='range']::-webkit-slider-runnable-track{
+  height: 10px;
+  border-radius: 10px;  
+  background-color: #eee; 
+}
+input[type='range']::-moz-slider-runnable-track{
+  height: 10px;
+  border-radius: 10px;  
+  background-color: #eee; 
+}
+input[type='range']::-webkit-slider-thumb {
+  margin-top: -5px;
+  width: 20px;
+  height: 20px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  background: #1ba1e2;
+  box-shadow: 0 .1em .125em #3b4547;
+  cursor: pointer;  
+  -webkit-appearance: none;
+}
+input[type='range']::-moz-range-thumb {
+  width: 7px;
+  height: 7px;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  background: #1ba1e2;
+  box-shadow: 0 .125em .125em #3b4547;
+  cursor: pointer;
+}
+
+#num {
+  color:#999;
+}
+ 
+#mometer {
+  position:relative;
+  margin:5px;
+  width:15px;
+  height:100px;
+  background-color:#CCC;
+  border-radius:15px;
+}
+ 
+span {
+  position:absolute;
+  bottom:0px;
+  display:block;
+  width:40px;
+  border-radius:15px;
+}
+ 
+#Hgheader {
+  position:relative;
+  left:-40px;
+  height:15px;
+  border-bottom:#f00 1px solid;
+  color:#FF0000;
+  font-size:14px;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:15px;
+  border-radius:15px;
+}
+ 
+#Hg {
+  width:15px;
+  height:0px;
+  background-color:#fc6460;
+  font-size:0px;
+  border-radius:15px;
+}
+ 
+#hot {
+  position:absolute;
+  top:0;
+  left:0;
+  width:15px;
+  height:100px;
+  background-color:#5abe5a;
+  border-radius:15px;
+} 
+
+.create-button {   
+  width: 190px;   
+  height: 40px;   
+  outline: none;   
+  border-width: 0px;   
+  border-radius: 3px;   
+  background: #1E90FF;   
+  color: white;   
+  font-size: 17px;  
+  cursor: pointer;   
+}  
+.create-button:hover {   
+  background: #5599FF;  
+}  

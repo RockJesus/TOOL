@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>FTP Profile Listing Settings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FTP,FTP listing format" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "profileftplisting.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">FTP Profile Listing Settings</span></h1>
+<p class="p_Command2"><span class="f_Command2">FTP Profile </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Listings</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="profileftpproxy.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="profileftp.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="profileftptransfer.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">Beyond Compare parses the plain text directory listings sent from the FTP server in order to determine the remote folder structure.  Unfortunately, there is no one standard for these listings.</p>
+<p class="p_Normal">These settings help Beyond Compare understand the conventions and capabilities of the FTP server.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Link resolution</span></p>
+<p class="p_Normal">FTP sites can connect files together using symbolic &quot;links&quot; which point from one area of the site to another.  These links do not specify whether they point to files or folders, so the following methods of resolving are available:</p>
+<p class="p_Command"><span class="f_Command">Fast</span></p>
+<p class="p_Normal">Mark to treat any link which has an extension (e.g. &quot;.txt&quot;) as a file and all others as folders.  This requires no extra transfers.</p>
+<p class="p_Command"><span class="f_Command">Simple</span></p>
+<p class="p_Normal">Mark to attempt to change folders into every link as it encounters it.  If it succeeds the link is considered a folder, otherwise it is considered a file.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">LIST options</span></p>
+<p class="p_Command"><span class="f_Command">Use MLSD command</span></p>
+<p class="p_Normal">Mark to request high-resolution timestamps from the server.  If successful, the following settings are ignored.  Soft links will be listed as plain files and folders, and listings won't be recursive.</p>
+<p class="p_Command"><span class="f_Command">Show hidden [-a]</span></p>
+<p class="p_Normal">Mark to make the FTP server include files that it wouldn't normally include, such as Unix filenames that begin with a period.</p>
+<p class="p_Command"><span class="f_Command">Force long format [-l]</span></p>
+<p class="p_Normal">Mark to attempt to change the output of the FTP server list command.  Try this option if Beyond Compare doesn't list any files when it loads.</p>
+<p class="p_Command"><span class="f_Command">Complete timestamps [-T]</span></p>
+<p class="p_Normal">Mark to expand the timestamps that the FTP server returns to include a full date and time, including seconds.</p>
+<p class="p_Command"><span class="f_Command">Resolve links [-L]</span></p>
+<p class="p_Normal">Mark to make the FTP server list soft links as plain files and folders with the timestamp and size of the link's target.</p>
+<p class="p_Command"><span class="f_Command">Recursive [-R]</span></p>
+<p class="p_Normal">Mark to make directory listings recursive, including contents of the subfolders in response to a single FTP list command.  Recursive listings may be slower initially, but save time overall if subfolders will need to be examined eventually.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Miscellaneous settings</span></p>
+<p class="p_Command"><span class="f_Command">Hide VMS versions</span></p>
+<p class="p_Normal">Mark to only include the most recent version of a file and align it with a local file.  Otherwise, all versions of the file are included with their version numbers.</p>
+<p class="p_Command"><span class="f_Command">Fetch incomplete timestamps</span></p>
+<p class="p_Normal">Mark to try to fetch the file's last modified time in cases where the directory listing only reports the date.  This will provide more accurate timestamp comparisons at the cost of some performance.  Not supported on all FTP servers.</p>
+<p class="p_Normal"><img width="12" height="12" style="margin:0;width:12px;height:12px;border:none" src="note.png"/><span class="f_Subtitle">Note  </span>If you need help with the settings on this page, consult your system administrator.</p>
+
+</td></tr></table>
+
+</body>
+</html>

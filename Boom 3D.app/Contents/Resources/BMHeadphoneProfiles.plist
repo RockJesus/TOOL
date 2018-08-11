@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+        <key>ProfileName</key>
+        <string>System Speakers</string>
+        <key>ProfileIdentifier</key>
+        <integer>5</integer>
+    </dict>
+	<dict>
+		<key>ProfileName</key>
+		<string>On Ear</string>
+		<key>ProfileIdentifier</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>ProfileName</key>
+		<string>Over Ear</string>
+		<key>ProfileIdentifier</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>ProfileName</key>
+		<string>In Canal</string>
+		<key>ProfileIdentifier</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>ProfileName</key>
+		<string>In Ear</string>
+		<key>ProfileIdentifier</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>ProfileName</key>
+		<string>Bluetooth</string>
+		<key>ProfileIdentifier</key>
+		<integer>4</integer>
+	</dict>
+    <dict>
+        <key>ProfileName</key>
+        <string>External Speakers</string>
+        <key>ProfileIdentifier</key>
+        <integer>6</integer>
+    </dict>
+</array>
+</plist>

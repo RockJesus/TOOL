@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Move to Folder</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="move,move files, folders" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "opmoveto.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#7B6B45;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Move to Folder</span></h1>
+<p class="p_Command2"><span class="f_Command2">Actions </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Move to Folder</span></p>
+
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p class="p_Normal">In the <span class="f_Command">Actions</span> menu, the <span class="f_Command">Move to Folder</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="moveto.png"/> command moves the selected files and folders to a given folder, optionally with the path intact.  You can select items on one side of the Folder Compare view or the other, but not both.</p>
+<p class="p_Normal">If a folder is selected, only its <a href="dir_filtering_the_view.html" class="topiclink">filtered contents</a> will be moved (same as if the folder was expanded and all visible contents selected).  However, if an open folder is selected and any of its children are selected as well, then the folder's selection is ignored and only the selected children will be moved.</p>
+<p class="p_Normal">When you pick <span class="f_Command">Move to Folder</span>, you can make the target an archive file (such as .zip).  If the archive file does not exist, Beyond Compare will create it for you.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Path options example</span></p>
+<p class="p_Subtitle"><img width="134" height="165" style="float:left;margin:8px 8px 8px 8px;width:134px;height:165px;border:none" src="todir.png"/><br/></p>
+<p class="p_Subtitle">In this example, three items are selected:  The file 10.txt, the folder Q and the file 30.txt.<br clear=all></p>
+<p class="p_Normal">The pictures below show how the items look in the target folder, using each of the three available path options.</p>
+<p class="p_Normal"><img width="134" height="118" style="float:left;margin:8px 8px 8px 8px;width:134px;height:118px;border:none" src="todirkeeprelative.png"/><br/></p>
+<p class="p_Normal"><span class="f_Command">Keep relative folder structure</span></p>
+<p class="p_Normal">Determines the minimum difference between all of the selected files' paths, and creates that in the target folder.  In this example, folders D and P were not selected, but they were created in the target folder in order to keep the same relative structure.<br clear=all></p>
+<p class="p_Normal"><img width="134" height="166" style="float:left;margin:8px 8px 8px 8px;width:134px;height:166px;border:none" src="todirkeepbase.png"/><br/></p>
+<p class="p_Normal"><span class="f_Command">Keep base folder structure</span></p>
+<p class="p_Normal">Creates the entire path (back to the base folder) in the target folder.<br clear=all></p>
+<p class="p_Normal"><img width="134" height="69" style="float:left;margin:8px 8px 8px 8px;width:134px;height:69px;border:none" src="todirflatten.png"/><br/></p>
+<p class="p_Normal"><span class="f_Command">Don't keep folder structure</span></p>
+<p class="p_Normal">Ignores all path information and moves all selected files and folders into the target folder together.  In this example, only the Q folder was created in the target folder, because it was specifically selected.</p>
+
+</td></tr></table>
+
+</body>
+</html>

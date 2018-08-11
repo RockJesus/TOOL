@@ -1,0 +1,18 @@
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "no thanks"; ObjectID = "3Ho-pf-JIT"; */
+"3Ho-pf-JIT.ibExternalAccessibilityDescription" = "不用了，謝謝";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "3aZ-6A-rRR"; */
+"3aZ-6A-rRR.title" = "視窗";
+
+/* Class = "NSButtonCell"; title = "No thanks"; ObjectID = "O6R-cb-jpE"; */
+"O6R-cb-jpE.title" = "不用了，謝謝";
+
+/* Class = "NSButtonCell"; title = "Ok,Sure"; ObjectID = "ah7-l0-n6q"; */
+"ah7-l0-n6q.title" = "好的，沒問題";
+
+/* Class = "NSTextFieldCell"; title = "Would you mind rating Boom 2?"; ObjectID = "bEZ-TS-6YY"; */
+"bEZ-TS-6YY.title" = "您是否可以為 Boom 2 評分？";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "ok, sure"; ObjectID = "pDN-W2-TZF"; */
+"pDN-W2-TZF.ibExternalAccessibilityDescription" = "好的，沒問題";
+

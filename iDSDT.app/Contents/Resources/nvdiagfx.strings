@@ -1,0 +1,68 @@
+Method (_DSM, 4, NotSerialized)
+{
+	Store (Package ()
+	{
+		"@0,compatible", 
+        Buffer (){
+			"NVDA,NVMac"
+		}, 
+		"@0,device_type",
+		Buffer (){
+			"display"
+		}, 
+			"@0,name", 
+		Buffer ()
+		{
+			"NVDA,Display-A"
+		}, 
+		"@1,compatible", 
+		Buffer ()
+		{
+			"NVDA,NVMac"
+		}, 
+		"@1,device_type", 
+		Buffer ()
+		{
+			"display"
+		}, 
+		"@1,name", 
+		Buffer ()
+		{
+			"NVDA,Display-B"
+		}, 
+		"NVCAP", 
+		Buffer ()
+		{
+			%@
+		}, 
+		"VRAM,totalsize", 
+		Buffer ()
+		{
+			0x00, 0x00, 0x00, 0X%x
+		}, 
+		"device_type", 
+		Buffer ()
+		{
+			"NVDA,%@"
+		}, 
+		"model", 
+		Buffer ()
+		{
+			"%@"
+		}, 
+		"rom-revision", 
+		Buffer ()
+		{
+			"%@"
+		},
+		"hda-gfx", 
+		Buffer ()
+		{
+			"onboard-1"
+		}
+	}, Local0)
+	DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+	Return (Local0)
+}
+				
+

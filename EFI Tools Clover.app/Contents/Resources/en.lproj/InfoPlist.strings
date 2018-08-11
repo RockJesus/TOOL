@@ -1,0 +1,4 @@
+CFBundleName = "Chameleon Installer";
+CFBundleShortVersionString = "1.0";
+CFBundleGetInfoString = "Chameleon Installer version 1.0 Copyright 2009 uphuck";
+NSHumanReadableCopyright = "Copyright 2009 uphuck.";

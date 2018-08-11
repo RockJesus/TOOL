@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Regular Expression Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="regular expressions" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "regular_expression_reference.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Regular Expression Reference</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="scripting_reference.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="welcome.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="glossary.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">Regular Expressions are a powerful way to define patterns for searching and matching.  Beyond Compare allows you to use regular expressions when searching through text, and when specifying rules for classifying text.  The regular expression support in Beyond Compare is a subset of the Perl Compatible Regular Expression (PCRE) syntax.</p>
+<p class="p_Normal">While Regular Expressions can be a complex topic, there are several excellent resources about them.  One such resource is a book called <span style="font-style: italic;">Mastering Regular Expressions</span>.  Another excellent resource is Steve Mansour's <span style="font-style: italic;">A Tao of Regular Expressions</span>, a copy of which can be found at:</p>
+<p class="p_Normal"> &nbsp; &nbsp;  <a href="http://www.scootersoftware.com/RegEx.html" class="weblink">www.scootersoftware.com/RegEx.html</a></p>
+<p class="p_Normal">A regular expression is composed of two types of characters:  normal characters and metacharacters.  When performing a match, metacharacters take on special meanings, controlling how the match is made and serving as wildcards.  Normal characters always match against only themselves.  To match against a metacharacter, <span style="font-style: italic;">escape</span> it, by prefixing it with a backslash &quot;\&quot;.  There are multiple types of metacharacters, each detailed below.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Metacharacters - Escape sequences</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Escape sequence</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\xnn</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">character with the hex code nn</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\x{nnnn}</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">character with the hex code nnnn</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\x{F000}</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">character with a null value</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\t</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">tab (0x09)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\f</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">form feed (0x0C)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\a</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">bell (0x07)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\e</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">escape (0x1B)</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">Metacharacters - Predefined classes</span></p>
+<p class="p_Normal">Predefined character classes match any of a certain subset of characters.  The following classes are already defined for you.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Class</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">.</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">match any character</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\w</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">any alphanumeric character or _</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\W</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">any non-alphanumeric character</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\d</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">any numeric character (0-9)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\D</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">any non-numeric character</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">\s</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">any whitespace (space, tab)</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">You can also construct your own character classes by surrounding a group of characters in brackets &quot;[]&quot;.  The predefined classes (except &quot;.&quot;) can be used in the brackets, and if a dash &quot;-&quot; appears between two characters, it represents a range.  Thus [a-z] would represent all lowercase letters, and [a-zA-Z] would represent both lower and uppercase letters.  To include a &quot;-&quot; as part of the class, place it at the beginning or end of the string.</p>
+<p class="p_Normal">If the first character within the brackets is a caret &quot;^&quot;, then the class represents everything except the specified characters.  [^a-z] matches on any character that isn't a lower-case alphabetic character.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Metacharacters - Alternatives</span></p>
+<p class="p_Normal">By placing an &quot;|&quot; between two groups of items, alternative matches can be represented.  a|b will match either a or b.  ab|cd will match &quot;ab&quot; or &quot;cd&quot;, but not &quot;ac&quot;.  &quot;|&quot; groups characters from pattern delimiter (&quot;(&quot;, &quot;[&quot;, or the start of the pattern) to itself and then again to the end of the pattern.  Alternatives can be placed within parenthesis &quot;()&quot; to make it obvious what is being matched against, as in a(bc|de)f.  Alternatives are matched left to right.  bey|beyond will match on bey, even if the string is &quot;beyond&quot;.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Metacharacters - Position</span></p>
+<p class="p_Normal">The following metacharacters control where the match can occur on a line.  Note: \A and \Z match the start and end of text respectively, but since Beyond Compare performs the search on a line by line basis, these have the same effect as ^ and $.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Metacharacter</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">^</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">match only at start of line</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">$</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">match only at end of line</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">Metacharacters - Iterators</span></p>
+<p class="p_Normal">Anything in a regular expression can be followed by an iterator metacharacter, which refers to the item before it.  There are two kinds of iterators - greedy and non-greedy.  Greedy iterators match as many as they can, non-greedy match as few as they can.</p>
+<p class="p_Normal">Greedy:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Metacharacter</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">*</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">match zero or more of the preceding character (equivalent to {0,})</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">+</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">match one or more of the preceding character (equivalent to {1,})</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">?</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches zero or one times (equivalent to {0,1})</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">{n}</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches exactly n times (equivalent to {n,n})</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">{n,}</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches n or more times</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">{n,m}</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches at least n but no more than m times</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">Non-greedy:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Metacharacter</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">*?</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches zero or more times</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">+?</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches one or more times</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">??</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches zero or one time</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">{n}?</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches exactly n times</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">{n,}?</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches at least n times</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">{n,m}?</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches at least n but no more than m times</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">Metacharacters - Subexpressions</span></p>
+<p class="p_Normal">Parenthesis &quot;()&quot; can also be used to group characters for use with iterators and backreferences (discussed below).  (bey){4,5} will match between 4 and 5 instances of &quot;bey&quot;.  (abc|[0-9])* will match any combination of &quot;abc&quot; and the digits 0 to 9 (e.g. &quot;abc5&quot;, &quot;679abc&quot; and &quot;abc77abc&quot;).</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Metacharacters - Back references</span></p>
+<p class="p_Normal">Each sequence of characters which is matched within a &quot;()&quot; will be saved as a subexpression, which you can refer to later with \1 to \9, which refer to the subexpressions from left to right.  b(.)\1n will match &quot;been&quot; and &quot;boon&quot;, but not &quot;bean&quot;, &quot;ben&quot; or &quot;beeen&quot;.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Modifiers</span></p>
+<p class="p_Normal">Modifiers allow changes to the matching behavior from that point on.  If the modifier is contained within a subexpression, it affects only that subexpression.  Use (?i) and (?-i) to control the case sensitivity of matching.</p>
+<p class="p_Normal">Examples:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"> &nbsp;(?i)Beyond Compare</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches both &quot;Beyond Compare&quot; and &quot;beyond compare&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"> &nbsp;(?i)Beyond (?-i)Compare</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">matches &quot;Beyond Compare&quot; and &quot;bEyOnD Compare&quot;, but not &quot;beyond compare&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_SingleSpaced"><span class="f_SingleSpaced">&nbsp;</span></p>
+<p class="p_SingleSpaced"><span class="f_SeeAlso">See also</span></p>
+<p class="p_SingleSpaced"><a href="sample_regular_expressions.html" class="topiclink">Sample Regular Expressions</a></p>
+
+</td></tr></table>
+
+</body>
+</html>

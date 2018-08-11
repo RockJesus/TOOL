@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Editing a Grammar Item</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="grammar,grammar editing,ignore,ignore page headings,ignore text columns" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "dlgtextgrammaritem.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#7B6B45;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Editing a Grammar Item</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p class="p_Normal">Pick an existing <span class="f_Command">Element name</span> from the dropdown list or enter your own new name.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">To define a simple grammar element</span></p>
+<p class="p_Normal">Pick the <span class="f_Command">Basic</span> category.  Enter a <span class="f_Command">Text matching</span> string and specify if the string should exactly <span class="f_Command">Match character case</span> and whether the string is a <span class="f_Command">Regular expression</span>.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">For an element that is defined by delimiters</span></p>
+<p class="p_Normal">Pick the <span class="f_Command">Delimited</span> category.  Specify starting and ending delimiters, or a starting delimiter and the <span class="f_Command">Stop at end of line</span> option.  Specify if the delimiters should exactly <span class="f_Command">Match character case</span> and whether they are <span class="f_Command">Regular expressions</span>.</p>
+<p class="p_Normal">An <span class="f_Command">Escape character</span> can be specified that allows the ending delimiter character to be embedded in the element.</p>
+<p class="p_Normal">For example, the colored literal string in the following code is delimited by apostrophes ('), with backslash (\) as the escape character:</p>
+<p class="p_IndentedCode"><span class="f_CourierFixed">s = </span><span class="f_CourierFixed" style="color: #339966;">'I can\'t see straight'</span></p>
+<p class="p_IndentedCode"><span class="f_IndentedCode">&nbsp;</span></p>
+<p class="p_Subtitle"><span class="f_Subtitle">To define a list of grammar tokens</span></p>
+<p class="p_Normal">Pick the <span class="f_Command">List</span> category and type the tokens into the memo control.  Specify if the tokens should exactly <span class="f_Command">Match character case</span> and whether they are <span class="f_Command">Regular expressions</span>.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">To define an element as a column range</span></p>
+<p class="p_Normal">Pick the <span class="f_Command">Columns</span> category.  Specify the starting and ending column numbers, or a starting column and the <span class="f_Command">to end of line</span> option.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">To match on repeating page headings in your data</span></p>
+<p class="p_Normal">When comparing report output, a single change can shift all subsequent page headings, causing many additional differences.  You can define a page heading grammar item in order to ignore these differences.  Pick the <span class="f_Command">Lines</span> category.  Enter a <span class="f_Command">Text matching</span> string that will match the heading at the top of each page in your data.  Typically this would be the Form Feed character.  Mark the <span class="f_Command">or line 1</span> checkbox if the first page doesn't start with the Form Feed character.  Specify the number of <span class="f_Command">lines</span> in the heading.  Specify if the match string should exactly <span class="f_Command">Match character case</span> and whether the string is a <span class="f_Command">Regular expression</span>.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">To define case-sensitivity</span></p>
+<p class="p_Normal">Mark the <span class="f_Command">This element is case sensitive</span> checkbox to indicate that changes in character case are important differences during comparison.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+Method (_DSM, 4, NotSerialized)
+{
+	Store (Package ()
+	{
+		"layout-id", 
+		Buffer ()
+		{
+			0x%02x, 0x%02x, 0x%02x, 0x%02x
+		}, 
+		"PinConfigurations", 
+		Buffer (Zero) {},
+		"hda-gfx", 
+		Buffer ()
+		{
+			"onboard-1"
+		},
+		"iDSDT",
+		Buffer()
+		{ 
+			"Created by iDSDT"
+		}
+	}, Local0)
+	DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+	Return (Local0)
+}

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Snapshots</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="snapshot,snapshot creating, using" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "snapshots.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Snapshots</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="remote_services.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="using_bc.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="calling_bc_from_other_applications.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">In the <span class="f_Command">Tools</span> menu, the <span class="f_Command">Save Snapshot</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="savesnapshot.png"/> command saves a compressed read-only listing of the specified folder and all of its subfolders, including each file's timestamp, size, and file attributes.  Snapshots have a .bcss file extension.</p>
+<p class="p_Normal">Snapshots are useful for detecting changes over time.  Snapshot files can be loaded at a later date and compared to a live folder.  You can load a snapshot just like any other base folder.  Binary and rules-based content comparisons do not work on snapshots, since the files in the snapshot do not really exist.</p>
+<p class="p_Normal">If CRCs of the files are included in the snapshot, then CRC comparisons can be used to determine whether the contents of files have changed.  This can be useful for detecting data corruption and other subtle changes to your data.</p>
+<p class="p_Normal">A snapshot remembers the name of the base folder it was produced from.  If you load a snapshot on the command line (or drag a snapshot file onto the Beyond Compare icon), the program will automatically compare the snapshot with the original folder.</p>
+<p class="p_SingleSpaced"><span class="f_SeeAlso">See also</span></p>
+<p class="p_SingleSpaced"><a href="dlgsnapshot.html" class="topiclink">Saving Snapshots</a></p>
+
+</td></tr></table>
+
+</body>
+</html>

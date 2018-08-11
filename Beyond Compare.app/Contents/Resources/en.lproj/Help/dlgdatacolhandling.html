@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Editing a Column Definition</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "dlgdatacolhandling.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#7B6B45;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Editing a Column Definition</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p class="p_Normal">The Column Handling dialog allows you to set options for each comparison column.  A subset of this dialog is used to set default handling for all columns.</p>
+<p class="p_Normal">Specify the <span class="f_Command">Name</span> to be displayed in the header of the comparison column.  If none is specified, an automatic one may be used.</p>
+<p class="p_Normal">Mark the <span class="f_Command">Key</span> checkbox to make data in this column control sorting and alignment.  If you have more than one key column, the priority for sorting is granted to the top-most columns in the list.</p>
+<p class="p_Normal">Mark the <span class="f_Command">Use Default</span> checkbox to use the default column handling as defined for this session.</p>
+<p class="p_Normal">Pick the appropriate <span class="f_Command">Type</span> for the column:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:78px; padding:0px;"><p class="p_Command"><span class="f_Command">Detected</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Automatically determine the column type based on the data in the files.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:78px; padding:0px;"><p class="p_Command"><span class="f_Command">Boolean</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Column values are either &quot;True&quot; or &quot;False&quot;, or numeric.  Zero is equivalent to False and any non-zero value is True.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:78px; padding:0px;"><p class="p_Command"><span class="f_Command">Date</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Column contains date-time values in any common format.  The comparison ignores differences in formatting.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:78px; padding:0px;"><p class="p_Command"><span class="f_Command">Numeric</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Column values are interpreted as real number values.  The comparison ignores differences in formatting.  For example, 0.00 and 0 are considered the same.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:78px; padding:0px;"><p class="p_Command"><span class="f_Command">Text</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Column contains textual data.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">Mark the <span class="f_Command">Unimportant</span> checkbox to indicate that this column is not important to the comparison.  (Unimportant differences are colored blue instead of red, or are ignored altogether using the <span class="f_Command">Ignore Unimportant Differences</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="insigignored.png"/> feature.)</p>
+<p class="p_Normal">Use <span class="f_Command">Date tolerance</span> to allow date-time values in this column to differ by the given amount before being considered an important difference.</p>
+<p class="p_Normal">Set the <span class="f_Command">Numeric tolerance</span> value to allow numbers to differ by the given amount before being considered an important difference.</p>
+<p class="p_Normal">The <span class="f_Command">Text important, except for</span> options govern columns that are defined or detected as Text.  Mark the <span class="f_Command">Character case (ABC = abc)</span> checkbox if differences in case (i.e., capitalization) are unimportant.  Mark the <span class="f_Command">Whitespace</span> checkbox to consider differences in whitespace (the number of blanks before, after or between words) unimportant.</p>
+
+</td></tr></table>
+
+</body>
+</html>

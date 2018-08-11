@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Command Line Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="command line,command line parameters,command line switches,error level,switches, command line" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "command_line_reference.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Command Line Reference</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="commandstextpatch.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="welcome.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="scripting_reference.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Subtitle"><a id="app" class="hmanchor"></a><span class="f_Subtitle">Command line executable files</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Executable</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">BCompare.exe <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_SingleSpaced">bcompare <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="linux.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">This is the main application.  Only one copy will run at a time, regardless of how many windows you have open.  If you launch a second copy it will tell the existing copy to start a comparison and exit immediately.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">BComp.exe <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">This is a Win32 GUI program.  If launched from a version control system, it should work just fine.  If launched from a console window, the console (or batch file) will not wait for it.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">BComp.com <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">This is a Win32 console program.  It has to have a console.  If you launch it from one (or a batch file) that console will wait for the comparison to complete before returning.  If you launch it from a version control system interactively, it will show a console window while it's waiting.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">bcomp <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="linux.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Launch this program from a version control system because it will wait for the comparison to complete before returning.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">Command line parameters</span></p>
+<p class="p_Normal">Notice that each parameter should be enclosed in quotation marks if it might contain a space.</p>
+<p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/><span class="f_Subtitle"> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="linux.png"/> Note  </span>Mac and Linux users should use &quot;bcompare&quot; instead of &quot;BCompare.exe&quot;.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Parameter</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Named Session</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens the specified session in the appropriate view.  For example:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp;BCompare.exe &quot;</span><span class="f_CourierFixed">My Session</span><span class="f_CourierFixed">&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Named Workspace</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens the specified saved workspace.  (see also <a href="dlgworkspacemanager.html" class="topiclink">Managing Workspaces</a>)  For example:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp;BCompare.exe &quot;</span><span class="f_CourierFixed">My Special Workspace</span><span class="f_CourierFixed">&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Pair of folders</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens a new Folder Compare view with the specified base folders.  For example:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp;BCompare.exe &quot;C:\</span><span class="f_CourierFixed">Left Folder</span><span class="f_CourierFixed">&quot; &quot;C:\</span><span class="f_CourierFixed">Right Folder</span><span class="f_CourierFixed">&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Pair of files</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens the specified files in the associated file view.  For example:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp;BCompare.exe &quot;C:\</span><span class="f_CourierFixed">Left File</span><span class="f_CourierFixed">.ext&quot; &quot;C:\</span><span class="f_CourierFixed">Right File</span><span class="f_CourierFixed">.ext&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">3 files <img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens a Text Merge view with the specified files in the left, right, and center panes.  For example:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp;BCompare.exe C:\</span><span class="f_CourierFixed">Left</span><span class="f_CourierFixed">.ext C:\</span><span class="f_CourierFixed">Right</span><span class="f_CourierFixed">.ext C:\</span><span class="f_CourierFixed">Center</span><span class="f_CourierFixed">.ext</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">4 files <img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens a Text Merge view with the specified files in the left, right, center, and output panes.  For example:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp;BCompare.exe C:\</span><span class="f_CourierFixed">Left</span><span class="f_CourierFixed">.ext C:\</span><span class="f_CourierFixed">Right</span><span class="f_CourierFixed">.ext C:\</span><span class="f_CourierFixed">Center</span><span class="f_CourierFixed">.ext C:\</span><span class="f_CourierFixed">Output</span><span class="f_CourierFixed">.ext</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Script file</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Automatically executes a list of commands without using a view.  For example:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp;BCompare.exe &quot;@C:\</span><span class="f_CourierFixed">My Script</span><span class="f_CourierFixed">.txt&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Settings package (.bcpkg)</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Imports settings from package.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Patch file (.diff or .patch)</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens the specified file in the Text Patch view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">-</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens stdin in the appropriate view.  For example:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp;dir | BCompare.exe -</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">Command line switches</span></p>
+<p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/><span class="f_Subtitle"> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="linux.png"/> Note  </span>Mac and Linux users should prefix the switches with &quot;-&quot; instead of &quot;/&quot;.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Switch</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/?, /h, /help</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/> Opens the help file to the &quot;Command Line Reference&quot; page.</p>
+<p class="p_SingleSpaced"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="linux.png"/> Writes usage information to the console.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/automerge </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Automatically merges files without user interaction unless conflicts are found.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/center=&lt;</span><span class="f_CourierFixed">filename</span><span class="f_CourierFixed">&gt; </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Explicitly specifies the merge center file.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/closescript</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Closes the script window on completion.  Overrides the <span class="f_Command">Close when finished</span> setting in <span class="f_Command">Tools &gt; Options &gt; Tweaks &gt; Scripts</span>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/edit</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens a Text Edit view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/expandall</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Expands all subfolders during the initial folder comparison.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/favorleft</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed">/favorright </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Draws non-conflicting changes in the output from the &quot;favored&quot; side without coloring or section lines.  For ignored unimportant conflicts, changes are automatically taken from the &quot;favored&quot; side instead of the center.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/filters=&lt;</span><span class="f_CourierFixed">file masks</span><span class="f_CourierFixed">&gt;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Uses the specified name filter for the initial folder comparison.  Separate multiple <a href="file_masks.html" class="topiclink">file masks</a> with semi-colons.  Surround the name filter with quotes if it contains spaces.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/force </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Writes conflicts to the output with CVS-style markers if <span class="f_CourierFixed">/automerge</span> is present.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/fv=&lt;</span><span class="f_CourierFixed">type</span><span class="f_CourierFixed">&gt;, /fileviewer=&lt;</span><span class="f_CourierFixed">type</span><span class="f_CourierFixed">&gt;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens a new view of the specified type which can be any of:</p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Text Compare&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Text Merge&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Table Compare&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Hex Compare&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;MP3 Compare&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Picture Compare&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Registry Compare&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Version Compare&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Folder Compare&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Folder Merge&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Folder Sync&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Text Edit&quot;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed"> &nbsp; &nbsp;&quot;Text Patch&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/iu, /ignoreunimportant</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Turns on <span class="f_Command">Ignore Unimportant Differences</span> if <span class="f_CourierFixed">/automerge</span> is present.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/mergeoutput=&lt;</span><span class="f_CourierFixed">filename</span><span class="f_CourierFixed">&gt; </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Explicitly specifies the merge output file.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/nobackups</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Prevents the creation of backup files.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/qc=&lt;</span><span class="f_CourierFixed">type</span><span class="f_CourierFixed">&gt;, /quickcompare=&lt;</span><span class="f_CourierFixed">type</span><span class="f_CourierFixed">&gt;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Performs a quick comparison of two files and sets the DOS error level on exit.  The specified type can be <span class="f_CourierFixed">size</span>, <span class="f_CourierFixed">crc</span>, or <span class="f_CourierFixed">binary</span>.  If a type is not specified, a rules-based comparison will be performed.  Error levels are documented below.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/reviewconflicts </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens a Text Merge view if <span class="f_CourierFixed">/automerge</span> is present and conflicts are found.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/ro, /readonly</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Disables editing on all sides.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/ro1, /lro, /leftreadonly</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed">/ro2, /rro, /rightreadonly</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Disables editing on the respective side.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/savetarget=&lt;</span><span class="f_CourierFixed">filename</span><span class="f_CourierFixed">&gt;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Overwrites the specified file instead of original file when the file view's <span class="f_Command">Save</span> command is used.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/silent</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Causes all interaction to be suppressed.  No Task Bar entry or window will be shown.  For settings packages, all settings will be imported.  For scripts, any unresolved issue that would normally show a dialog will log an error instead.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/solo</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Forces a new instance of the program.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/sync </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Opens a Folder Sync view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/title1=&lt;</span><span class="f_CourierFixed">title</span><span class="f_CourierFixed">&gt;, /lefttitle=&lt;</span><span class="f_CourierFixed">title</span><span class="f_CourierFixed">&gt;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed">/title2=&lt;</span><span class="f_CourierFixed">title</span><span class="f_CourierFixed">&gt;, /righttitle=&lt;</span><span class="f_CourierFixed">title</span><span class="f_CourierFixed">&gt;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed">/title3=&lt;</span><span class="f_CourierFixed">title</span><span class="f_CourierFixed">&gt;, /centertitle=&lt;</span><span class="f_CourierFixed">title</span><span class="f_CourierFixed">&gt;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed">/title4=&lt;</span><span class="f_CourierFixed">title</span><span class="f_CourierFixed">&gt;, /outputtitle=&lt;</span><span class="f_CourierFixed">title</span><span class="f_CourierFixed">&gt;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Shows the specified description in the respective path edit.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced"><span class="f_CourierFixed">/vcs1=&lt;</span><span class="f_CourierFixed">path</span><span class="f_CourierFixed">&gt;, /vcsleft=&lt;</span><span class="f_CourierFixed">path</span><span class="f_CourierFixed">&gt;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed">/vcs2=&lt;</span><span class="f_CourierFixed">path</span><span class="f_CourierFixed">&gt;, /vcsright=&lt;</span><span class="f_CourierFixed">path</span><span class="f_CourierFixed">&gt;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed">/vcs3=&lt;</span><span class="f_CourierFixed">path</span><span class="f_CourierFixed">&gt;, /vcscenter=&lt;</span><span class="f_CourierFixed">path</span><span class="f_CourierFixed">&gt;</span></p>
+<p class="p_SingleSpaced"><span class="f_CourierFixed">/vcs4=&lt;</span><span class="f_CourierFixed">path</span><span class="f_CourierFixed">&gt;, /vcsoutput=&lt;</span><span class="f_CourierFixed">path</span><span class="f_CourierFixed">&gt;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Shows the specified version control system path in the respective path edit unless a title has been provided.  For a file view, the specified path is also used to pick the appropriate file format.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">Return codes</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Code</p>
+</td>
+<td style="vertical-align:top; background-color:#dadada; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Meaning</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">0</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Success</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">1</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Binary same</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">2</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Rules-based same</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">11</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Binary differences</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">12</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Similar</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">13</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Rules-based differences</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">14</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Conflicts detected</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">100</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Unknown error</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">101</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Conflicts detected, merge output not written</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">102</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">BComp.exe unable to wait until BCompare.exe finishes</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">103</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">BComp.exe cannot find BCompare.exe</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">104</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Trial period expired</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">105</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Error loading script file</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">106</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Script syntax error</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">107</p>
+</td>
+<td style="vertical-align:top; background-color:#eeeeee; padding:2px; border:solid 2px #ffffff;"><p class="p_SingleSpaced">Script failed to load folders or files</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

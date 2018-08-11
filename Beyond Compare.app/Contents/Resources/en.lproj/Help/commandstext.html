@@ -1,0 +1,897 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Text Compare Commands</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="menu,menu Text Compare commands,Text Compare,Text Compare commands" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "commandstext.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Text Compare Commands</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="commandsdirsync.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="commands_reference.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="commandstextmerge.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">Following is a description of the <a href="viewtext.html" class="topiclink">Text Compare</a> commands, in addition to the <a href="commandsbc.html" class="topiclink">common commands</a>.  Most of these commands are available as toolbar buttons.</p>
+<p class="p_Normal">Pick <span class="f_Command">Tools &gt; Options</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="options.png"/> and switch to the <a href="optionscommand.html" class="topiclink">Toolbars, etc.</a> page to define your own keyboard shortcuts, and hide or expose commands on the menus and toolbars.</p>
+<p class="p_Subtitle"><a id="sessionmenu" class="hmanchor"></a><span class="f_Subtitle">The Session menu</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="sessionsave.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Save Session</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Saves the current session.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="sessionsaveas.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Save Session As</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Saves the current session under a new name.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="sessionedit.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Session Settings</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens the Text Compare <a href="sessiontext.html" class="topiclink">Session Settings</a> dialog.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="sessionlocked.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Locked</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Locks or unlocks current session.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Clear Session</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Replaces the current view with an empty Text Compare.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="swap.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Swap Sides</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Exchanges the left and right files.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="refresh.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Reload Files</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Reloads the displayed files, prompting to save first if necessary.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="recompare.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Recompare Files</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Recompares the displayed files, preserving edits, but not undoability.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="report.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Text Compare Report</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Produces the <a href="dlgreport.html" class="topiclink">Text Compare report</a>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="info.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Text Compare Info</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Displays comparison statistics.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Compare Files Using</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens the displayed files in a new session using a different class of file view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="textmergesession.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Merge Files </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens a new Text Merge session based on the currently loaded files.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Compare Parent Folders</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens a new Folder Compare session based on the parent folders of the currently loaded files.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">The File menu</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="browse.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Open File</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens an existing file into the picked pane.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Open File on File System </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens an existing local file into the picked pane.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Open File Using Profile </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens an existing file into the picked pane using a profile.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Open Clipboard</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Loads the Clipboard contents into the picked pane.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Open With</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens the picked pane's file in one of the external <a href="optionsopenwith.html" class="topiclink">Open With</a> applications.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Open With </span><span class="f_Command">&gt;</span></p>
+<p class="p_Command"><span class="f_Command">  Associated Application</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens the picked pane's file with its associated application.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="texteditsession.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Open With </span><span class="f_Command">&gt;</span></p>
+<p class="p_Command"><span class="f_Command">  Text Edit</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens the picked pane's file with the built-in text editor.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="textpatchsession.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Open With </span><span class="f_Command">&gt;</span></p>
+<p class="p_Command"><span class="f_Command">  Text Patch</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens the picked pane's file with the built-in patch view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="save.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Save File</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Saves the modified file from the picked pane.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Save File As</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Saves the file from the picked pane with a new name.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Save File on File System As </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Saves the file from the picked pane with a new name on the file system.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Save File Using Profile As </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Saves the file from the picked pane with a new name using a profile.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Explorer </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Displays the file manager's context menu for the file in the picked pane.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Check In </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Appears if a <a href="dlgsourcecontrolmanager.html" class="topiclink">source control provider</a> has been configured and the file is under source control.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Check Out </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Undo Check Out </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><br />
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">The Edit menu</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="undo.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Undo</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Undoes previous action.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="redo.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Redo</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Redoes previously undone action.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Align With</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Allows you to select one or more lines, and then click on a line on the other side to force them to be side-by-side.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Isolate</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Realigns comparison so that selected lines are by themselves.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Replacement </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Adds item to the replacement list based on the current difference.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="copyright.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Copy to Right </span><span class="f_Command">/</span><span class="f_Command"> Copy to Left </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Copies selected lines or current section to indicated side.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Copy to Other Side</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Copies selected lines or current section to opposite side.  The caption and icon appear as <span class="f_Command">Copy to Right</span> or <span class="f_Command">Copy to Left</span> depending on the current side.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="filecopyselright.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Copy Line to Right </span><span class="f_Command">/</span><span class="f_Command"> Copy Line to Left </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Copies current line to indicated side.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Copy Line to Other Side</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Copies current line to other side.  The caption and icon appear as <span class="f_Command">Copy Line to Right</span> or <span class="f_Command">Copy Line to Left</span> depending on the current side.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Increase Indent</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Increases indentation of selected lines.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Decrease Indent</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Decreases indentation of selected lines.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Cut </span><span class="f_Command">/</span><span class="f_Command"> Copy </span><span class="f_Command">/</span><span class="f_Command"> Paste </span><span class="f_Command">/</span><span class="f_Command"> Delete</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Standard editing commands.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Delete Line </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Deletes the current line.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Delete to Start of Line </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Deletes text from the current position to the beginning of the line.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Delete to End of Line </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Deletes text from the current position to the end of the line.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Delete Word </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Deletes the word at the current position.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Delete to Start of Word </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Deletes from the current position to the beginning of the word.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Delete to End of Word </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Deletes from the current position to the end of the word.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Insert Line Before </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Inserts a new blank line before the current line.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Insert Line After </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; height:20px; padding:0px;"><p class="p_Normal">Inserts a new blank line after the current line.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Select All</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Selects all visible lines in the current pane.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Select Section</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Selects all lines in the current section.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Compare Selection to Clipboard</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Compares the selected text with the contents of the clipboard in a new view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Convert File  </span><span class="f_Command">&gt;</span></p>
+<p class="p_Command"><span class="f_Command">  Trim Trailing Whitespace</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Strips off spaces and tab characters at end of lines.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Convert File  </span><span class="f_Command">&gt;</span></p>
+<p class="p_Command"><span class="f_Command">  Leading Spaces to Tabs</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Replaces spaces at the beginning of lines with the appropriate number of tab characters (based on current tab stop setting).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Convert File  </span><span class="f_Command">&gt;</span></p>
+<p class="p_Command"><span class="f_Command">  Tabs To Spaces</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Replaces all tab characters with the appropriate number of space characters (based on current tab stop setting).</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Convert File  </span><span class="f_Command">&gt;</span></p>
+<p class="p_Command"><span class="f_Command">  Line Endings</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Changes the line ending style on all lines.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="fulledit.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Full Edit</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Toggles between full character mode editing (marked) and Beyond Compare 2-like line mode (unmarked) in the main file panes.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">The Search menu</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Next Difference</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at next difference text.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Previous Difference</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at previous difference text.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="down.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Next Difference Section</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at next difference section.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="up.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Previous Difference Section</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at previous difference section.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="difffilenext.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Next Difference Files</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens the parent folder session's next pair of files with differences.  (Child sessions only.)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="difffileprev.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Previous Difference Files</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Opens the parent folder session's previous pair of files with differences.  (Child sessions only.)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="copyfileright.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Copy File to Right and Open Next Difference</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Copies the entire left-side file to the right and opens the folder session's next different files.  (Child sessions only.)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="copyfileleft.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Copy File to Left and Open Next Difference</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Copies the entire right-side file to the left and opens the folder session's next different files.  (Child sessions only.)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Next Replacement </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at next replacement text.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Previous Replacement </span><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at previous replacement text.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Next Edit</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at the next edited line beyond the cursor.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Previous Edit</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at previous edited line before the cursor.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="find.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Find</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Searches for matching text.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="replace.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Replace</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Replaces matching text.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="findnext.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Find Next</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Finds next occurrence of search string.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="findprev.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Find Previous</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Finds previous occurrence of search string.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="goto.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Go To</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Positions at specified line and column.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Toggle Bookmark</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Places a numbered marker on the current line of the comparison, numbered from 0 to 9.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Go To Bookmark</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Repositions at the specified bookmark.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Clear Bookmarks</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Removes all bookmarks from the comparison.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">The View menu</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="favall.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Show All</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows all lines, with or without differences.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="favdiff.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Show Differences</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows only lines with differences.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="favsame.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Show Same</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows only lines without differences.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="favnone.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Show None </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Hides all lines.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showcontext.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Show Context</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows lines surrounding differences.  The number of context lines can be set in <a href="optionstext.html" class="topiclink">Text View Options</a>.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="insigignored.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Ignore Unimportant Differences</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Treats unimportant differences as same.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="ignored.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Ignored</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Suppresses differences in selected lines or current section.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showws.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Visible Whitespace</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides visible spaces, tabs.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showitemnum.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Line Numbers</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides line numbers.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showsyntaxhighlighting.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Syntax Highlighting</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides syntax highlighting.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="displayfont.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Display Font </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Selects the font to use in editor panes.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="displayfontincrease.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Increase Display Font Size </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Increases editor font size.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="displayfontdecrease.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Decrease Display Font Size </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Decreases editor font size.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="displayfontreset.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Reset Display Font Size </span><span class="f_Command">*</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Resets editor font size.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="sidebyside.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Side-by-side Layout</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Arranges editor panes left and right of each other.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="overunder.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Over-under Layout</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Arranges editor panes above and below each other.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="webbrowser.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Webpages </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides web browser panels that display the current files as webpages.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showthumbnail.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Thumbnail</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides the thumbnail summary of changes at left of view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showtextdetails.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Text Details</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides the text details panel at bottom of view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showhexdetails.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Hex Details</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides the hexadecimal details panel at bottom of view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showaligndetails.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Alignment Details</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides the alignment details panel at bottom of view.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showruler.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Ruler</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides the line details ruler.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="info.png"/></p>
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">File Info</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides file information panels at the top of editor panes.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:18px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:210px; padding:0px;"><p class="p_Command"><span class="f_Command">Toolbar</span></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Shows or hides the toolbar.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">* Hidden by default.</p>
+
+</td></tr></table>
+
+</body>
+</html>

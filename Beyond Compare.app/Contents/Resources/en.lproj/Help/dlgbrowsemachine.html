@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Selecting a Remote Registry</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "dlgbrowsemachine.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#7B6B45;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Selecting a Remote Registry</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p class="p_Normal"><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Normal">If the remote computer you want to connect with does not appear in the list, you may need to do the following:</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Turn on network discovery and file sharing</span></p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span>In Windows Control Panel, pick <span class="f_Command">Network and Internet &gt; Network and Sharing Center &gt; Advanced sharing settings</span>.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span>Pick <span class="f_Command">Turn on network discovery</span> and <span class="f_Command">Turn on file and printer sharing</span>.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span>Click <span class="f_Command">Save changes</span>.</p><p class="p_Subtitle"><span class="f_Subtitle">Enable the Remote Registry service</span></p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span>In Windows Computer Management, pick <span class="f_Command">Services and Applications &gt; Services</span>.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span>In the services list, double-click on <span class="f_Command">Remote Registry</span>.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span>Click <span class="f_Command">Start</span> and wait for the status to update.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">4.</span>Change the <span class="f_Command">Startup type</span> to <span class="f_Command">Automatic</span>.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">5.</span>Click <span class="f_Command">OK</span>.</p><p class="p_Subtitle"><span class="f_Subtitle">Allow connections through Windows Firewall</span></p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span>In Windows Control Panel, pick <span class="f_Command">System and Security &gt; Windows Firewall &gt;Allowed Programs</span>.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span>In the allowed programs list, check <span class="f_Command">Windows Remote Management</span>.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span>Click <span class="f_Command">OK</span>.</p>
+</td></tr></table>
+
+</body>
+</html>

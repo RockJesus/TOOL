@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.bjango.istatmenusdaemon</key>
+		<true/>
+	</dict>
+	<key>Label</key>
+	<string>com.bjango.istatmenus.daemon</string>
+	<key>KeepAlive</key>
+	<dict>
+		<key>Crashed</key>
+		<true/>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>Program</key>
+	<string>/Library/Application Support/iStat Menus 6/iStatMenusDaemon</string>
+	<key>RunAtLoad</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Editing an Open With Item</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "dlgopenwithitem.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#7B6B45;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Editing an Open With Item</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p class="p_Normal">Enter a name in the <span class="f_Command">Description</span> edit to appear on the Open With menu.</p>
+<p class="p_Normal">To define a keyboard shortcut for the application, focus on the <span class="f_Command">Shortcut</span> edit and press the desired keystroke.  Click the <span class="f_Command">Remove</span> button to remove an assigned shortcut.</p>
+<p class="p_Normal">Enter a suitable <span class="f_Command">Command line</span> specification for launching the application.  It can include command line switches appropriate to that application.  The following variables will be replaced with the indicated information:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:38px; padding:0px;"><p class="p_Normal">%f</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Absolute path and filename</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:38px; padding:0px;"><p class="p_Normal">%l</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">(lowercase L) Current line number in file view</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:38px; padding:0px;"><p class="p_Normal">%n</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Filename only</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:38px; padding:0px;"><p class="p_Normal">%p</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Absolute path</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:38px; padding:0px;"><p class="p_Normal">%x</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Extension (includes &quot;.&quot;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:38px; padding:0px;"><p class="p_Normal">%b</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Filename without extension</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:38px; padding:0px;"><p class="p_Normal">%F</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Path and filename relative to the working folder</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:38px; padding:0px;"><p class="p_Normal">%P</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Path relative to the working folder</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&quot;1&quot; and &quot;2&quot; can be appended to the end of variables to refer to the left/first or right/second file (e.g. &quot;BCompare %F2 %F1&quot;).  In all cases except for a second %f or %l (for backwards compatibility), leaving a number off will refer to the first file no matter how many times it's listed on the command line.</p>
+<p class="p_Normal">The <span class="f_Command">Working folder</span> edit allows you to change where the program executes (the &quot;Start in&quot; folder).  If it is blank, the program is executed in the same working folder as Beyond Compare.  You can specify a specific folder, or pick the special values <span class="f_CourierFixed">&lt;parent folder&gt;</span> and <span class="f_CourierFixed">&lt;base folder&gt;</span> from the dropdown list.  <span class="f_CourierFixed">&lt;parent folder&gt;</span> will use the selected file's parent folder, while <span class="f_CourierFixed">&lt;base folder&gt;</span> will use the base folder of the selected side (or the parent folder in a file view).</p>
+<p class="p_Normal">Use the <span class="f_Command">Path delimiter</span> edit to replace all path delimiters with the given string.  If left blank, the normal delimiters will be used (e.g. backslash (\) under Windows).</p>
+<p class="p_Normal">The <span class="f_Command">Accepts files</span> and <span class="f_Command">Accepts folders</span> checkboxes control whether the application should be available for files, folders, or both.  Tip: You can configure Beyond Compare itself as an additional application for folders.  That way, you can select folders and compare them in another instance of Beyond Compare.</p>
+<p class="p_Normal"><span class="f_Command">Refresh when finished</span> performs a Fast Refresh when Beyond Compare is done processing the Open With list.</p>
+<p class="p_Normal">When the <span class="f_Command">Multiple instances</span> checkbox is marked, you can select multiple files or file pairs, and execute the operation on all of them once per file or pair of lined up files.  With this option, Beyond Compare checks to see if a second file would be given on the command line (e.g. &quot;%x2&quot;).  If it is, the application will execute on pairs at a time, otherwise it will break the pair up and execute once for each selected item in the pair.</p>
+<p class="p_Normal"><span class="f_Command">Wait for previous instance to finish</span> makes Beyond Compare wait until the previous command finishes executing before running the next command.</p>
+
+</td></tr></table>
+
+</body>
+</html>

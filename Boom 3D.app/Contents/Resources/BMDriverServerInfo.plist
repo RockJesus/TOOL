@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AudioClientGroup</key>
+	<array>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.WebKit.WebContent</string>
+			<key>AppName</key>
+			<string>Safari Web Content</string>
+			<key>GenerateDynamicGroupName</key>
+			<true/>
+			<key>IsGroup</key>
+			<false/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.WebKit.WebContent</string>
+			<key>AppName</key>
+			<string>Mail Web Content</string>
+			<key>GenerateDynamicGroupName</key>
+			<true/>
+			<key>IsGroup</key>
+			<false/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppName</key>
+			<string>com.apple.speech.speechsynthesisd</string>
+			<key>GroupID</key>
+			<string>com.apple.speech.speechsynthesisd</string>
+			<key>GroupName</key>
+			<string>Speech</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>ParentProcessName</key>
+			<string>AirPlayXPCHelper</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.dt.Xcode</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.globaldelight.Boom3D</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.globaldelight.Boom3DMAS</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.globaldelight.Boom2Daemon</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.globaldelight.Boom3DHelper</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.mail</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.Terminal</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.SiriNCService</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.FaceTime</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.audio.AudioMIDISetup</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>ClientBID</key>
+			<string>com.apple.quicklook.ui.helper</string>
+			<key>GroupID</key>
+			<string>Quick preview video/audio</string>
+			<key>GroupName</key>
+			<string>Quick preview video/audio</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.qtkitserver</string>
+			<key>GenerateDynamicGroupName</key>
+			<true/>
+			<key>IsGroup</key>
+			<false/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.loginwindow</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.AirPlayUIAgent</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>systemsoundserverd</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.mediaremoted</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.audio.coreaudiod</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.sharingd</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.systempreferences</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.identityservicesd</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.TelephonyUtilities</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.preference.sound.remoteservice</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.preference.datetime.remoteservice</string>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>AppBID</key>
+			<string>com.apple.assistantd</string>
+			<key>GroupID</key>
+			<string>com.apple.speech.speechsynthesisd</string>
+			<key>GroupName</key>
+			<string>Speech</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>GroupID</key>
+			<string>Facetime</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>ParentProcessName</key>
+			<string>avconferenced</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>GroupID</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>GroupName</key>
+			<string>Notifications and user-interface sounds</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>ParentProcessName</key>
+			<string>universalaccessd</string>
+			<key>Validate</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>GroupID</key>
+			<string>Facetime</string>
+			<key>IsGroup</key>
+			<true/>
+			<key>ParentProcessName</key>
+			<string>callservicesd</string>
+			<key>Validate</key>
+			<false/>
+		</dict>
+	</array>
+	<key>IncompatibleAppsList</key>
+	<array>
+		<string>Skype</string>
+	</array>
+	<key>SiriDaemonId</key>
+	<string>com.apple.assistantd</string>
+	<key>SiriEnabled</key>
+	<integer>0</integer>
+	<key>HandleSilence</key>
+	<integer>0</integer>
+</dict>
+</plist>

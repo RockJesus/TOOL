@@ -1,9 +1,0 @@
-#!/bin/bash
-#
-# postinstall script to configure hibernatemode for laptops
-#
-# Copyright (C) tonymacx86 LLC
-
-pmset -a hibernatemode 3
-
-exit 0

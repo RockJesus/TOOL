@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>Beyond Compare</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style type="text/css">
+       body { background:#FFF; }
+       .navbar      { font-size: 120%; }
+
+       #idx          { margin: 0; padding: 0; }     /* div tag that wraps the keyword index */
+       #idx a        { font-color: #000; text-decoration: none; }  /* all links in index appear as text */
+
+       #idx p             { margin: 2px; }       /* keywords and secondary keywords */
+       #idx p.idxkeyword2 { margin-left: 20px }  /* indentation for secondary keywords */
+
+       table.idxtable { background: #F4F4F4;
+                        border: 1px solid #000000;
+                        border-collapse: collapse;
+                        -moz-box-shadow: 2px 2px 2px #B0B0B0;
+                        -webkit-box-shadow: 2px 2px 2px #B0B0B0;
+                        box-shadow: 2px 2px 2px #B0B0B0;
+                        filter: progid:DXImageTransform.Microsoft.Shadow(color=B0B0B0, Direction=135, Strength=4); }
+       td.idxtable    { background: #F4F4F4; }
+
+       /* font definitions for keyword section, keywords and popup links */
+       .idxsection  { font-family: Arial,Helvetica; font-weight: bold; font-size: 14pt; color: #000000; text-decoration: none;
+                      margin-top: 15px; margin-bottom: 15px; }
+       .idxkeyword  { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .idxkeyword2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .idxlink     { font-family: Arial,Helvetica; font-weight: normal; font-size: 9pt; color: #000000; text-decoration: none; }
+
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="hmcontextids.js"></script>
+</head>
+<body>
+<p class="navbar"><a href="hmcontent.html">Contents</a>
+ | <b>Index</b>
+ | <a href="hmftsearch.html">Search</a>
+</p>
+<hr/>
+
+  <!-- Place holder for the keyword index - this variable is REQUIRED! -->
+  <script type="text/javascript">
+
+  function hmInitHideLinks(cssCode) {
+  	var styleElement = document.createElement("style");
+  	styleElement.type = "text/css";
+  	if (styleElement.styleSheet) {
+    	styleElement.styleSheet.cssText = cssCode;
+  	}
+  	else {
+    	styleElement.appendChild(document.createTextNode(cssCode));
+  	}
+  	document.getElementsByTagName("head")[0].appendChild(styleElement);
+  }
+
+  hmInitHideLinks("#idx div { display: none }");
+
+  var currentdiv = null;
+  var canhidelinks = true;
+
+  function hmshowLinks(divID) {
+    var thisdiv = document.getElementById(divID);
+    canhidelinks = true;
+    hmhideLinks();
+    if (thisdiv) {
+      currentdiv = thisdiv;
+      $(currentdiv).show();
+      $(currentdiv).mouseover(hmdivMouseOver).mouseout(hmdivMouseOut);
+      $(document).mouseup(hmhideLinks);
+    }
+  }
+  function hmdivMouseOver() { canhidelinks = false; };
+  function hmdivMouseOut() { canhidelinks = true; };
+  function hmhideLinks() {
+    if (canhidelinks) {
+      if (currentdiv) {
+        $(currentdiv).hide();
+        $(currentdiv).unbind("onmouseover", "onmouseout");
+      }
+      currentdiv = null;
+      $(document).unbind("onmouseup");
+    }
+  }
+</script>
+<div id="idx" style="margin:0;padding:0;border:none">
+<a name="3" id="3"></a><p class="idxsection">- 3 -</p>
+<p class="idxkeyword"><span class="idxkeyword">3-way merge</span></p>
+<p class="idxkeyword2"><a href="3-way_merge_concepts.html" target="hmcontent"><span class="idxkeyword2">concepts</span></a></p>
+<p class="idxkeyword2"><a href="viewtextmerge.html" target="hmcontent"><span class="idxkeyword2">session</span></a></p>
+<a name="A" id="A"></a><p class="idxsection">- A -</p>
+<p class="idxkeyword"><a href="sessiondataalignment.html" target="hmcontent"><span class="idxkeyword">alignment control (in Table Compare)</span></a></p>
+<p class="idxkeyword"><a href="sessiontextalignment.html" target="hmcontent"><span class="idxkeyword">alignment control (in Text Compare)</span></a></p>
+<p class="idxkeyword"><a href="sessiontextmergealignment.html" target="hmcontent"><span class="idxkeyword">alignment control (in Text Merge)</span></a></p>
+<p class="idxkeyword"><a href="sessiondirmisc.html" target="hmcontent"><span class="idxkeyword">alignment override (in Folder Compare)</span></a></p>
+<p class="idxkeyword"><a href="sessiondirmergemisc.html" target="hmcontent"><span class="idxkeyword">alignment override (in Folder Merge)</span></a></p>
+<p class="idxkeyword"><a href="sessiondirsyncmisc.html" target="hmcontent"><span class="idxkeyword">alignment override (in Folder Sync)</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Amazon S3</span></p>
+<p class="idxkeyword2"><a href="profileamazons3.html" target="hmcontent"><span class="idxkeyword2">profile</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k9')"><span class="idxkeyword">anonymous login</span></a></p>
+<div id="k9" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="profileftpglobal.html" target="hmcontent"><span class="idxlink">FTP Profile Global Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="profileftplogin.html" target="hmcontent"><span class="idxlink">FTP Profile Login Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">archive files</span></p>
+<p class="idxkeyword2"><a href="optionsarchive.html" target="hmcontent"><span class="idxkeyword2">associations</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k10.2')"><span class="idxkeyword2">handling</span></a></p>
+<div id="k10.2" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirhandling.html" target="hmcontent"><span class="idxlink">Folder Compare Handling Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergehandling.html" target="hmcontent"><span class="idxlink">Folder Merge Handling Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynchandling.html" target="hmcontent"><span class="idxlink">Folder Sync Handling Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="profileftptransfer.html" target="hmcontent"><span class="idxkeyword">ASCII mode transfer</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">attributes</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k12.1')"><span class="idxkeyword2">compare</span></a></p>
+<div id="k12.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="opattrib.html" target="hmcontent"><span class="idxkeyword2">modify</span></a></p>
+<p class="idxkeyword"><a href="profileftpglobal.html" target="hmcontent"><span class="idxkeyword">authentication</span></a></p>
+<p class="idxkeyword"><a href="scripts.html" target="hmcontent"><span class="idxkeyword">automate Beyond Compare</span></a></p>
+<a name="B" id="B"></a><p class="idxsection">- B -</p>
+<p class="idxkeyword"><span class="idxkeyword">backup</span></p>
+<p class="idxkeyword2"><a href="optionsbackup.html" target="hmcontent"><span class="idxkeyword2">automatic backup options</span></a></p>
+<p class="idxkeyword"><a href="scripts.html" target="hmcontent"><span class="idxkeyword">batch file processing</span></a></p>
+<p class="idxkeyword"><a href="profileftptransfer.html" target="hmcontent"><span class="idxkeyword">binary mode transfer</span></a></p>
+<p class="idxkeyword"><a href="dlgsupport.html" target="hmcontent"><span class="idxkeyword">bug reports</span></a></p>
+<a name="C" id="C"></a><p class="idxsection">- C -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k19')"><span class="idxkeyword">classifying text differences</span></a></p>
+<div id="k19" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file_formats.html" target="hmcontent"><span class="idxlink">File Formats</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiontextimportance.html" target="hmcontent"><span class="idxlink">Text Compare Importance Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiontextmergeimportance.html" target="hmcontent"><span class="idxlink">Text Merge Importance Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rules_vs_file_formats.html" target="hmcontent"><span class="idxlink">Rules vs. File Formats</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">Clipboard Compare</span></p>
+<p class="idxkeyword2"><a href="bcclipmain.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword"><a href="viewtext.html" target="hmcontent"><span class="idxkeyword">clipboard, compare to</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">colors</span></p>
+<p class="idxkeyword2"><a href="optionsdircolor.html" target="hmcontent"><span class="idxkeyword2">folder comparison</span></a></p>
+<p class="idxkeyword2"><a href="optionscolor.html" target="hmcontent"><span class="idxkeyword2">folder display</span></a></p>
+<p class="idxkeyword2"><a href="optionsfilecolor.html" target="hmcontent"><span class="idxkeyword2">selection in file view</span></a></p>
+<p class="idxkeyword2"><a href="optionscolor.html" target="hmcontent"><span class="idxkeyword2">selection in folder view</span></a></p>
+<p class="idxkeyword2"><a href="optionsfilecolor.html" target="hmcontent"><span class="idxkeyword2">syntax highlighting</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">command line</span></p>
+<p class="idxkeyword2"><a href="command_line_reference.html" target="hmcontent"><span class="idxkeyword2">parameters</span></a></p>
+<p class="idxkeyword2"><a href="command_line_reference.html" target="hmcontent"><span class="idxkeyword2">switches</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">compare</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k24.1')"><span class="idxkeyword2">attributes</span></a></p>
+<div id="k24.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="viewtext.html" target="hmcontent"><span class="idxkeyword2">clipboard contents</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k24.3')"><span class="idxkeyword2">file contents</span></a></p>
+<div id="k24.3" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k24.4')"><span class="idxkeyword2">file size</span></a></p>
+<div id="k24.4" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k24.5')"><span class="idxkeyword2">timestamps</span></a></p>
+<div id="k24.5" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k24.6')"><span class="idxkeyword2">version info</span></a></p>
+<div id="k24.6" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="viewtext.html" target="hmcontent"><span class="idxkeyword2">via http</span></a></p>
+<p class="idxkeyword"><a href="opcompare.html" target="hmcontent"><span class="idxkeyword">compare contents</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">comparison criteria</span></p>
+<p class="idxkeyword2"><a href="dir_how_to_compare.html" target="hmcontent"><span class="idxkeyword2">planning</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k26.2')"><span class="idxkeyword2">setting</span></a></p>
+<div id="k26.2" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="profileftptransfer.html" target="hmcontent"><span class="idxkeyword">compress transfers</span></a></p>
+<p class="idxkeyword"><a href="optionsop.html" target="hmcontent"><span class="idxkeyword">confirmations</span></a></p>
+<p class="idxkeyword"><a href="support_ordering_and_license.html" target="hmcontent"><span class="idxkeyword">contacting us</span></a></p>
+<p class="idxkeyword"><a href="opcompare.html" target="hmcontent"><span class="idxkeyword">content comparison</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">copy</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k31.1')"><span class="idxkeyword2">files, folders</span></a></p>
+<div id="k31.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="opcopy.html" target="hmcontent"><span class="idxlink">Copy</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="opcopyto.html" target="hmcontent"><span class="idxlink">Copy to Folder</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="opcopytooutput.html" target="hmcontent"><span class="idxlink">Copy to Output</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="moving_bc_to_another_computer.html" target="hmcontent"><span class="idxkeyword2">settings to new computer</span></a></p>
+<p class="idxkeyword"><a href="support_ordering_and_license.html" target="hmcontent"><span class="idxkeyword">customer support</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">customize</span></p>
+<p class="idxkeyword2"><a href="optionscommand.html" target="hmcontent"><span class="idxkeyword2">keyboard shortcuts</span></a></p>
+<p class="idxkeyword2"><a href="optionscommand.html" target="hmcontent"><span class="idxkeyword2">menus</span></a></p>
+<p class="idxkeyword2"><a href="optionscommand.html" target="hmcontent"><span class="idxkeyword2">toolbars</span></a></p>
+<p class="idxkeyword"><a href="settings_reference.html" target="hmcontent"><span class="idxkeyword">customizing Beyond Compare</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k35')"><span class="idxkeyword">cutoff date</span></a></p>
+<div id="k35" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<a name="D" id="D"></a><p class="idxsection">- D -</p>
+<p class="idxkeyword"><span class="idxkeyword">date modified</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k36.1')"><span class="idxkeyword2">filter by</span></a></p>
+<div id="k36.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="optouch.html" target="hmcontent"><span class="idxkeyword2">modify</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">delete</span></p>
+<p class="idxkeyword2"><a href="opdelete.html" target="hmcontent"><span class="idxkeyword2">files, folders</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">desktop</span></p>
+<p class="idxkeyword2"><a href="commandsbc.html" target="hmcontent"><span class="idxkeyword2">load</span></a></p>
+<p class="idxkeyword2"><a href="commandsbc.html" target="hmcontent"><span class="idxkeyword2">save</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k39')"><span class="idxkeyword">display filters</span></a></p>
+<div id="k39" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dir_filtering_the_view.html" target="hmcontent"><span class="idxlink">Filtering the Folder Compare View</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="display_filters.html" target="hmcontent"><span class="idxlink">Display Filters</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">Dropbox</span></p>
+<p class="idxkeyword2"><a href="profiledropbox.html" target="hmcontent"><span class="idxkeyword2">profile</span></a></p>
+<p class="idxkeyword"><a href="display_filters.html" target="hmcontent"><span class="idxkeyword">dropdown mode</span></a></p>
+<a name="E" id="E"></a><p class="idxsection">- E -</p>
+<p class="idxkeyword"><a href="editing_text.html" target="hmcontent"><span class="idxkeyword">editing text</span></a></p>
+<p class="idxkeyword"><a href="standard_vs_pro.html" target="hmcontent"><span class="idxkeyword">editions (Standard vs Pro)</span></a></p>
+<p class="idxkeyword"><a href="viewtextedit.html" target="hmcontent"><span class="idxkeyword">editor</span></a></p>
+<p class="idxkeyword"><a href="optionstext.html" target="hmcontent"><span class="idxkeyword">editor options</span></a></p>
+<p class="idxkeyword"><a href="command_line_reference.html" target="hmcontent"><span class="idxkeyword">error level</span></a></p>
+<p class="idxkeyword"><a href="license_agreement.html" target="hmcontent"><span class="idxkeyword">EULA</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">exchange</span></p>
+<p class="idxkeyword2"><a href="opexchange.html" target="hmcontent"><span class="idxkeyword2">files, folders</span></a></p>
+<p class="idxkeyword"><a href="opexclude.html" target="hmcontent"><span class="idxkeyword">exclude</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k49.1')"><span class="idxkeyword2">files by attribute</span></a></p>
+<div id="k49.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k49.2')"><span class="idxkeyword2">files by date modified</span></a></p>
+<div id="k49.2" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k49.3')"><span class="idxkeyword2">files by file size</span></a></p>
+<div id="k49.3" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k49.4')"><span class="idxkeyword2">files by name</span></a></p>
+<div id="k49.4" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirnamefilter.html" target="hmcontent"><span class="idxlink">Folder Compare Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergenamefilter.html" target="hmcontent"><span class="idxlink">Folder Merge Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncnamefilter.html" target="hmcontent"><span class="idxlink">Folder Sync Name Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k49.5')"><span class="idxkeyword2">folders by name</span></a></p>
+<div id="k49.5" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirnamefilter.html" target="hmcontent"><span class="idxlink">Folder Compare Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergenamefilter.html" target="hmcontent"><span class="idxlink">Folder Merge Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncnamefilter.html" target="hmcontent"><span class="idxlink">Folder Sync Name Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="optionsstartup.html" target="hmcontent"><span class="idxkeyword">Explorer context menu</span></a></p>
+<p class="idxkeyword"><a href="dlgexport.html" target="hmcontent"><span class="idxkeyword">export</span></a></p>
+<p class="idxkeyword"><a href="optionsopenwith.html" target="hmcontent"><span class="idxkeyword">external applications</span></a></p>
+<a name="F" id="F"></a><p class="idxsection">- F -</p>
+<p class="idxkeyword"><a href="dlgprogoptions.html" target="hmcontent"><span class="idxkeyword">factory defaults</span></a></p>
+<p class="idxkeyword"><a href="display_filters.html" target="hmcontent"><span class="idxkeyword">favorites mode</span></a></p>
+<p class="idxkeyword"><a href="dir_filtering_the_view.html" target="hmcontent"><span class="idxkeyword">file filters</span></a></p>
+<p class="idxkeyword"><a href="file_formats.html" target="hmcontent"><span class="idxkeyword">File Formats</span></a></p>
+<p class="idxkeyword2"><a href="dlgfileformatmanager.html" target="hmcontent"><span class="idxkeyword2">managing</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k57')"><span class="idxkeyword">file masks</span></a></p>
+<div id="k57" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirnamefilter.html" target="hmcontent"><span class="idxlink">Folder Compare Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergenamefilter.html" target="hmcontent"><span class="idxlink">Folder Merge Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncnamefilter.html" target="hmcontent"><span class="idxlink">Folder Sync Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file_masks.html" target="hmcontent"><span class="idxlink">File Masks</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="profileftptransfer.html" target="hmcontent"><span class="idxkeyword">filename conversion</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">filter</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k59.1')"><span class="idxkeyword2">by attribute</span></a></p>
+<div id="k59.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k59.2')"><span class="idxkeyword2">by date modified</span></a></p>
+<div id="k59.2" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k59.3')"><span class="idxkeyword2">by file size</span></a></p>
+<div id="k59.3" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k59.4')"><span class="idxkeyword2">by name</span></a></p>
+<div id="k59.4" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirnamefilter.html" target="hmcontent"><span class="idxlink">Folder Compare Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergenamefilter.html" target="hmcontent"><span class="idxlink">Folder Merge Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncnamefilter.html" target="hmcontent"><span class="idxlink">Folder Sync Name Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="optionsarchive.html" target="hmcontent"><span class="idxkeyword">filter presets</span></a></p>
+<p class="idxkeyword"><a href="dir_filtering_the_view.html" target="hmcontent"><span class="idxkeyword">filters</span></a></p>
+<p class="idxkeyword"><a href="profileftpconnection.html" target="hmcontent"><span class="idxkeyword">firewall settings</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Folder Compare</span></p>
+<p class="idxkeyword2"><a href="viewdir.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandsdir.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessiondircomparison.html" target="hmcontent"><span class="idxkeyword2">rules</span></a></p>
+<p class="idxkeyword2"><a href="sessiondir.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Folder Merge</span></p>
+<p class="idxkeyword2"><a href="viewdirmerge.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandsdirmerge.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxkeyword2">rules</span></a></p>
+<p class="idxkeyword2"><a href="sessiondirmerge.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Folder Sync</span></p>
+<p class="idxkeyword2"><a href="viewdirsync.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandsdirsync.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessiondirsyncops.html" target="hmcontent"><span class="idxkeyword2">presets</span></a></p>
+<p class="idxkeyword2"><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxkeyword2">rules</span></a></p>
+<p class="idxkeyword2"><a href="sessiondirsync.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">FTP</span></p>
+<p class="idxkeyword2"><a href="profileftpglobal.html" target="hmcontent"><span class="idxkeyword2">authentication</span></a></p>
+<p class="idxkeyword2"><a href="profileftpconnection.html" target="hmcontent"><span class="idxkeyword2">connection settings</span></a></p>
+<p class="idxkeyword2"><a href="profileftplisting.html" target="hmcontent"><span class="idxkeyword2">listing format</span></a></p>
+<p class="idxkeyword2"><a href="profileftplogin.html" target="hmcontent"><span class="idxkeyword2">login</span></a></p>
+<p class="idxkeyword2"><a href="profileftp.html" target="hmcontent"><span class="idxkeyword2">profile</span></a></p>
+<p class="idxkeyword2"><a href="profileftptransfer.html" target="hmcontent"><span class="idxkeyword2">transfer settings</span></a></p>
+<a name="G" id="G"></a><p class="idxsection">- G -</p>
+<p class="idxkeyword"><span class="idxkeyword">grammar</span></p>
+<p class="idxkeyword2"><a href="dlgtextgrammaritem.html" target="hmcontent"><span class="idxkeyword2">editing</span></a></p>
+<p class="idxkeyword2"><a href="grammars.html" target="hmcontent"><span class="idxkeyword2">using</span></a></p>
+<a name="H" id="H"></a><p class="idxsection">- H -</p>
+<p class="idxkeyword"><span class="idxkeyword">Hex Compare</span></p>
+<p class="idxkeyword2"><a href="viewhex.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandshex.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessionhex.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><a href="optionstweak.html" target="hmcontent"><span class="idxkeyword">hints, configuring</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Home</span></p>
+<p class="idxkeyword2"><a href="commandshome.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword"><a href="viewhome.html" target="hmcontent"><span class="idxkeyword">Home view</span></a></p>
+<p class="idxkeyword"><a href="optionstweak.html" target="hmcontent"><span class="idxkeyword">Home view options</span></a></p>
+<p class="idxkeyword"><a href="dlgreport.html" target="hmcontent"><span class="idxkeyword">HTML output</span></a></p>
+<p class="idxkeyword"><a href="viewtext.html" target="hmcontent"><span class="idxkeyword">http compare</span></a></p>
+<a name="I" id="I"></a><p class="idxsection">- I -</p>
+<p class="idxkeyword"><span class="idxkeyword">ignore</span></p>
+<p class="idxkeyword2"><a href="dir_filtering_the_view.html" target="hmcontent"><span class="idxkeyword2">folder structure</span></a></p>
+<p class="idxkeyword2"><a href="dlgtextgrammaritem.html" target="hmcontent"><span class="idxkeyword2">page headings</span></a></p>
+<p class="idxkeyword2"><a href="dlgtextgrammaritem.html" target="hmcontent"><span class="idxkeyword2">text columns</span></a></p>
+<p class="idxkeyword"><a href="dlgimport.html" target="hmcontent"><span class="idxkeyword">import</span></a></p>
+<p class="idxkeyword"><a href="rules_vs_file_formats.html" target="hmcontent"><span class="idxkeyword">important text</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">include</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k78.1')"><span class="idxkeyword2">files by name</span></a></p>
+<div id="k78.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirnamefilter.html" target="hmcontent"><span class="idxlink">Folder Compare Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergenamefilter.html" target="hmcontent"><span class="idxlink">Folder Merge Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncnamefilter.html" target="hmcontent"><span class="idxlink">Folder Sync Name Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k78.2')"><span class="idxkeyword2">folders by name</span></a></p>
+<div id="k78.2" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirnamefilter.html" target="hmcontent"><span class="idxlink">Folder Compare Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergenamefilter.html" target="hmcontent"><span class="idxlink">Folder Merge Name Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncnamefilter.html" target="hmcontent"><span class="idxlink">Folder Sync Name Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<a name="K" id="K"></a><p class="idxsection">- K -</p>
+<p class="idxkeyword"><a href="optionscommand.html" target="hmcontent"><span class="idxkeyword">keyboard shortcuts</span></a></p>
+<a name="L" id="L"></a><p class="idxsection">- L -</p>
+<p class="idxkeyword"><a href="license_agreement.html" target="hmcontent"><span class="idxkeyword">license agreement</span></a></p>
+<p class="idxkeyword"><a href="profileftptransfer.html" target="hmcontent"><span class="idxkeyword">limit download/upload speed</span></a></p>
+<p class="idxkeyword"><a href="where_settings_are_stored.html" target="hmcontent"><span class="idxkeyword">location of program settings</span></a></p>
+<p class="idxkeyword"><a href="managing_sessions.html" target="hmcontent"><span class="idxkeyword">lock session</span></a></p>
+<a name="M" id="M"></a><p class="idxsection">- M -</p>
+<p class="idxkeyword"><span class="idxkeyword">menu</span></p>
+<p class="idxkeyword2"><a href="commandsdir.html" target="hmcontent"><span class="idxkeyword2">Folder Compare commands</span></a></p>
+<p class="idxkeyword2"><a href="commandsdirmerge.html" target="hmcontent"><span class="idxkeyword2">Folder Merge commands</span></a></p>
+<p class="idxkeyword2"><a href="commandsdirsync.html" target="hmcontent"><span class="idxkeyword2">Folder Sync commands</span></a></p>
+<p class="idxkeyword2"><a href="commandsbc.html" target="hmcontent"><span class="idxkeyword2">global commands</span></a></p>
+<p class="idxkeyword2"><a href="commandshex.html" target="hmcontent"><span class="idxkeyword2">Hex Compare commands</span></a></p>
+<p class="idxkeyword2"><a href="commandshome.html" target="hmcontent"><span class="idxkeyword2">Home commands</span></a></p>
+<p class="idxkeyword2"><a href="commandsmp3.html" target="hmcontent"><span class="idxkeyword2">MP3 Compare commands</span></a></p>
+<p class="idxkeyword2"><a href="commandspix.html" target="hmcontent"><span class="idxkeyword2">Picture Compare commands</span></a></p>
+<p class="idxkeyword2"><a href="commandsreg.html" target="hmcontent"><span class="idxkeyword2">Registry Compare commands</span></a></p>
+<p class="idxkeyword2"><a href="commandsdata.html" target="hmcontent"><span class="idxkeyword2">Table Compare commands</span></a></p>
+<p class="idxkeyword2"><a href="commandstext.html" target="hmcontent"><span class="idxkeyword2">Text Compare commands</span></a></p>
+<p class="idxkeyword2"><a href="commandstextedit.html" target="hmcontent"><span class="idxkeyword2">Text Edit commands</span></a></p>
+<p class="idxkeyword2"><a href="commandstextmerge.html" target="hmcontent"><span class="idxkeyword2">Text Merge commands</span></a></p>
+<p class="idxkeyword2"><a href="commandstextpatch.html" target="hmcontent"><span class="idxkeyword2">Text Patch commands</span></a></p>
+<p class="idxkeyword2"><a href="commandsver.html" target="hmcontent"><span class="idxkeyword2">Version Compare commands</span></a></p>
+<p class="idxkeyword"><a href="optionscommand.html" target="hmcontent"><span class="idxkeyword">menu configuration</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">merge</span></p>
+<p class="idxkeyword2"><a href="3-way_merge_concepts.html" target="hmcontent"><span class="idxkeyword2">concepts</span></a></p>
+<p class="idxkeyword2"><a href="opmerge.html" target="hmcontent"><span class="idxkeyword2">files, folders</span></a></p>
+<p class="idxkeyword2"><a href="viewtextmerge.html" target="hmcontent"><span class="idxkeyword2">session</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">move</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k87.1')"><span class="idxkeyword2">files, folders</span></a></p>
+<div id="k87.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="opmove.html" target="hmcontent"><span class="idxlink">Move</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="opmoveto.html" target="hmcontent"><span class="idxlink">Move to Folder</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">MP3 Compare</span></p>
+<p class="idxkeyword2"><a href="viewother.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandsmp3.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessionmp3.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<a name="N" id="N"></a><p class="idxsection">- N -</p>
+<p class="idxkeyword"><a href="whats_new.html" target="hmcontent"><span class="idxkeyword">new features</span></a></p>
+<p class="idxkeyword"><a href="walking_through_differences.html" target="hmcontent"><span class="idxkeyword">next difference</span></a></p>
+<p class="idxkeyword"><a href="optionsnextdiff.html" target="hmcontent"><span class="idxkeyword">next difference options</span></a></p>
+<a name="O" id="O"></a><p class="idxsection">- O -</p>
+<p class="idxkeyword"><span class="idxkeyword">OneDrive</span></p>
+<p class="idxkeyword2"><a href="profileonedrive.html" target="hmcontent"><span class="idxkeyword2">profile</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Open With</span></p>
+<p class="idxkeyword2"><a href="optionsopenwith.html" target="hmcontent"><span class="idxkeyword2">configuration</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k94')"><span class="idxkeyword">options</span></a></p>
+<div id="k94" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="settings_reference.html" target="hmcontent"><span class="idxlink">Settings Reference</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dlgprogoptions.html" target="hmcontent"><span class="idxlink">Program Options</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="support_ordering_and_license.html" target="hmcontent"><span class="idxkeyword">ordering Beyond Compare</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">override</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k96.1')"><span class="idxkeyword2">file formats</span></a></p>
+<div id="k96.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirhandling.html" target="hmcontent"><span class="idxlink">Folder Compare Handling Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergehandling.html" target="hmcontent"><span class="idxlink">Folder Merge Handling Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynchandling.html" target="hmcontent"><span class="idxlink">Folder Sync Handling Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k96.2')"><span class="idxkeyword2">filename alignment</span></a></p>
+<div id="k96.2" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmisc.html" target="hmcontent"><span class="idxlink">Folder Compare Miscellaneous Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergemisc.html" target="hmcontent"><span class="idxlink">Folder Merge Miscellaneous Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncmisc.html" target="hmcontent"><span class="idxlink">Folder Sync Miscellaneous Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k96.3')"><span class="idxkeyword2">folder alignment</span></a></p>
+<div id="k96.3" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmisc.html" target="hmcontent"><span class="idxlink">Folder Compare Miscellaneous Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergemisc.html" target="hmcontent"><span class="idxlink">Folder Merge Miscellaneous Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncmisc.html" target="hmcontent"><span class="idxlink">Folder Sync Miscellaneous Settings</span></a></td></tr></table></td></tr></table></div>
+<a name="P" id="P"></a><p class="idxsection">- P -</p>
+<p class="idxkeyword"><a href="profileftpconnection.html" target="hmcontent"><span class="idxkeyword">PASV</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Picture Compare</span></p>
+<p class="idxkeyword2"><a href="viewpix.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandspix.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="optionspixcolor.html" target="hmcontent"><span class="idxkeyword2">options</span></a></p>
+<p class="idxkeyword2"><a href="sessionpix.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><a href="viewother.html" target="hmcontent"><span class="idxkeyword">plug-ins</span></a></p>
+<p class="idxkeyword"><a href="where_settings_are_stored.html" target="hmcontent"><span class="idxkeyword">portable install</span></a></p>
+<p class="idxkeyword"><a href="walking_through_differences.html" target="hmcontent"><span class="idxkeyword">previous difference</span></a></p>
+<p class="idxkeyword"><a href="dlgreport.html" target="hmcontent"><span class="idxkeyword">printouts</span></a></p>
+<p class="idxkeyword"><a href="standard_vs_pro.html" target="hmcontent"><span class="idxkeyword">Pro Edition</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Profiles</span></p>
+<p class="idxkeyword2"><a href="profileamazons3.html" target="hmcontent"><span class="idxkeyword2">Amazon S3</span></a></p>
+<p class="idxkeyword2"><a href="profiledropbox.html" target="hmcontent"><span class="idxkeyword2">Dropbox</span></a></p>
+<p class="idxkeyword2"><a href="profileftp.html" target="hmcontent"><span class="idxkeyword2">FTP</span></a></p>
+<p class="idxkeyword2"><a href="dlgprofilemanager.html" target="hmcontent"><span class="idxkeyword2">managing</span></a></p>
+<p class="idxkeyword2"><a href="profileonedrive.html" target="hmcontent"><span class="idxkeyword2">OneDrive</span></a></p>
+<p class="idxkeyword2"><a href="profilesvn.html" target="hmcontent"><span class="idxkeyword2">Subversion</span></a></p>
+<p class="idxkeyword2"><a href="profilewebdav.html" target="hmcontent"><span class="idxkeyword2">WebDAV</span></a></p>
+<p class="idxkeyword"><a href="profileftpproxy.html" target="hmcontent"><span class="idxkeyword">proxy settings</span></a></p>
+<a name="R" id="R"></a><p class="idxsection">- R -</p>
+<p class="idxkeyword"><a href="dir_reconciling_differences.html" target="hmcontent"><span class="idxkeyword">reconcile differences</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">refresh</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k107.1')"><span class="idxkeyword2">automatic</span></a></p>
+<div id="k107.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirhandling.html" target="hmcontent"><span class="idxlink">Folder Compare Handling Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergehandling.html" target="hmcontent"><span class="idxlink">Folder Merge Handling Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynchandling.html" target="hmcontent"><span class="idxlink">Folder Sync Handling Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">Registry Compare</span></p>
+<p class="idxkeyword2"><a href="viewreg.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandsreg.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessionreg.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k109')"><span class="idxkeyword">regular expressions</span></a></p>
+<div id="k109" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="regular_expression_reference.html" target="hmcontent"><span class="idxlink">Regular Expression Reference</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sample_regular_expressions.html" target="hmcontent"><span class="idxlink">Sample Regular Expressions</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">rename</span></p>
+<p class="idxkeyword2"><a href="oprename.html" target="hmcontent"><span class="idxkeyword2">files, folders</span></a></p>
+<p class="idxkeyword"><a href="sessiontextreplacements.html" target="hmcontent"><span class="idxkeyword">replacements</span></a></p>
+<p class="idxkeyword"><a href="dlgreport.html" target="hmcontent"><span class="idxkeyword">reports</span></a></p>
+<a name="S" id="S"></a><p class="idxsection">- S -</p>
+<p class="idxkeyword"><a href="dlgsnapshot.html" target="hmcontent"><span class="idxkeyword">save snapshot</span></a></p>
+<p class="idxkeyword"><a href="scheduling_a_script.html" target="hmcontent"><span class="idxkeyword">scheduled task</span></a></p>
+<p class="idxkeyword"><a href="dlgsupport.html" target="hmcontent"><span class="idxkeyword">screenshots, for support</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">scripts</span></p>
+<p class="idxkeyword2"><a href="scripts.html" target="hmcontent"><span class="idxkeyword2">overview</span></a></p>
+<p class="idxkeyword2"><a href="scripting_reference.html" target="hmcontent"><span class="idxkeyword2">reference</span></a></p>
+<p class="idxkeyword2"><a href="sample_scripts.html" target="hmcontent"><span class="idxkeyword2">samples</span></a></p>
+<p class="idxkeyword2"><a href="scheduling_a_script.html" target="hmcontent"><span class="idxkeyword2">scheduling</span></a></p>
+<p class="idxkeyword"><a href="dir_reconciling_differences.html" target="hmcontent"><span class="idxkeyword">selecting folders, files</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">sessions</span></p>
+<p class="idxkeyword2"><a href="managing_sessions.html" target="hmcontent"><span class="idxkeyword2">deleting</span></a></p>
+<p class="idxkeyword2"><a href="viewdir.html" target="hmcontent"><span class="idxkeyword2">Folder Compare</span></a></p>
+<p class="idxkeyword2"><a href="viewdirmerge.html" target="hmcontent"><span class="idxkeyword2">Folder Merge</span></a></p>
+<p class="idxkeyword2"><a href="viewdirsync.html" target="hmcontent"><span class="idxkeyword2">Folder Sync</span></a></p>
+<p class="idxkeyword2"><a href="managing_sessions.html" target="hmcontent"><span class="idxkeyword2">locking</span></a></p>
+<p class="idxkeyword2"><a href="managing_sessions.html" target="hmcontent"><span class="idxkeyword2">managing</span></a></p>
+<p class="idxkeyword2"><a href="viewpix.html" target="hmcontent"><span class="idxkeyword2">Picture Compare</span></a></p>
+<p class="idxkeyword2"><a href="managing_sessions.html" target="hmcontent"><span class="idxkeyword2">renaming</span></a></p>
+<p class="idxkeyword2"><a href="optionstweak.html" target="hmcontent"><span class="idxkeyword2">sharing</span></a></p>
+<p class="idxkeyword2"><a href="viewdata.html" target="hmcontent"><span class="idxkeyword2">Table Compare</span></a></p>
+<p class="idxkeyword2"><a href="viewtext.html" target="hmcontent"><span class="idxkeyword2">Text Compare</span></a></p>
+<p class="idxkeyword2"><a href="viewtextmerge.html" target="hmcontent"><span class="idxkeyword2">Text Merge</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">settings</span></p>
+<p class="idxkeyword2"><a href="dlgexport.html" target="hmcontent"><span class="idxkeyword2">export</span></a></p>
+<p class="idxkeyword2"><a href="settings_reference.html" target="hmcontent"><span class="idxkeyword2">how to find</span></a></p>
+<p class="idxkeyword2"><a href="dlgimport.html" target="hmcontent"><span class="idxkeyword2">import</span></a></p>
+<p class="idxkeyword2"><a href="where_settings_are_stored.html" target="hmcontent"><span class="idxkeyword2">location of</span></a></p>
+<p class="idxkeyword2"><a href="moving_bc_to_another_computer.html" target="hmcontent"><span class="idxkeyword2">move to new computer</span></a></p>
+<p class="idxkeyword2"><a href="settings_reference.html" target="hmcontent"><span class="idxkeyword2">tweaks</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">SFTP</span></p>
+<p class="idxkeyword2"><a href="profileftpglobal.html" target="hmcontent"><span class="idxkeyword2">authentication</span></a></p>
+<p class="idxkeyword2"><a href="profileftplogin.html" target="hmcontent"><span class="idxkeyword2">login</span></a></p>
+<p class="idxkeyword"><a href="optionstweak.html" target="hmcontent"><span class="idxkeyword">shared sessions</span></a></p>
+<p class="idxkeyword"><a href="where_settings_are_stored.html" target="hmcontent"><span class="idxkeyword">sharing Beyond Compare on a network</span></a></p>
+<p class="idxkeyword"><a href="sharing_sessions.html" target="hmcontent"><span class="idxkeyword">sharing sessions</span></a></p>
+<p class="idxkeyword"><a href="optionsstartup.html" target="hmcontent"><span class="idxkeyword">shell extension</span></a></p>
+<p class="idxkeyword"><a href="display_filters.html" target="hmcontent"><span class="idxkeyword">show differences</span></a></p>
+<p class="idxkeyword"><a href="profileftpconnection.html" target="hmcontent"><span class="idxkeyword">simultaneous connections</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">snapshot</span></p>
+<p class="idxkeyword2"><a href="snapshots.html" target="hmcontent"><span class="idxkeyword2">creating, using</span></a></p>
+<p class="idxkeyword2"><a href="dlgsnapshot.html" target="hmcontent"><span class="idxkeyword2">options</span></a></p>
+<p class="idxkeyword"><a href="profileftpglobal.html" target="hmcontent"><span class="idxkeyword">SSH authentication</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">SSL</span></p>
+<p class="idxkeyword2"><a href="profileftpglobal.html" target="hmcontent"><span class="idxkeyword2">certificate</span></a></p>
+<p class="idxkeyword2"><a href="profileftpconnection.html" target="hmcontent"><span class="idxkeyword2">clear control channel</span></a></p>
+<p class="idxkeyword2"><a href="profileftpconnection.html" target="hmcontent"><span class="idxkeyword2">clear data channel</span></a></p>
+<p class="idxkeyword"><a href="optionsstartup.html" target="hmcontent"><span class="idxkeyword">startup options</span></a></p>
+<p class="idxkeyword"><a href="where_settings_are_stored.html" target="hmcontent"><span class="idxkeyword">stored settings</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Subversion</span></p>
+<p class="idxkeyword2"><a href="profilesvn.html" target="hmcontent"><span class="idxkeyword2">profile</span></a></p>
+<p class="idxkeyword"><a href="command_line_reference.html" target="hmcontent"><span class="idxkeyword">switches, command line</span></a></p>
+<p class="idxkeyword"><a href="viewdirsync.html" target="hmcontent"><span class="idxkeyword">synchronize folders</span></a></p>
+<p class="idxkeyword"><a href="grammars.html" target="hmcontent"><span class="idxkeyword">syntax highlighting</span></a></p>
+<a name="T" id="T"></a><p class="idxsection">- T -</p>
+<p class="idxkeyword"><a href="formattextmisc.html" target="hmcontent"><span class="idxkeyword">tab stops</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">tabbed windows</span></p>
+<p class="idxkeyword2"><a href="optionstab.html" target="hmcontent"><span class="idxkeyword2">options</span></a></p>
+<p class="idxkeyword2"><a href="using_bc.html" target="hmcontent"><span class="idxkeyword2">using</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Table Compare</span></p>
+<p class="idxkeyword2"><a href="viewdata.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandsdata.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessiondatacolumns.html" target="hmcontent"><span class="idxkeyword2">rules</span></a></p>
+<p class="idxkeyword2"><a href="sessiondata.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><a href="using_bc.html" target="hmcontent"><span class="idxkeyword">tear off tab</span></a></p>
+<p class="idxkeyword"><a href="support_ordering_and_license.html" target="hmcontent"><span class="idxkeyword">tech support</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Text Compare</span></p>
+<p class="idxkeyword2"><a href="viewtext.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandstext.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="optionstext.html" target="hmcontent"><span class="idxkeyword2">options</span></a></p>
+<p class="idxkeyword2"><a href="sessiontextimportance.html" target="hmcontent"><span class="idxkeyword2">rules</span></a></p>
+<p class="idxkeyword2"><a href="sessiontext.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Text Edit</span></p>
+<p class="idxkeyword2"><a href="viewtextedit.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandstextedit.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Text Merge</span></p>
+<p class="idxkeyword2"><a href="viewtextmerge.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandstextmerge.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessiontextmergeimportance.html" target="hmcontent"><span class="idxkeyword2">rules</span></a></p>
+<p class="idxkeyword2"><a href="sessiontextmerge.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Text Patch</span></p>
+<p class="idxkeyword2"><a href="viewtextpatch.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandstextpatch.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword"><a href="sessiontextreplacements.html" target="hmcontent"><span class="idxkeyword">text replacements</span></a></p>
+<p class="idxkeyword"><a href="profileftpconnection.html" target="hmcontent"><span class="idxkeyword">timeout</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">timestamp</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k147.1')"><span class="idxkeyword2">filter by</span></a></p>
+<div id="k147.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirotherfilters.html" target="hmcontent"><span class="idxlink">Folder Compare Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergeotherfilters.html" target="hmcontent"><span class="idxlink">Folder Merge Other Filter Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsyncotherfilters.html" target="hmcontent"><span class="idxlink">Folder Sync Other Filter Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="optouch.html" target="hmcontent"><span class="idxkeyword2">modify</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">timestamps</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k148.1')"><span class="idxkeyword2">compare</span></a></p>
+<div id="k148.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="profileftptransfer.html" target="hmcontent"><span class="idxkeyword2">preserve on upload</span></a></p>
+<p class="idxkeyword"><a href="display_filters.html" target="hmcontent"><span class="idxkeyword">toggles mode</span></a></p>
+<p class="idxkeyword"><a href="optionscommand.html" target="hmcontent"><span class="idxkeyword">toolbar configuration</span></a></p>
+<p class="idxkeyword"><a href="optouch.html" target="hmcontent"><span class="idxkeyword">touch</span></a></p>
+<p class="idxkeyword"><a href="settings_reference.html" target="hmcontent"><span class="idxkeyword">tweaks</span></a></p>
+<a name="U" id="U"></a><p class="idxsection">- U -</p>
+<p class="idxkeyword"><a href="rules_vs_file_formats.html" target="hmcontent"><span class="idxkeyword">unimportant text</span></a></p>
+<a name="V" id="V"></a><p class="idxsection">- V -</p>
+<p class="idxkeyword"><span class="idxkeyword">version</span></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k154.1')"><span class="idxkeyword2">compare version info</span></a></p>
+<div id="k154.1" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondircomparison.html" target="hmcontent"><span class="idxlink">Folder Compare Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergecomparison.html" target="hmcontent"><span class="idxlink">Folder Merge Comparison Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynccomparison.html" target="hmcontent"><span class="idxlink">Folder Sync Comparison Settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><span class="idxkeyword">Version Compare</span></p>
+<p class="idxkeyword2"><a href="viewother.html" target="hmcontent"><span class="idxkeyword2">about</span></a></p>
+<p class="idxkeyword2"><a href="commandsver.html" target="hmcontent"><span class="idxkeyword2">commands</span></a></p>
+<p class="idxkeyword2"><a href="sessionver.html" target="hmcontent"><span class="idxkeyword2">session settings</span></a></p>
+<a name="W" id="W"></a><p class="idxsection">- W -</p>
+<p class="idxkeyword"><a href="profilewebdav.html" target="hmcontent"><span class="idxkeyword">WebDAV</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">workspace</span></p>
+<p class="idxkeyword2"><a href="optionsstartup.html" target="hmcontent"><span class="idxkeyword2">auto-load, auto-save</span></a></p>
+<p class="idxkeyword2"><a href="dlgworkspacemanager.html" target="hmcontent"><span class="idxkeyword2">renaming, deleting</span></a></p>
+<a name="Z" id="Z"></a><p class="idxsection">- Z -</p>
+<p class="idxkeyword"><span class="idxkeyword">zip files</span></p>
+<p class="idxkeyword2"><a href="optionsarchive.html" target="hmcontent"><span class="idxkeyword2">associations</span></a></p>
+<p class="idxkeyword2"><a href="viewdir.html" target="hmcontent"><span class="idxkeyword2">comparing</span></a></p>
+<p class="idxkeyword2"><a href="javascript:void(0)" onclick="return hmshowLinks('k158.3')"><span class="idxkeyword2">handling</span></a></p>
+<div id="k158.3" style="position:relative;margin:0 0 0 40px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirhandling.html" target="hmcontent"><span class="idxlink">Folder Compare Handling Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirmergehandling.html" target="hmcontent"><span class="idxlink">Folder Merge Handling Settings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="sessiondirsynchandling.html" target="hmcontent"><span class="idxlink">Folder Sync Handling Settings</span></a></td></tr></table></td></tr></table></div>
+</div>
+
+
+</body>
+</html>
+

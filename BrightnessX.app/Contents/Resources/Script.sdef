@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<!-- declare the namespace for using XInclude so we can include the standard suite -->
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
+    
+    
+    <!-- use XInclude to include the standard suite -->
+    <xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
+    
+    
+    <!-- specific suite(s) for the application follow... -->
+    <suite name="Simple Scripting Verbs" code="SVrb" description="Terminology for the SimpleScriptingVerbs Sample.">
+        
+
+      
+        <command name="brightness" code="Brightne" description="run a command with a bunch of arguments">
+            <cocoa class="BrightnessCommand"/>
+            
+            <parameter name="intensity" code="inte" type="integer" optional="no"
+                description="an integer parameter.">
+                <cocoa key="intensity"/>
+            </parameter>
+            <result type="text" description="the direct parameter enclosed in quotes"/>
+        </command>
+      
+    </suite>
+    
+</dictionary>

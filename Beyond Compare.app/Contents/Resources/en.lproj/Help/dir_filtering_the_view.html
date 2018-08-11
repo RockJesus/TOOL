@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Filtering the Folder Compare View</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="display filters,file filters,filters,ignore,ignore folder structure" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "dir_filtering_the_view.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Filtering the Folder Compare View</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="dir_how_to_compare.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="viewdir.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="dir_reconciling_differences.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">There are three overall type of filters you can use to control a Folder Compare session's scope:  <span class="f_Definition">File Filters</span> that include or exclude files based on their name or attributes, <span class="f_Definition">Display Filters</span> that show or hide lines of the comparison based on comparison status, and <span class="f_Definition">Folder Display Filters</span> that control when folders appear.</p>
+<p class="p_Normal">For instance, you can set the display filter to <span class="f_Command">View &gt; Show Left Newer</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="dirfavleftnewer.png"/> to display only those files that are newer on the left side of the comparison.  Or you can set a file filter to exclude *.bak files if you don't want to see or manipulate them.</p>
+<p class="p_Normal">By default, commands that act on a selected folder's contents (such as Copy, Move, Delete, etc.) will respect the current filters.  That is, if the selection includes a folder, the folder's filtered-out contents are skipped.  To change this default behavior, pick <span class="f_Command">Tools &gt; Options</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="options.png"/>, switch to the <span class="f_Command">File Operations</span> page, and mark the <span class="f_Command">Include hidden items by default</span> checkbox.  In either case, action dialogs allow you to override the default behavior on a case-by-case basis.</p>
+<p class="p_Normal">Pick <span class="f_Command">View &gt; Suppress Filters</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="suppressfilters.png"/> to temporarily suppress file filters and display filters.  Files and folders that were hidden will appear colored teal (blue-green) and can be processed.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">File Filters</span></p>
+<p class="p_Normal">You can specify the type of files you want to include in (or exclude from) the session.  For instance, if you are comparing Delphi projects you could include file types such as *.pas, *.dfm, and *.dpr.  Or, you could include all files except *.dcu and *.~* by excluding these file types.</p>
+<p class="p_Normal">To specify a simple &quot;include these types&quot; filter, use the <span class="f_Command">Filters</span> toolbar edit.  Enter the file types separated by semicolons, or use the dropdown list to select from presets.  Include a minus sign (-) in front of files to be excluded.</p>
+<p class="p_Normal"><img width="309" height="27" style="margin:0;width:309px;height:27px;border:none" src="toolbarfilefilters.png"/></p>
+<p class="p_Normal">In addition to these simple wildcard filters, you can specify more complex filters that include or exclude files or folders by name.  Pick <span class="f_Command">Session &gt; Session Settings</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="sessionedit.png"/>, and switch to the <span class="f_Command">Name Filters</span> tab.  Or, simply click the <span class="f_Command">Filters</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="filters.png"/> toolbar button.</p>
+<p class="p_Normal">Files can also be filtered based on their modified date, size, file attributes or text content.  In the Session Settings dialog, switch to the <span class="f_Command">Other Filters</span> tab.  (Folders are not directly filtered based on their attributes, but are affected by the filtering of their contents.)</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Display Filters</span></p>
+<p class="p_Normal">Display filters limit the view to certain comparison results.  The comparison results are determined by the session's comparison rules.  For instance, you can pick <span class="f_Command">View &gt; Show Differences</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="favdiff.png"/> to remove all the matching files so that you can concentrate on the mismatches.</p>
+<p class="p_Normal" style="margin: 10px 0px 14px 0px;"><span class="f_Subtitle">Folder Display Filters</span></p>
+<p class="p_Normal">By default, folders only appear if at least one file they contain is visible.  However, you can switch to one of the other folder display filters.</p>
+<p class="p_Normal"><span class="f_Command">View &gt; Always Show Folders</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="dirshowall.png"/> causes all folders to appear (unless they have been explicitly excluded by file filters), regardless of the other display filter selection.</p>
+<p class="p_Normal"><span class="f_Command">View &gt; Compare Files and Folder Structure</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="dircomparestructure.png"/> causes folders to respect the display filters.  For example, if the main display filter is <span class="f_Command">Show All</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="favall.png"/> then all folders appear.  If it is <span class="f_Command">Show Orphans</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="dirfavorphan.png"/>, only orphan folders and folders that contain orphan files are shown.</p>
+<p class="p_Normal"><span class="f_Command">View &gt; Only Compare Files</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="dircomparefilesonly.png"/> suppresses all empty folders, both truly empty folders and folders whose entire contents are hidden by other display or file filters.</p>
+<p class="p_Normal"><span class="f_Command">View &gt; Ignore Folder Structure</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="dirflatten.png"/> hides the folder tree and aligns files regardless of what subfolder they are in.</p>
+<p class="p_SingleSpaced"><span class="f_SeeAlso">See also</span></p>
+<p class="p_SingleSpaced"><a href="sessiondirnamefilter.html" class="topiclink">Folder Compare Name Filters</a></p>
+<p class="p_SingleSpaced"><a href="sessiondirotherfilters.html" class="topiclink">Folder Compare Other Filters</a></p>
+<p class="p_SingleSpaced"><a href="display_filters.html" class="topiclink">Display Filters</a></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Folder Compare Comparison Settings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="attributes,attributes compare,compare,compare attributes,compare file contents,compare file size,compare timestamps,compare version info,comparison criteria,comparison criteria setting,Folder Compare,Folder Compare rules,timestamps,timestamps compare,version,version compare version info" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sessiondircomparison.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Folder Compare Comparison Settings</span></h1>
+<p class="p_Command2"><span class="f_Command2">Session </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Session Settings </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Comparison</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="sessiondirspecs.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="sessiondir.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="sessiondirhandling.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">These settings control what is considered a difference in a folder session.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Quick tests</span></p>
+<p class="p_Normal">These comparison tests can be performed simply by reading folders and are much quicker than tests that require reading individual files.</p>
+<p class="p_Command"><span class="f_Command">Compare file size</span></p>
+<p class="p_Normal">Marks files as different if file sizes differ.</p>
+<p class="p_Command"><span class="f_Command">Compare timestamps</span></p>
+<p class="p_Normal">Compares files' date and time last modified.  Timestamps must differ by more seconds than the <span class="f_Command">second tolerance</span> to be considered mismatches.</p>
+<p class="p_Indented"><span class="f_Command">Ignore daylight saving difference</span> ignores exact hour differences.  This is useful for dealing with the way that different file systems handle Daylight Savings Time.</p>
+<p class="p_Indented"><span class="f_Command">Ignore timezone differences</span> ignores timestamp differences that are multiples of an exact hour.</p>
+<p class="p_Command"><span class="f_Command">Compare filename case</span></p>
+<p class="p_Normal">Marks files as different if character capitalizations differ.</p>
+<p class="p_Command"><span class="f_Command">Compare file attributes </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Indented"><span class="f_Command">Archive</span> compares files' archive attribute.  Since merely copying a file can change its archive attribute, you should normally disable this option.</p>
+<p class="p_Indented"><span class="f_Command">System</span> compares files' system attribute.</p>
+<p class="p_Indented"><span class="f_Command">Hidden</span> compares files' hidden attribute.</p>
+<p class="p_Indented"><span class="f_Command">Read-only</span> compares files' read-only attribute.</p>
+<p class="p_Command"><span class="f_Command">Align filenames with different extensions</span></p>
+<p class="p_Normal">Lines up files whose filenames are the same except for the extensions.</p>
+<p class="p_Command"><span class="f_Command">Align filenames with different Unicode normalization forms</span></p>
+<p class="p_Normal">Lines up files whose filenames are Unicode equivalent.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Tests that require reading files</span></p>
+<p class="p_Command"><span class="f_Command">Compare contents</span></p>
+<p class="p_Normal">Enables size or content-related comparisons.</p>
+<p class="p_Indented"><span class="f_Command">CRC comparison</span> compares files using their CRC values.</p>
+<p class="p_Indented"><span class="f_Command">Binary comparison</span> compares files byte-by-byte.</p>
+<p class="p_Indented"><span class="f_Command">Rules-based comparison</span> compares files based on their <a href="file_formats.html" class="topiclink">file format</a> associations.  Allows you to ignore differences in line endings, whitespace, or source code comments.</p>
+<p class="p_Indented"><span class="f_Command">Skip if quick tests indicate files are the same</span> improves comparison speed by only performing the slower, more thorough tests when timestamps are different.</p>
+<p class="p_Command"><span class="f_Command">Compare versions </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Normal">Compares version information, typically stored in application files (.exe, .dll, .ocx, etc).</p>
+<p class="p_Command"><span class="f_Command">Override quick test results</span></p>
+<p class="p_Normal">Marks files as matching if a content comparison determines they match even if there are differences in timestamps or other quick tests.</p>
+
+</td></tr></table>
+
+</body>
+</html>

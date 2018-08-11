@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Editing Text</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="editing text" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "editing_text.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Editing Text</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="viewtext.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="viewtext.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="walking_through_differences.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">Each pane of the Text Compare view is a full-featured text editor.  You can enter and edit text like any other text editor, although as you do the comparison is continually updated to reflect differences between the panes.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Line mode vs. character mode</span></p>
+<p class="p_Normal">The <span class="f_Command">Full Edit</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="fulledit.png"/> command toggles the editor between <span class="f_Definition">Line Mode</span> and <span class="f_Definition">Character Mode</span>.  In line mode, editing occurs on a line-by-line basis, so selection, cut, copy, paste, delete, etc. all affect entire lines.  While in line mode you can edit individual lines using the Text Details area.  Line mode supports disjointed selections.  In character mode the main panes support editing text.  Selection and editing commands all affect individual characters or spans of characters.  Character mode can only have a single, continuous selection.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Visible whitespace</span></p>
+<p class="p_Normal">Enabling the <span class="f_Command">Visible Whitespace</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="showws.png"/> command allows you to see where spaces, tabs, and line endings occur in your files.  The following example illustrates each of them.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 3px 0px 14px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:8px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:16px; padding:0px;"><p class="p_Normal"><img width="7" height="11" style="margin:0;width:7px;height:11px;border:none" src="space.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Space</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:8px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:16px; padding:0px;"><p class="p_Normal"><img width="7" height="11" style="margin:0;width:7px;height:11px;border:none" src="tab.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Tab</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:8px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:16px; padding:0px;"><p class="p_Normal"><img width="7" height="11" style="margin:0;width:7px;height:11px;border:none" src="windowslineending.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Windows line ending</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:8px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:16px; padding:0px;"><p class="p_Normal"><img width="7" height="11" style="margin:0;width:7px;height:11px;border:none" src="maclineending.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Mac line ending</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:8px; padding:0px;"><br />
+</td>
+<td style="vertical-align:top; width:16px; padding:0px;"><p class="p_Normal"><img width="7" height="11" style="margin:0;width:7px;height:11px;border:none" src="unixlineending.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p class="p_Normal">Unix line ending</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subtitle"><span class="f_Subtitle">Editing disabled</span></p>
+<p class="p_Normal">Beyond Compare disables editing of a file for any of the following reasons:</p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>The comparison encountered an error.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>The comparison was cancelled.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>The location of the file is read-only (e.g. 7zip/CHM/RAR archives, CD-ROMs, DVD-ROMs).</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>The file format <a href="formattextconversion.html" class="topiclink">conversion</a> doesn't support saving.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Editing in the parent <a href="sessiondirspecs.html" class="topiclink">folder session</a> has been disabled.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Editing in the <a href="sessiontextspecs.html" class="topiclink">file session</a> has been disabled.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Command line <a href="command_line_reference.html" class="topiclink">switches</a> have disabled editing.</p>
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Startup Options</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Explorer context menu,shell extension,startup options,workspace,workspace auto-load, auto-save" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "optionsstartup.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Startup Options</span></h1>
+<p class="p_Command2"><span class="f_Command2">Tools </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Options </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Startup</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="dlgprogoptions.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="dlgprogoptions.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="optionstab.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Subtitle"><span class="f_Subtitle">Startup options</span></p>
+<p class="p_Normal">When Beyond Compare starts up, it normally shows the Home view.  To have the program automatically start up with the same sessions that were open the last time you used Beyond Compare, specify the same workspace name in the <span class="f_Command">Load workspace</span> and <span class="f_Command">On Exit, save workspace as</span> edits.  In the <span class="f_Command">Session</span> menu, you can also use the <span class="f_Command">Save Workspace As</span> and <span class="f_Command">Load Workspace</span> commands for further control.</p>
+<p class="p_Normal">When you start Beyond Compare with a pair of files specified, the program can display a dialog with a comparison summary, rather than taking the time to display the entire side-by-side comparison.  To preface a file comparison with the Quick Compare dialog:</p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span>Mark the <span class="f_Command">When starting with file comparison, show quick compare dialog</span> checkbox.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span>Pick <span class="f_Command">Binary quick compare</span> to perform a byte-by-byte comparison, or <span class="f_Command">Rules-based quick compare</span> to use the file format settings appropriate for the specified files.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 24px; margin: 3px 0px 14px 0px;"><span style="font-size:10pt; font-family: 'Verdana';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span>Mark the <span class="f_Command">Open view automatically if files are different</span> checkbox if you want the dialog to only appear when the files match.</p><p class="p_Subtitle"><span class="f_Subtitle">To run Clipboard Compare on Windows startup </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Normal">Mark the <span class="f_Command">Run Clipboard Compare on Windows startup</span> checkbox.  The <a href="bcclipmain.html" class="topiclink">Clipboard Compare</a> is a small system tray application that can be used to compare recent Windows clipboard entries.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">To add Beyond Compare to Explorer's right-click menu </span><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/></p>
+<p class="p_Normal">Mark the <span class="f_Command">Include Beyond Compare in Explorer context menu</span> checkbox.</p>
+<p class="p_Normal">Pick any of the optional commands listed in the table and pick <span class="f_Command">Main menu</span> or <span class="f_Command">Submenu</span> to include it in the context menu.  Enable <span class="f_Command">Compare Using</span> to add a submenu that lists specific views, such as the Table Compare view and the Hex Compare view.  This allows you to override the view that would normally be selected via the file formats list.  Enable <span class="f_Command">Merge</span> to add 3-way merge support to the context menu.  Enable <span class="f_Command">Sync</span> to support synchronizing folders from Explorer.  Enable <span class="f_Command">Edit</span> to support editing a single file from Explorer.  Enable <span class="f_Command">Compare to Registry</span> to support comparing a registry file to the live registry.</p>
+
+</td></tr></table>
+
+</body>
+</html>

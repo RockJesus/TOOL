@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>VolumeBooster AU</string>
+			<key>factoryFunction</key>
+			<string>VolumeBoosterFactory</string>
+			<key>manufacturer</key>
+			<string>gdbm</string>
+			<key>name</key>
+			<string>VolumeBooster</string>
+			<key>sandboxSafe</key>
+			<true/>
+			<key>subtype</key>
+			<string>gdb1</string>
+			<key>type</key>
+			<string>aufx</string>
+			<key>version</key>
+			<string>65536</string>
+		</dict>
+	</array>
+	<key>BuildMachineOSBuild</key>
+	<string>16F73</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>VolumeBooster</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Version 1.8 Copyright © 2014, Global Delight Technologies Pvt. Ltd.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.globaldelight.VolumeBooster</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>VolumeBooster</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.8</string>
+	<key>CFBundleSignature</key>
+	<string>GDBM</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.8</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>8E2002</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>16E185</string>
+	<key>DTSDKName</key>
+	<string>macosx10.12</string>
+	<key>DTXcode</key>
+	<string>0832</string>
+	<key>DTXcodeBuild</key>
+	<string>8E2002</string>
+</dict>
+</plist>

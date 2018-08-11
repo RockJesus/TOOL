@@ -1,0 +1,1376 @@
+#!/bin/sh
+
+function head
+{
+clear
+echo " "
+echo "　　　　Clover EFI Tools v2013.05.31"
+echo " "
+echo "　　　　　　　　　　　　　　　by crazybirdy"
+}
+
+
+function menu
+{
+echo "　GPT EFI HFS格式"
+echo "　A、格式化 EFI 分区并挂载到桌面(HFS)"
+echo "　B、挂载 EFI 分区到桌面不格式化(HFS)"
+echo "　C、(一)安装 Clover EFI 开机引导文件(HFS)"
+echo "　D、(一)仅更新 Clover boot 文件(4kb)(HFS)"
+echo "　E、(二)安装 Clover 的 rc.local 程序"
+echo " "
+echo "　GPT EFI Fat32格式"
+echo "　F、格式化 EFI 分区并挂载到桌面(Fat32)"
+echo "　G、挂载 EFI 分区到桌面不格式化(Fat32)"
+echo "　H、(一)安装 Clover EFI 开机引导文件(Fat32)"
+echo "　I、(一)仅更新 Clover boot 文件(4kb)(Fat32)"
+echo "　J、(二)安装 Clover 的 rc.local 程序"
+echo " "
+echo "　X、安全卸载（推出）EFI 分区"
+echo "　Q、结束安装程序　　Clover_v2.3k_r3215_EFI"
+echo " "
+echo "   源自 Nezzdivya 的 EFI Tools 及 HJMac Plus"
+echo "   版权所有 © 2012 Nezzdivya + HJMac @PCBeta"
+read -n 1 option
+}
+
+
+function FormatHFS
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "请输入目标磁盘的 BSD 编号："
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的分区编号:"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+if [ -d "/Volumes/EFI" ]; then
+	echo " "
+	echo " 正在进行 卸载 EFI 分区........."  
+	sudo umount -f /Volumes/EFI
+fi
+echo " "
+echo " 正在进行 格式化 EFI 分区........."  
+sudo newfs_hfs -v EFI $ddiskp
+echo " "
+echo " 正在进行 挂载 EFI 分区........."  
+sudo rm -rf /Volumes/EFI
+sudo mkdir /Volumes/EFI
+sudo mount_hfs -u 0 -g 0 $ddiskp /Volumes/EFI
+
+sudo rm -rf /Volumes/EFI.metadata_never_index
+sudo touch /Volumes/EFI/.metadata_never_index
+if [ -e "/Volumes/EFI/.fseventsd" ]; then
+    sudo touch /Volumes/EFI/.fseventsd/no_log
+	sleep 1
+	sudo rm -Rf /Volumes/EFI/.fseventsd/
+fi
+sudo rm -Rf /Volumes/EFI/.fseventsd/
+sudo mkdir /Volumes/EFI/.fseventsd
+sudo touch /Volumes/EFI/.fseventsd/no_log
+sleep 1
+sudo rm -Rf /Volumes/EFI/.fseventsd/
+sudo mkdir /Volumes/EFI/.fseventsd
+sudo touch /Volumes/EFI/.fseventsd/no_log
+
+echo " "
+echo " "
+echo "A、格式化 EFI 分区并挂载到桌面(HFS)！ 所有操作已完成！"
+echo " "
+}
+
+
+function MountHFS
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "请输入目标磁盘的 BSD 编号："
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的分区编号:"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+if [ -d "/Volumes/EFI" ]; then
+	echo " "
+	echo " 正在进行 卸载 EFI 分区........."  
+	sudo umount -f /Volumes/EFI
+fi
+echo " "
+echo " 正在进行 挂载 EFI 分区........."  
+sudo rm -rf /Volumes/EFI
+sudo mkdir /Volumes/EFI
+sudo mount_hfs -u 0 -g 0 $ddiskp /Volumes/EFI
+echo " "
+echo " "
+echo "B、挂载 EFI 分区到桌面不格式化(HFS)！ 所有操作已完成！"
+echo " "
+}
+
+
+function BootSetup64HFS
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "请输入目标磁盘的 BSD 编号："
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的分区编号:"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+qwe=$(mount | grep $ddiskp | awk '{print $1}')
+if [ -n "$qwe" ]; then
+    {
+    zxc=1
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+else
+    {
+    diskutil mount $ddiskp
+    sleep 2
+    zxc=0
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+			exit 0
+        }
+    fi
+    }
+fi
+echo " "
+echo " 正在进行 写入 boot0ss" 
+sudo "$rsp/i386/fdisk440" -u -f "$rsp/i386/boot0ss" -y /dev/rdisk"$dn"
+sleep 2
+echo " "
+echo " 正在进行 写入 boot1h2" 
+sudo dd if="$rsp/i386/boot1h2" of=/dev/rdisk"$dn"s"$pt"
+sleep 2
+
+#if [ -f "$sdfgh/boot" ]; then
+#    {
+#    tm=$(date "+%H%M%S")
+#        echo " "
+#    echo "备份现有的 boot 文件为 boot.old$tm"
+#        echo " "
+#    sudo mv "$sdfgh/boot" "$sdfgh/boot.old$tm"
+#    }
+#fi
+
+echo " "
+echo "设置默认开机的 boot 为 64bit"
+
+		#添加 boot1 開始
+		sudo file "$sdfgh/boot" > "/tmp/boottype"
+		boottypeversion=$( grep "boot" "/tmp/boottype" | awk '{ print $2 }' | tr -d '}' )
+		echo "${boottypeversion}" >> "/tmp/boottype"
+
+		if [ "${boottypeversion}" == "data" ]; then
+			echo " "
+			echo " 正在进行 写入 boot1 = 变色龙 boot"
+			sudo cp "$sdfgh/boot" "$sdfgh/boot1"
+			sudo "$rsp/SetFile" -a V "$sdfgh/boot1"
+		fi
+		sudo rm "/tmp/boottype"
+
+		if [ ! -e "$sdfgh/boot1" ]; then
+			echo " "
+			echo " 正在进行 写入 boot1 = 变色龙 boot"
+			sudo cp "$rsp/i386/bootc" "$sdfgh/boot1"
+			sudo "$rsp/SetFile" -a V "$sdfgh/boot1"
+		fi
+
+		#添加 boot1 結束
+
+		echo " "
+		echo " 正在进行 写入 boot  = 64位 Clover boot"
+		sudo cp "$rsp/i386/boot6" "$sdfgh/boot"
+
+#echo " "
+#echo " 正在进行 写入 boot  = 64位 Clover boot"
+#sudo cp "$rsp/i386/boot6" "$sdfgh/boot"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot"
+
+#添加 boot6 開始
+echo " 正在进行 写入 boot6 = 64位 Clover boot"
+sudo cp "$rsp/i386/boot6" "$sdfgh/boot6"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot6"
+#添加 boot6 結束
+
+if [ -e "$sdfgh/mach_kernel" ]; then
+    sudo "$rsp/SetFile" -a V "$sdfgh/mach_kernel"
+fi
+
+echo " "
+echo " 正在进行 写入 /EFI"
+sudo rm -f "$sdfgh/EFI/drivers/FSInject32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/FSInject64.efi"
+sudo rm -f "$sdfgh/EFI/drivers/FSInject-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/FSInject-64.efi"
+sudo cp -R -f "$rsp/EFI" "$sdfgh/"
+#sudo rm -rf "$3/Library/Preferences/SystemConfiguration/NetworkInterfaces.plist"
+#sudo cp -R -f "$rsp/kext/" "$3/System/Library/Extensions/"
+#sudo chown -R root:wheel "$3/System/Library/Extensions"
+#sudo chmod -R 755 "$3/System/Library/Extensions"
+
+#sudo cp -f "$sdfgh/EFI/CLOVER/config-org.plist" "$sdfgh/EFI/CLOVER/config.plist"
+sudo rm -f "$sdfgh/EFI/drivers/FSInject-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/VBoxExt2-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/VBoxIso9600-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/XhciDxe-32.efi"
+
+if [ -e "$sdfgh/EFI/CLOVER/config.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+    sudo chmod 777 "$sdfgh/EFI"
+    sudo chmod 777 "$sdfgh/EFI/CLOVER"
+    sudo chmod 666 "$sdfgh/EFI/CLOVER/config.plist"
+fi
+
+if [ ! -e "$sdfgh/EFI/CLOVER/config.plist" ]; then
+    sudo cp -f "$sdfgh/EFI/CLOVER/config-org.plist" "$sdfgh/EFI/CLOVER/config.plist"
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+    sudo chmod 777 "$sdfgh/EFI"
+    sudo chmod 777 "$sdfgh/EFI/CLOVER"
+    sudo chmod 666 "$sdfgh/EFI/CLOVER/config.plist"
+fi
+
+if [ -e "$sdfgh/EFI/CLOVER/config-x32.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-x32.plist"
+fi
+
+if [ -e "$sdfgh/EFI/CLOVER/config-org.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+fi
+
+echo " "
+echo " "
+echo "C、(一)安装 Clover EFI 开机引导文件(HFS)！所有操作已完成！"
+echo " "
+}
+
+
+function BootSetupbootHFS
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "适用手动安装 boot1h2 的 4kb 磁盘，"
+echo "仅更新 boot 文件，不安装 boot0ss, boot1h2 文件。"
+echo "请输入目标磁盘的 BSD 编号："
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的分区编号:"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+qwe=$(mount | grep $ddiskp | awk '{print $1}')
+if [ -n "$qwe" ]; then
+    {
+    zxc=1
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+else
+    {
+    diskutil mount $ddiskp
+    sleep 2
+    zxc=0
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+    echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+fi
+
+#if [ -f "$sdfgh/boot" ]; then
+#    {
+#    tm=$(date "+%H%M%S")
+#        echo " "
+#    echo "备份现有的 boot 文件为 boot.old$tm"
+#        echo " "
+#    sudo mv "$sdfgh/boot" "$sdfgh/boot.old$tm"
+#    }
+#fi
+
+echo " "
+echo "设置默认开机的 boot 为 64bit"
+
+#添加 boot1 開始
+sudo file "$sdfgh/boot" > "/tmp/boottype"
+boottypeversion=$( grep "boot" "/tmp/boottype" | awk '{ print $2 }' | tr -d '}' )
+echo "${boottypeversion}" >> "/tmp/boottype"
+
+if [ "${boottypeversion}" == "data" ]; then
+echo " "
+echo " 正在进行 写入 boot1 = 变色龙 boot"
+sudo cp "$sdfgh/boot" "$sdfgh/boot1"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot1"
+fi
+sudo rm "/tmp/boottype"
+
+if [ ! -e "$sdfgh/boot1" ]; then
+echo " "
+echo " 正在进行 写入 boot1 = 变色龙 boot"
+sudo cp "$rsp/i386/bootc" "$sdfgh/boot1"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot1"
+fi
+
+#添加 boot1 結束
+
+echo " "
+echo " 正在进行 写入 boot  = 64位 Clover boot"
+sudo cp "$rsp/i386/boot6" "$sdfgh/boot"
+
+#echo " "
+#echo " 正在进行 写入 boot  = 64位 Clover boot"
+#sudo cp "$rsp/i386/boot6" "$sdfgh/boot"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot"
+
+#添加 boot6 開始
+echo " 正在进行 写入 boot6 = 64位 Clover boot"
+sudo cp "$rsp/i386/boot6" "$sdfgh/boot6"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot6"
+#添加 boot6 結束
+
+if [ -e "$sdfgh/mach_kernel" ]; then
+    sudo "$rsp/SetFile" -a V "$sdfgh/mach_kernel"
+fi
+
+echo " "
+echo " 正在进行 写入 /EFI"
+sudo cp -R -f "$rsp/EFI" "$sdfgh/"
+#sudo rm -rf "$3/Library/Preferences/SystemConfiguration/NetworkInterfaces.plist"
+#sudo cp -R -f "$rsp/kext/" "$3/System/Library/Extensions/"
+#sudo chown -R root:wheel "$3/System/Library/Extensions"
+#sudo chmod -R 755 "$3/System/Library/Extensions"
+
+#sudo cp -f "$sdfgh/EFI/CLOVER/config-org.plist" "$sdfgh/EFI/CLOVER/config.plist"
+sudo rm -f "$sdfgh/EFI/drivers/FSInject-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/VBoxExt2-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/VBoxIso9600-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/XhciDxe-32.efi"
+
+if [ -e "$sdfgh/EFI/CLOVER/config.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+    sudo chmod 777 "$sdfgh/EFI"
+    sudo chmod 777 "$sdfgh/EFI/CLOVER"
+    sudo chmod 666 "$sdfgh/EFI/CLOVER/config.plist"
+fi
+
+if [ ! -e "$sdfgh/EFI/CLOVER/config.plist" ]; then
+    sudo cp -f "$sdfgh/EFI/CLOVER/config-org.plist" "$sdfgh/EFI/CLOVER/config.plist"
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+    sudo chmod 777 "$sdfgh/EFI"
+    sudo chmod 777 "$sdfgh/EFI/CLOVER"
+    sudo chmod 666 "$sdfgh/EFI/CLOVER/config.plist"
+fi
+
+if [ -e "$sdfgh/EFI/CLOVER/config-x32.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-x32.plist"
+fi
+
+if [ -e "$sdfgh/EFI/CLOVER/config-org.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+fi
+
+echo " "
+echo " "
+echo "D、(一)仅更新 Clover boot 文件(4kb)(HFS)！所有操作已完成！"
+echo " "
+}
+
+
+function BootrcloaclHFS
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "请输入目标磁盘 Mac 系统的 BSD 编号："
+echo "输入目标磁盘为 Clover EFI 即将引导的 Mac 系统磁盘。"
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的 Mac 系统分区编号:"
+echo "输入目标磁盘为 Clover EFI 即将引导的 Mac 系统分区(非EFI分区)。"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+qwe=$(mount | grep $ddiskp | awk '{print $1}')
+if [ -n "$qwe" ]; then
+    {
+    zxc=1
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+else
+    {
+    diskutil mount $ddiskp
+    sleep 2
+    zxc=0
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 rc 引导程序到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+        	exit 0
+        }
+    fi
+    }
+fi
+
+    echo "准备安装 /etc/rc.local 及 /etc/rc.shutdown.local"
+    echo "到目标分区"$sdfgh"？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 /etc/rc.local 及 /etc/rc.shutdown.local"
+        echo "到目标分区"$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+        	exit 0
+        }
+    fi
+    
+if [ ! -d "$sdfgh/etc" ]; then
+    sudo mkdir "$sdfgh/etc"
+fi
+sudo cp "$rsp/etc/rc.local" "$sdfgh/etc/rc.local"
+sudo cp "$rsp/etc/rc.shutdown.local" "$sdfgh/etc/rc.shutdown.local"
+if [ -e "$sdfgh/etc/rc.local" ]; then
+	sudo ls "$sdfgh/etc/rc.local"
+	sudo ls "$sdfgh/etc/rc.shutdown.local"
+fi
+
+echo " "
+echo " "
+echo "E、(二)安装 Clover 的 rc.local 程序！所有操作已完成！"
+echo " "
+}
+
+
+function FormatFat32
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "请输入目标磁盘的 BSD 编号："
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的分区编号:"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+if [ -d "/Volumes/EFI" ]; then
+	echo " "
+	echo " 正在进行 卸载 EFI 分区........."  
+	sudo umount -f /Volumes/EFI
+fi
+echo " "
+echo " 正在进行 格式化 EFI 分区........."  
+sudo newfs_msdos -v EFI -F 32 $ddiskp
+echo " "
+echo " 正在进行 挂载 EFI 分区........."  
+sudo rm -rf /Volumes/EFI
+sudo mkdir /Volumes/EFI
+sudo mount_msdos -u 0 -g 0 $ddiskp /Volumes/EFI
+
+sudo rm -rf /Volumes/EFI.metadata_never_index
+sudo touch /Volumes/EFI/.metadata_never_index
+if [ -e "/Volumes/EFI/.fseventsd" ]; then
+    sudo touch /Volumes/EFI/.fseventsd/no_log
+	sleep 1
+	sudo rm -Rf /Volumes/EFI/.fseventsd/
+fi
+sudo rm -Rf /Volumes/EFI/.fseventsd/
+sudo mkdir /Volumes/EFI/.fseventsd
+sudo touch /Volumes/EFI/.fseventsd/no_log
+sleep 1
+sudo rm -Rf /Volumes/EFI/.fseventsd/
+sudo mkdir /Volumes/EFI/.fseventsd
+sudo touch /Volumes/EFI/.fseventsd/no_log
+
+echo " "
+echo " "
+echo "F、格式化 EFI 分区并挂载到桌面(Fat32)！ 所有操作已完成！"
+echo " "
+}
+
+
+function MountFat32
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "请输入目标磁盘的 BSD 编号："
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的分区编号:"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+if [ -d "/Volumes/EFI" ]; then
+	echo " "
+	echo " 正在进行 卸载 EFI 分区........."  
+	sudo umount -f /Volumes/EFI
+fi
+echo " "
+echo " 正在进行 挂载 EFI 分区........."  
+sudo rm -rf /Volumes/EFI
+sudo mkdir /Volumes/EFI
+sudo mount_msdos -u 0 -g 0 $ddiskp /Volumes/EFI
+echo " "
+echo " "
+echo "G、挂载 EFI 分区到桌面不格式化(Fat32)！ 所有操作已完成！"
+echo " "
+}
+
+
+function BootSetup64Fat32
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "请输入目标磁盘的 BSD 编号："
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的分区编号:"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+qwe=$(mount | grep $ddiskp | awk '{print $1}')
+if [ -n "$qwe" ]; then
+    {
+    zxc=1
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+else
+    {
+    diskutil mount $ddiskp
+    sleep 2
+    zxc=0
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+fi
+echo " "
+echo " 正在进行 写入 boot0ss" 
+sudo "$rsp/i386/fdisk440" -u -f "$rsp/i386/boot0ss" -y /dev/rdisk"$dn"
+sleep 2
+
+echo " "
+echo " 正在进行 写入 boot1f32alt" 
+sudo rm -f "$rsp/i386/newbs"
+sudo rm -f "$rsp/i386/origbs"
+sudo dd if=/dev/rdisk"$dn"s"$pt" count=1 bs=512 of="$rsp/i386/origbs"
+sudo cp "$rsp/i386/boot1f32alt" "$rsp/i386/newbs"
+sudo dd if="$rsp/i386/origbs" of="$rsp/i386/newbs" skip=3 seek=3 bs=1 count=87 conv=notrunc
+sudo dd if="$rsp/i386/newbs" of=/dev/rdisk"$dn"s"$pt" count=1 bs=512
+
+sudo rm -f "$rsp/i386/origbs"
+sudo dd if=/dev/rdisk"$dn"s"$pt" count=1 bs=512 of="$rsp/i386/origbs"
+sudo cp "$rsp/i386/boot1f32alt" "$rsp/i386/newbs"
+sudo dd if="$rsp/i386/origbs" of="$rsp/i386/newbs" skip=3 seek=3 bs=1 count=87 conv=notrunc
+sudo dd if="$rsp/i386/newbs" of=/dev/rdisk"$dn"s"$pt" count=1 bs=512
+
+sudo rm -f "$rsp/i386/origbs"
+sudo rm -f "$rsp/i386/newbs"
+
+sleep 2
+
+#if [ -f "$sdfgh/boot" ]; then
+#    {
+#    tm=$(date "+%H%M%S")
+#        echo " "
+#    echo "备份现有的 boot 文件为 boot.old$tm"
+#        echo " "
+#    sudo mv "$sdfgh/boot" "$sdfgh/boot.old$tm"
+#    }
+#fi
+
+echo " "
+echo "设置默认开机的 boot 为 64bit"
+
+#添加 boot1 開始
+sudo file "$sdfgh/boot" > "/tmp/boottype"
+boottypeversion=$( grep "boot" "/tmp/boottype" | awk '{ print $2 }' | tr -d '}' )
+echo "${boottypeversion}" >> "/tmp/boottype"
+
+if [ "${boottypeversion}" == "data" ]; then
+echo " "
+echo " 正在进行 写入 boot1 = 变色龙 boot"
+sudo cp "$sdfgh/boot" "$sdfgh/boot1"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot1"
+fi
+sudo rm "/tmp/boottype"
+
+if [ ! -e "$sdfgh/boot1" ]; then
+echo " "
+echo " 正在进行 写入 boot1 = 变色龙 boot"
+sudo cp "$rsp/i386/bootc" "$sdfgh/boot1"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot1"
+fi
+
+#添加 boot1 結束
+
+echo " "
+echo " 正在进行 写入 boot  = 64位 Clover boot"
+sudo cp "$rsp/i386/boot6" "$sdfgh/boot"
+
+#echo " "
+#echo " 正在进行 写入 boot  = 64位 Clover boot"
+#sudo cp "$rsp/i386/boot6" "$sdfgh/boot"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot"
+
+#添加 boot6 開始
+echo " 正在进行 写入 boot6 = 64位 Clover boot"
+sudo cp "$rsp/i386/boot6" "$sdfgh/boot6"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot6"
+#添加 boot6 結束
+
+if [ -e "$sdfgh/mach_kernel" ]; then
+    sudo "$rsp/SetFile" -a V "$sdfgh/mach_kernel"
+fi
+
+echo " "
+echo " 正在进行 写入 /EFI"
+sudo cp -R -f "$rsp/EFI" "$sdfgh/"
+#sudo rm -rf "$3/Library/Preferences/SystemConfiguration/NetworkInterfaces.plist"
+#sudo cp -R -f "$rsp/kext/" "$3/System/Library/Extensions/"
+#sudo chown -R root:wheel "$3/System/Library/Extensions"
+#sudo chmod -R 755 "$3/System/Library/Extensions"
+
+#sudo cp -f "$sdfgh/EFI/CLOVER/config-org.plist" "$sdfgh/EFI/CLOVER/config.plist"
+sudo rm -f "$sdfgh/EFI/drivers/FSInject-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/VBoxExt2-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/VBoxIso9600-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/XhciDxe-32.efi"
+
+if [ -e "$sdfgh/EFI/CLOVER/config.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+    sudo chmod 777 "$sdfgh/EFI"
+    sudo chmod 777 "$sdfgh/EFI/CLOVER"
+    sudo chmod 666 "$sdfgh/EFI/CLOVER/config.plist"
+fi
+
+if [ ! -e "$sdfgh/EFI/CLOVER/config.plist" ]; then
+    sudo cp -f "$sdfgh/EFI/CLOVER/config-org.plist" "$sdfgh/EFI/CLOVER/config.plist"
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+    sudo chmod 777 "$sdfgh/EFI"
+    sudo chmod 777 "$sdfgh/EFI/CLOVER"
+    sudo chmod 666 "$sdfgh/EFI/CLOVER/config.plist"
+fi
+
+if [ -e "$sdfgh/EFI/CLOVER/config-x32.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-x32.plist"
+fi
+
+if [ -e "$sdfgh/EFI/CLOVER/config-org.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+fi
+
+echo " "
+echo " "
+echo "H、(一)安装 Clover EFI 开机引导文件(Fat32)！所有操作已完成！"
+echo " "
+}
+
+
+function BootSetupbootFat32
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "适用手动安装 boot1h2 的 4kb 磁盘，"
+echo "仅更新 boot 文件，不安装 boot0ss, boot1h2 文件。"
+echo "请输入目标磁盘的 BSD 编号："
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的分区编号:"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+qwe=$(mount | grep $ddiskp | awk '{print $1}')
+if [ -n "$qwe" ]; then
+    {
+    zxc=1
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+else
+    {
+    diskutil mount $ddiskp
+    sleep 2
+    zxc=0
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+fi
+
+#if [ -f "$sdfgh/boot" ]; then
+#    {
+#    tm=$(date "+%H%M%S")
+#        echo " "
+#    echo "备份现有的 boot 文件为 boot.old$tm"
+#        echo " "
+#    sudo mv "$sdfgh/boot" "$sdfgh/boot.old$tm"
+#    }
+#fi
+
+echo " "
+echo "设置默认开机的 boot 为 64bit"
+
+#添加 boot1 開始
+sudo file "$sdfgh/boot" > "/tmp/boottype"
+boottypeversion=$( grep "boot" "/tmp/boottype" | awk '{ print $2 }' | tr -d '}' )
+echo "${boottypeversion}" >> "/tmp/boottype"
+
+if [ "${boottypeversion}" == "data" ]; then
+echo " "
+echo " 正在进行 写入 boot1 = 变色龙 boot"
+sudo cp "$sdfgh/boot" "$sdfgh/boot1"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot1"
+fi
+sudo rm "/tmp/boottype"
+
+if [ ! -e "$sdfgh/boot1" ]; then
+echo " "
+echo " 正在进行 写入 boot1 = 变色龙 boot"
+sudo cp "$rsp/i386/bootc" "$sdfgh/boot1"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot1"
+fi
+
+#添加 boot1 結束
+
+echo " "
+echo " 正在进行 写入 boot  = 64位 Clover boot"
+sudo cp "$rsp/i386/boot6" "$sdfgh/boot"
+
+#echo " "
+#echo " 正在进行 写入 boot  = 64位 Clover boot"
+#sudo cp "$rsp/i386/boot6" "$sdfgh/boot"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot"
+
+#添加 boot6 開始
+echo " 正在进行 写入 boot6 = 64位 Clover boot"
+sudo cp "$rsp/i386/boot6" "$sdfgh/boot6"
+sudo "$rsp/SetFile" -a V "$sdfgh/boot6"
+#添加 boot6 結束
+
+if [ -e "$sdfgh/mach_kernel" ]; then
+    sudo "$rsp/SetFile" -a V "$sdfgh/mach_kernel"
+fi
+
+echo " "
+echo " 正在进行 写入 /EFI"
+sudo cp -R -f "$rsp/EFI" "$sdfgh/"
+#sudo rm -rf "$3/Library/Preferences/SystemConfiguration/NetworkInterfaces.plist"
+#sudo cp -R -f "$rsp/kext/" "$3/System/Library/Extensions/"
+#sudo chown -R root:wheel "$3/System/Library/Extensions"
+#sudo chmod -R 755 "$3/System/Library/Extensions"
+
+#sudo cp -f "$sdfgh/EFI/CLOVER/config-org.plist" "$sdfgh/EFI/CLOVER/config.plist"
+sudo rm -f "$sdfgh/EFI/drivers/FSInject-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/VBoxExt2-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/VBoxIso9600-32.efi"
+sudo rm -f "$sdfgh/EFI/drivers/XhciDxe-32.efi"
+   
+if [ -e "$sdfgh/EFI/CLOVER/config.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+    sudo chmod 777 "$sdfgh/EFI"
+    sudo chmod 777 "$sdfgh/EFI/CLOVER"
+    sudo chmod 666 "$sdfgh/EFI/CLOVER/config.plist"
+fi
+
+if [ ! -e "$sdfgh/EFI/CLOVER/config.plist" ]; then
+    sudo cp -f "$sdfgh/EFI/CLOVER/config-org.plist" "$sdfgh/EFI/CLOVER/config.plist"
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+    sudo chmod 777 "$sdfgh/EFI"
+    sudo chmod 777 "$sdfgh/EFI/CLOVER"
+    sudo chmod 666 "$sdfgh/EFI/CLOVER/config.plist"
+fi
+
+if [ -e "$sdfgh/EFI/CLOVER/config-x32.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-x32.plist"
+fi
+
+if [ -e "$sdfgh/EFI/CLOVER/config-org.plist" ]; then
+    sudo rm -rf "$sdfgh/EFI/CLOVER/config-org.plist"
+fi
+
+echo " "
+echo " "
+echo "I、(一)仅更新 Clover boot 文件(4kb)(Fat32)！所有操作已完成！"
+echo " "
+}
+
+
+function BootrcloaclFat32
+{
+head
+rspx=`echo $0`
+rsp=${rspx%%'/chameleon_installer'*}
+diskutil list
+echo " "
+echo "请输入目标磁盘 Mac 系统的 BSD 编号："
+echo "输入目标磁盘为 Clover EFI 即将引导的 Mac 系统磁盘。"
+read dn
+echo " "
+echo "请输入目标磁盘 disk$dn 的 Mac 系统分区编号:"
+echo "输入目标磁盘为 Clover EFI 即将引导的 Mac 系统分区(非EFI分区)。"
+read pt
+echo " "
+diskp=`echo "disk"$dn"s"$pt`
+ddiskp=`echo "/dev/"$diskp`
+ddisk=`echo "/dev/disk"$dn`
+echo "您的“磁盘标识符”为 "$ddiskp", 是否继续? （按 y 或 n）"
+read -s -n 1 q2
+if [ "$q2" = "y" ]; then
+    {
+    echo "yes"
+    }
+else
+    {
+		echo " "
+		echo "操作终止！"
+		echo " "
+		exit 0
+    }
+fi
+qwe=$(mount | grep $ddiskp | awk '{print $1}')
+if [ -n "$qwe" ]; then
+    {
+    zxc=1
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 引导到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+else
+    {
+    diskutil mount $ddiskp
+    sleep 2
+    zxc=0
+    sdf=$(mount | grep $ddiskp)
+    sdfg=${sdf%%' ('*}
+    sdfgh=${sdfg#*'on '}
+	echo " "
+    echo "目标磁盘的挂载点为 "$sdfgh" 是否正确？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 Clover 幸运草 rc 引导程序到 "$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+    }
+fi
+
+    echo "准备安装 /etc/rc.local 及 /etc/rc.shutdown.local"
+    echo "到目标分区"$sdfgh"？（按 y 或 n）"
+    read -s -n 1 q3
+    if [ "$q3" = "y" ]; then
+        {
+        echo "yes"
+        echo " "
+        echo "正在安装 /etc/rc.local 及 /etc/rc.shutdown.local"
+        echo "到目标分区"$sdfgh"，请稍候……"
+        echo " "
+        }
+    else
+        {
+			echo " "
+			echo "操作终止！"
+            echo " "
+            exit 0
+        }
+    fi
+
+if [ ! -d "$sdfgh/etc" ]; then
+    sudo mkdir "$sdfgh/etc"
+fi
+sudo cp "$rsp/etc/rc.local" "$sdfgh/etc/rc.local"
+sudo cp "$rsp/etc/rc.shutdown.local" "$sdfgh/etc/rc.shutdown.local"
+if [ -e "$sdfgh/etc/rc.local" ]; then
+	sudo ls "$sdfgh/etc/rc.local"
+	sudo ls "$sdfgh/etc/rc.shutdown.local"
+fi
+
+echo " "
+echo " "
+echo "J、(二)安装 Clover 的 rc.local 程序！所有操作已完成！"
+echo " "
+}
+
+
+function XEFI
+{
+head
+echo " "
+echo " 正在进行 卸载 EFI 分区........." 
+sudo umount -f /Volumes/EFI
+sudo rm -rf /Volumes/EFI
+echo " "
+echo "EFI 分区已成功卸载"
+echo " "
+echo "X、安全卸载（推出）EFI 分区！所有操作已完成！"
+echo " "
+}
+
+
+function Quit
+{
+head
+
+echo " "
+echo " " 
+echo " 　　　　　 　　　结束安装程序！"
+echo " "
+echo " " 
+echo " "
+echo "   源自 Nezzdivya 的 EFI Tools 及 HJMac Plus"
+echo "   版权所有 © 2012 Nezzdivya + HJMac @PCBeta"
+echo " "
+echo " "
+exit 0
+
+}
+
+
+while [ 1 ]
+do
+head
+menu
+case $option in
+
+a)
+echo
+FormatHFS ;;
+b)
+echo
+MountHFS ;;
+c)
+echo
+BootSetup64HFS ;;
+d)
+echo
+BootSetupbootHFS ;;
+e)
+echo
+BootrcloaclHFS ;;
+
+f)
+echo
+FormatFat32 ;;
+g)
+echo
+MountFat32 ;;
+h)
+echo
+BootSetup64Fat32 ;;
+i)
+echo
+BootSetupbootFat32 ;;
+j)
+echo
+BootrcloaclFat32 ;;
+
+x)
+echo
+XEFI ;;
+q)
+echo
+Quit ;;
+
+
+*)
+echo " 输入错误！"
+esac
+echo
+echo "按任意键返回主菜单"
+echo
+read -n 1 line
+clear
+done
+
+exit
+
+

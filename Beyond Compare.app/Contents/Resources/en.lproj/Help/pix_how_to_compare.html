@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>How to Compare in the Picture Compare</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "pix_how_to_compare.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">How to Compare in the Picture Compare View</span></h1>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="viewpix.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="viewpix.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="viewreg.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Subtitle"><span class="f_Subtitle">Aligning image content</span></p>
+<p class="p_Normal">You can compare images that have been resized, rotated, reflected or cropped.</p>
+<p class="p_Normal">Pick <span class="f_Command">Auto Scale</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="pixautoscale.png"/> to automatically enlarge the smaller image to match the scale of the larger one.</p>
+<p class="p_Normal">Pick <span class="f_Command">Rotate Clockwise</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="pixrotateright.png"/> or <span class="f_Command">Rotate Counterclockwise</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="pixrotateleft.png"/> to rotate the current image ninety degrees to the right or to the left.</p>
+<p class="p_Normal">Pick <span class="f_Command">Flip Horizontally</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="pixfliphorz.png"/> or <span class="f_Command">Flip Vertically</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="pixflipvert.png"/> to reflect the current image across its y-axis or x-axis.</p>
+<p class="p_Normal">If one image is a cropped version of the other, you can drag the mouse over the difference pane to adjust the position of the right image's top left corner.  To reset the offset back to (0,0) pick <span class="f_Command">Reset Difference Offset</span> or simply click on the offset label.  For finer control, use the arrow keys to nudge the offset one pixel at a time, or Ctrl+arrow keys to move by a larger amount.  Note that the difference pane must be selected for the keyboard nudge function to work.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Tolerance Mode</span></p>
+<p class="p_Normal">Pick <span class="f_Command">Tolerance Mode</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="pixdifftolerance.png"/> to have difference pixels indicate matches, unimportant differences, and important differences.  It uses a configurable <span class="f_Command">Tolerance</span> to define the greatest degree of difference that is considered unimportant.  You can also define <span class="f_Command">Replacements</span> to ignore specific color changes between images.  By default, shades of gray are used for matches, shades of blue are used for unimportant differences, and shades of red are used for important differences.  You can adjust these colors to suit your preferences.  (See <a href="optionspixcolor.html" class="topiclink">Picture Compare Colors</a>.)</p>
+<p class="p_Normal">Mark <span class="f_Command">Ignore Unimportant Differences</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="insigignored.png"/> to ignore any differences less than or equal to the tolerance.  They will be handled the same as matching pixels.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Mismatch Range Mode</span></p>
+<p class="p_Normal">Pick <span class="f_Command">Mismatch Range Mode</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="pixdiffrange.png"/> to have difference pixels represent the degree of difference between the images.  Black pixels are used for matches and yellow ones are used for differences.  Brightness represents the degree of difference.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Blend Mode</span></p>
+<p class="p_Normal">Pick <span class="f_Command">Blend Mode</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="pixdiffblend.png"/> to use a configurable <span class="f_Command">Blend</span> percentage to combine the images.  Decrease the percentage to make the right image more dominant.</p>
+
+</td></tr></table>
+
+</body>
+</html>

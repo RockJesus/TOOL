@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>FTP Profile Transfer Settings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ASCII mode transfer,binary mode transfer,compress transfers,filename conversion,FTP,FTP transfer settings,limit download/upload speed,timestamps,timestamps preserve on upload" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "profileftptransfer.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">FTP Profile Transfer Settings</span></h1>
+<p class="p_Command2"><span class="f_Command2">FTP Profile </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Transfer</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="profileftplisting.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="profileftp.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="profileamazons3.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">These settings control how files are transferred to and from the FTP server.</p>
+<p class="p_Command"><span class="f_Command">Transfer type</span></p>
+<p class="p_Normal">FTP sites can transfer data in two ways:  ASCII and Binary.  ASCII is used to transfer text files which don't have any special characters.  The FTP server will automatically make any adjustments to line endings needed in ASCII mode.  ASCII mode also handles transfers from mainframes by converting from EBCDIC to ANSI and adding line terminators to the end of records.  Binary is used to transfer all other files, including pictures, music, Word documents, etc.  In Binary mode, no changes are made to the file during the transfer.</p>
+<p class="p_Normal">Setting the transfer type to either <span class="f_Command">ASCII</span> or <span class="f_Command">Binary</span> will force all files to transfer that way.  If the transfer type is <span class="f_Command">Auto</span>, Beyond Compare will automatically switch back and forth based on the file's extension.</p>
+<p class="p_Command"><span class="f_Command">Copy timestamps on upload</span></p>
+<p class="p_Normal">Mark to force the remote timestamp to match the source timestamp.  Only unmark if it causes problems with the server.</p>
+<p class="p_Command"><span class="f_Command">Copy Unix permissions on upload</span></p>
+<p class="p_Normal">Mark to force the remote Unix permissions to match the source Unix permissions.  Only unmark if it causes problems with the server.</p>
+<p class="p_Command"><span class="f_Command">Compress transfers (MODE Z)</span></p>
+<p class="p_Normal">Mark to use compression to speed up transfers when supported by the server.  This may actually slow down transfers on fast connections.</p>
+<p class="p_Command"><span class="f_Command">Limit download (Kbps)</span>, <span class="f_Command">Limit upload (Kbps)</span></p>
+<p class="p_Normal">Specify how much bandwidth Beyond Compare can consume for each connection.</p>
+<p class="p_Command"><span class="f_Command">Force faster uploads to older OpenSSH servers</span></p>
+<p class="p_Normal">Mark to use larger transfer buffers and pipelining on OpenSSH servers prior to OpenSSH 3.9.  This can substantially increase transfer speed, but is not compatible with all servers, and failures may not be obvious.  Use a binary content comparison to verify the first transfers you do after enabling this.</p>
+<p class="p_Normal"><img width="12" height="12" style="margin:0;width:12px;height:12px;border:none" src="note.png"/><span class="f_Subtitle">Note  </span>If you need help with the settings on this page, consult your system administrator.</p>
+
+</td></tr></table>
+
+</body>
+</html>

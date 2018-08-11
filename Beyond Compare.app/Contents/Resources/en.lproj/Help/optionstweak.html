@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Tweak Options</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="hints, configuring,Home view options,sessions,sessions sharing,shared sessions" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "optionstweak.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Tweak Options</span></h1>
+<p class="p_Command2"><span class="f_Command2">Tools </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Options </span><span class="f_Command2">&gt;</span><span class="f_Command2"> Tweaks</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="optionsopenwith.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="dlgprogoptions.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="session_settings.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Normal">Tweaks are advanced or obscure program options that we group here to avoid cluttering other areas.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Check for Updates</span></p>
+<p class="p_Normal">By default, Beyond Compare checks our website for new versions of the software.  You can change the number of <span class="f_Command">days</span> between checks or unmark the <span class="f_Command">Check every</span> checkbox to never check.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Editor Display</span></p>
+<p class="p_Normal">Most of the display settings for text views are found on the <a href="optionsfilecolor.html" class="topiclink">File View Colors, Fonts</a> page of the Options dialog.  Settings specific to the text editors are here.</p>
+<p class="p_Normal">Syntax highlighting is normally suppressed on difference lines so that it doesn't interfere with difference coloring schemes.  Mark the <span class="f_Command">Show syntax highlighting on difference lines</span> checkbox to change this behavior. </p>
+<p class="p_Normal"><span class="f_Command">Use crosshatching for lines beyond the end of file</span> helps identify the end of your text files, particularly when comparing a longer file with a shorter one.</p>
+<p class="p_Normal"><span class="f_Command">Right side gutter for left editor (compare only)</span> positions the copy buttons close together in the center of the view, and keeps the scrollbars at the outer edges.  It has no effect if you are using the <span class="f_Command">View &gt; Over-under layout</span> <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="overunder.png"/>.</p>
+<p class="p_Normal"><span class="f_Command">Enable font linking in editors</span> allows the text editor to use additional fonts in order to support characters from multiple languages.</p>
+<p class="p_Normal"><span class="f_Command">Use orphan color</span> causes file views to use a separately configurable color for items that are only on one side of the comparison.</p>
+<p class="p_Normal">You can add or subtract pixels from <span class="f_Command">Extra line spacing</span> to change the density of text in the view.</p>
+<p class="p_Normal">To show a vertical line at a specific column position, set <span class="f_Command">Show column line at</span> to the desired value.  Set it to zero (0) to hide the line.  If you use a proportionally spaced font, the column position will be determined by the width of the space character.</p>
+<p class="p_Normal"><span class="f_Command">Dim inactive pane by</span> darkens the non-active side of the comparison in order to help you focus on the active side.</p>
+<p class="p_Normal"><img width="27" height="12" style="margin:0;width:27px;height:12px;border:none" src="pro.png"/> To use an alternate font for the narrower input panes in a Text Merge session, mark the <span class="f_Command">Use different font for merge input panes</span> checkbox.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">File Operations</span></p>
+<p class="p_Normal"><span class="f_Command">Beep after long file operations</span> causes an audible sound when file operations such as copy and move are completed, unless they take less than 3 seconds.</p>
+<p class="p_Normal"><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/> The read-only attribute is normally preserved when copying files.  On read-only media such as CDs or DVDs, all files will still be marked read-only when they are copied to another location.  To avoid this, mark the <span class="f_Command">Remove read-only flag when copying from a CD or DVD</span> checkbox.</p>
+<p class="p_Normal">Mark the <span class="f_Command">Check for files changed on disk</span> checkbox to check for a newer copy of a file when returning focus to a file view.  If found, Beyond Compare will prompt &quot;File changed on disk, reload?&quot;  Mark the <span class="f_Command">Automatically reload unless changes will be discarded</span> checkbox to have Beyond Compare automatically load the newer file as long as you haven't made changes to the displayed file.</p>
+<p class="p_Normal"><span class="f_Command">Comparison priority</span> can be changed to affect the order in which background work is performed.</p>
+<p class="p_Normal"><span class="f_Command">Buffer size for binary compare</span> can be changed to affect speed.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Home View</span></p>
+<p class="p_Normal"><span class="f_Command">Sticky session selection</span> can be set to remember the last session picked from a Home view instead of the last session updated in the application.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Interface</span></p>
+<p class="p_Normal">Here is what a toolbar looks like when the <span class="f_Command">Show hints for toolbar buttons, etc.</span> and <span class="f_Command">Show keyboard shortcut in hints</span> checkboxes are marked:</p>
+<p class="p_Normal"><img width="130" height="64" style="margin:0;width:130px;height:64px;border:none" src="prefsinterface.png"/></p>
+<p class="p_Normal"><span class="f_Command">ESC key closes file views</span> applies to all file view types, such as Text Compare, Table Compare and Picture Compare.  It does not affect folder views.</p>
+<p class="p_Normal"><span class="f_Command">Single vertical scrollbar</span> can be marked to save horizontal space by hiding a redundant vertical scrollbar.</p>
+<p class="p_Normal"><span class="f_Command">Sticky splitter position</span> can be marked to have the size of the panes in file views be user defined instead of automatically determined.</p>
+<p class="p_Normal">Pick <span class="f_Command">Compress to fit</span> to compress the thumbnail to the available vertical space.  Pick <span class="f_Command">Allow scrolling</span> to show a vertical scrollbar instead.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Log Panel</span></p>
+<p class="p_Command"><span class="f_Command">Operation summaries</span></p>
+<p class="p_Normal">Log a summary of each operation.</p>
+<p class="p_Command"><span class="f_Command">Operation details</span></p>
+<p class="p_Normal">Log details of each operation, including each file affected.</p>
+<p class="p_Command"><span class="f_Command">Warnings</span></p>
+<p class="p_Normal">Log warnings and errors.</p>
+<p class="p_Command"><span class="f_Command">FTP trace</span></p>
+<p class="p_Normal">Log messages to and from FTP site.</p>
+<p class="p_Command"><span class="f_Command">Debug messages</span></p>
+<p class="p_Normal">Log messages useful to Scooter Software's technical support staff.</p>
+<p class="p_Normal"><span class="f_Command">Display up to</span> defines how many messages the log can handle before it starts deleting the oldest ones.</p>
+<p class="p_Normal">If a file is entered for <span class="f_Command">Automatically save messages to file</span>, it will be created when necessary.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Metrics</span></p>
+<p class="p_Command"><span class="f_Command">Max auto-saved sessions</span></p>
+<p class="p_Normal">Defines how many sessions can automatically be saved before the oldest one will be automatically deleted.  Enter zero (0) to disable the auto-save sessions feature.</p>
+<p class="p_Command"><span class="f_Command">Max most recently used items</span></p>
+<p class="p_Normal">Defines how many items can automatically be remembered before the oldest one will be automatically deleted.  For example, it affects how base folder dropdown lists.</p>
+<p class="p_Command"><span class="f_Command">Milliseconds before help hint appears</span></p>
+<p class="p_Normal">Defines how long to wait before showing a popup hint.</p>
+<p class="p_Command"><span class="f_Command">Milliseconds before help hint disappears</span></p>
+<p class="p_Normal">Defines how long a popup hint remains visible.</p>
+<p class="p_Command"><span class="f_Command">Milliseconds before incremental search resets</span></p>
+<p class="p_Normal">Defines how long to wait for the user to type in the next character for an incremental search.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Name Filter Presets</span></p>
+<p class="p_Normal">Specify the preset name filter choices, available on the folder view's toolbar.  Use simple wildcard definitions separated by semicolons for the mask.  Example:</p>
+<p class="p_IndentedCode"><span class="f_CourierFixed">*.htm;*.html;*.jpg</span></p>
+<p class="p_IndentedCode"><span class="f_IndentedCode">&nbsp;</span></p>
+<p class="p_Subtitle"><span class="f_Subtitle">Scripts</span></p>
+<p class="p_Command">Mark the <span class="f_Command">Beep when finished</span> checkbox for an audible cue that a script has finished.</p>
+<p class="p_Command"><span class="f_Command">&nbsp;</span></p>
+<p class="p_Normal">Mark the <span class="f_Command">Close when finished</span> checkbox to exit the program when the script has finished.</p>
+<p class="p_Normal">Specify a <span class="f_Command">Shared scripts folder</span> to be the location for shared scripts.  If a script filename is not found in the current folder, Beyond Compare will look for it there.</p>
+<p class="p_Subtitle"><span class="f_Subtitle">Shared Sessions File</span></p>
+<p class="p_Normal">If a <span class="f_Command">Shared sessions file</span> is specified, shared sessions will appear in your sessions tree.  You can use but not modify them.  Use <span class="f_Command">Tools &gt; Export Settings</span> to create a shared sessions file.</p>
+
+</td></tr></table>
+
+</body>
+</html>

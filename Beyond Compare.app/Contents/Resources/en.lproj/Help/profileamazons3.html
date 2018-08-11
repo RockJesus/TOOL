@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Amazon S3 Profile Settings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Amazon S3,Amazon S3 profile,Profiles,Profiles Amazon S3" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "profileamazons3.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" 
+       style="margin: 0px; background: #9D0909 url(red-bg.jpg) 0px 0px repeat-x;">
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#B01213"> -->
+  <tr valign="middle">
+<!--    <td style="width: 10px">&nbsp;</td> -->
+    <td align="left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Amazon S3 Profile Settings</span></h1>
+<p class="p_Command2"><span class="f_Command2">Amazon S3 Profile </span><span class="f_Command2">&gt;</span><span class="f_Command2"> General</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="profileftptransfer.html"
+        onmouseover="document.images.prev.src='prev-hot.png'" 
+        onmouseout="document.images.prev.src='prev.png'"
+        ><img name=prev src="prev.png" border=0 alt="Previous"
+        ></a><a href="dlgprofilemanager.html"
+        onmouseover="document.images.top.src='top-hot.png'" 
+        onmouseout="document.images.top.src='top.png'"><img name=top src="top.png" border=0 alt="Up"
+        ></a><a href="profiledropbox.html"
+        onmouseover="document.images.next.src='next-hot.png'" 
+        onmouseout="document.images.next.src='next.png'"><img name=next src="next.png" border=0 alt="Next"
+        ></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Command"><span class="f_Command">Authentication type</span></p>
+<p class="p_Normal">Controls where credentials are loaded from.</p>
+<p class="p_Command"><span class="f_Command">Saved S3 credentials</span></p>
+<p class="p_Normal">Use saved <span class="f_Command">Access key ID</span> and <span class="f_Command">Secret access key</span>.</p>
+<p class="p_Command"><span class="f_Command">Load from credentials file</span></p>
+<p class="p_Normal">Load the access key and secret access key from an AWS SDK credentials or AWS CLI config file.  If provided, security tokens will be used for time limited credentials.  The default credentials file is %UserProfile%\.aws\credentials <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="windows.png"/> or ~/.aws/credentials <img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="mac.png"/><img width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="linux.png"/>, but Beyond Compare will use the AWS CLI &quot;config&quot; file if necessary and does respect the AWS_SHARED_CREDENTIALS_FILE and AWS_CONFIG_FILE environment variables if they're present.  The profile should be one that exists within that file.  If left blank, &quot;default&quot; is used.</p>
+<p class="p_Command"><span class="f_Command">Load from environment variables</span></p>
+<p class="p_Normal">Load the access key, secret access key, and security token from AWS_* environment variables.  It will first check for the AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and AWS_SESSION_TOKEN variables.  If those do not exist, it will select a profile from the default credentials file (as above).  The AWS_PROFILE variable can be used to select a non-default profile.</p>
+<p class="p_Command"><span class="f_Command">Bucket (optional)</span></p>
+<p class="p_Normal">This can be used to select a bucket in case you don't have permission to list all buckets.</p>
+<p class="p_Normal">The <span class="f_Command">Description</span> can include any text you want.</p>
+
+</td></tr></table>
+
+</body>
+</html>

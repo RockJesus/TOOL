@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Chrome</key>
+	<dict>
+		<key>creation_flags</key>
+		<integer>1</integer>
+		<key>manifest</key>
+		<dict>
+			<key>key</key>
+			<string>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDZOVP5rzmaz+FD0wd603TaV3HixpcdanCMID91VQcQKQjEBaz2WztKUM9o+e7I1AhiZeVvdxOlcZVDZyPd/Nfea9H+kkW3TKJirkYkEGdAUvxGw1D7NXPMqtZb2EUtnVRZx5ZMlMhdxchu2ic7KKHkdaWPbmBT1QjzWfLF1exwjwIDAQAB</string>
+			<key>description</key>
+			<string>迅雷下载支持</string>
+			<key>name</key>
+			<string>迅雷下载支持测试版</string>
+		</dict>
+		<key>location</key>
+		<integer>1</integer>
+		<key>active_permissions</key>
+		<dict>
+			<key>scriptable_host</key>
+			<array>
+				<string>http://*/*</string>
+				<string>https://*/*</string>
+			</array>
+			<key>manifest_permissions</key>
+			<array/>
+			<key>explicit_host</key>
+			<array>
+				<string>http://*/*</string>
+				<string>https://*/*</string>
+			</array>
+			<key>api</key>
+			<array>
+				<string>cookies</string>
+				<string>contextMenus</string>
+				<string>tabs</string>
+				<string>downloads</string>
+				<string>plugin</string>
+			</array>
+		</dict>
+		<key>granted_permissions</key>
+		<dict>
+			<key>scriptable_host</key>
+			<array>
+				<string>http://*/*</string>
+				<string>https://*/*</string>
+			</array>
+			<key>manifest_permissions</key>
+			<array/>
+			<key>explicit_host</key>
+			<array>
+				<string>http://*/*</string>
+				<string>https://*/*</string>
+			</array>
+			<key>api</key>
+			<array>
+				<string>cookies</string>
+				<string>contextMenus</string>
+				<string>tabs</string>
+				<string>plugin</string>
+			</array>
+		</dict>
+		<key>state</key>
+		<integer>1</integer>
+		<key>was_installed_by_default</key>
+		<false/>
+		<key>was_installed_by_oem</key>
+		<false/>
+	</dict>
+	<key>Firefox</key>
+	<dict>
+		<key>iconURL</key>
+		<string>chrome://thunder/content/logo.png</string>
+		<key>id</key>
+		<string>thunder@xunlei.com</string>
+		<key>location</key>
+		<string>app-profile</string>
+		<key>type</key>
+		<string>extension</string>
+		<key>visible</key>
+		<true/>
+		<key>active</key>
+		<true/>
+		<key>userDisabled</key>
+		<false/>
+		<key>appDisabled</key>
+		<false/>
+		<key>bootstrap</key>
+		<false/>
+		<key>softDisabled</key>
+		<false/>
+		<key>foreignInstall</key>
+		<false/>
+		<key>hasBinaryComponents</key>
+		<false/>
+		<key>strictCompatibility</key>
+		<false/>
+		<key>defaultLocale</key>
+		<dict>
+			<key>name</key>
+			<string>Thunder extension</string>
+			<key>description</key>
+			<string>Thunder Extension</string>
+			<key>creator</key>
+			<string>Xunlei.com</string>
+			<key>homepageURL</key>
+			<string>http://mac.xunlei.com/</string>
+		</dict>
+		<key>targetApplications</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</string>
+				<key>minVersion</key>
+				<string>3.*</string>
+				<key>maxVersion</key>
+				<string>20.*</string>
+			</dict>
+		</array>
+		<key>targetPlatforms</key>
+		<array/>
+	</dict>
+	<key>Safari</key>
+	<dict>
+		<key>Removed Default Toolbar Items</key>
+		<array/>
+		<key>Hidden Bars</key>
+		<array/>
+		<key>Added Non-Default Toolbar Items</key>
+		<array/>
+		<key>Archive File Name</key>
+		<string>Thunder Extension.safariextz</string>
+		<key>Bundle Directory Name</key>
+		<string>Thunder Extension.safariextension</string>
+		<key>Enabled</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

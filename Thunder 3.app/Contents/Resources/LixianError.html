@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file://localhost/Users/maizhikun/Project/%E8%BF%85%E9%9B%B7/RTX/error.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>无网络</title>
+<style>
+    body,dl,dd,h1,h2,h3,h4,h5,h6,p,form{margin:0;}ol,ul,input{margin:0; padding:0;}
+    body,button,input,select,textarea{font:12px/1.5 \5FAE\8F6F\96C5\9ED1,tahoma,arial,\5b8b\4f53,sans-serif;outline:none;}
+    ul,ol{list-style:none;}
+    a{text-decoration:none;outline:0 none;color:#a3a3a3;}
+    img{border:0;}
+    /* error */
+    .error_page{height:360px;position: absolute;top: 50%;margin-top: -200px;width: 100%;text-align: center;color: #86c8ff;left: 0;}
+    .error_page .pic_error{width:280px;height:260px;margin: 0 auto ;background: url(./spr_tips.png) no-repeat;line-height: 500;overflow: hidden;}
+    .error_page .network{background-position: 0 -300px;}
+    .error_page .not_exist{background-position: 0 -560px;}
+    .error_page .btn_refresh{width: 100px;height: 34px;line-height: 34px;background: #409cf7;color: #fff;font-size: 14px;margin: 10px auto;display: block;}
+    .btn_refresh:hover{background:#58acff}
+    .txt_error{line-height: 45px;}
+</style>
+<script type="text/javascript">
+    //刷新的时候，调用客户端的接口进行刷新
+    function reload() {
+        try {
+            external.reload();
+        }catch(e){}
+    }
+</script>
+</head>
+<body>
+    <div class="error_page">
+        <div class="pic_error network">您的网络未连接</div>
+        <p class="txt_error">您的电脑未连网，因此无法显示此页面</p>
+        <a href="javascript:;" onclick="window.location.href=&#39;http://lixian.xunlei.com/mac/public/index.html&#39;" class="btn_refresh">刷新</a>
+    </div>
+
+</body></html>

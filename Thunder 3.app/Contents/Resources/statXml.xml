@@ -1,0 +1,29 @@
+<config>
+	<server>
+		<tcp host="xlmacclient.rcv.sandai.net" port="80"/>
+	</server>
+	<priority>
+		<level id="0" report_time="0"/>
+		<level id="1" report_time="0"/>
+		<level id="2" report_time="1"/>
+		<level id="3" report_time="-1"/>
+		<level id="4" report_time="-2"/>
+	</priority>
+	<stat>
+		<event index="4719" key="startevent" priority="1" />
+		<event index="4721" key="loginregister" priority="1" />
+		<event index="4722" key="vipevent" priority="1" />
+		<event index="4723" key="taskevent" priority="1" />
+		<event index="4724" key="leftmenu" priority="1" />
+		<event index="4725" key="game" priority="1" />
+        <event index="4834" key="play" priority="1" />
+        <event index="4825" key="sniffer" priority="1" />
+        <event index="4826" key="advertising" priority="1" />
+        <event index="4969" key="recommend" priority="1" />
+	</stat>
+    
+    <max_storage_records>2000</max_storage_records>
+    <max_send_records>200</max_send_records>
+    <storage_name>mac_statstorage_v1.xml</storage_name>
+    <seq_id_file_name>mac_seq_id</seq_id_file_name>
+</config>
